@@ -1,0 +1,191 @@
+---
+title: "TIPOLOGÍA I CICLE DE VIDA DE LES DADES.\n\nInforme Dinàmic  PRACTICA2 "
+author: "Joaquim de Dalmases Juanet"
+date: "20 de mayo de 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align='center')
+```
+
+<style>
+table {
+  border:2px solid blue;
+}
+th {
+  border:1px solid skyblue;
+  border-spacing: 1px;
+  font-size:14px;
+  color:white;
+  background-color: navy;
+} 
+td {
+  border:1px solid skyblue;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  font-family:arial;
+  color:royalblue;
+  font-size:12px;
+  padding:5px;
+  background-color: aliceblue;
+}
+p {
+    font-family: calibri; 
+    font-size:16px; 
+    color:black;
+    text-align:justify;
+}
+li {
+    font-family: calibri; 
+    font-size:16px; 
+    color:black;
+    text-align:justify;
+}
+caption {  
+  caption-side: bottom;
+  text-align:center;  
+  color:royalblue;
+  font-weight: bold;
+}
+.pregs {
+    font-family: calibri; 
+    font-size:16px; 
+    color:royalblue;
+    text-align:justify;
+}
+</style>
+
+<br>
+<p style="font-family: Calibri; font-size:36px; color:blue; background-color:skyblue">Activitat 3: Modelització predictiva</p>
+<br>
+
+
+```{r, message=F, warning=F}
+# Es realitza la PAC amb les següents variables de sessió: 
+# versió de R (data), Plataforma hardware, configuració local i el nom i versió de
+# les llibreries usades.
+xfun::session_info(dependencies = FALSE)
+# Carreguem les llibreries que s'utilitzaran a la PAC 2, evitant escriure en l'informe els 
+# missatges o alertes que es produeixin [{r, message=F, warning=F}].
+
+library(kableExtra)   #  Generar taules formatejades en el informe en markdown.
+library(stringr)      #  Manipulació de text. En concret per fer reemplaçaments de parts de text.
+library(Hmisc)        #  Visualització d'histogrames.
+library(car)          #  Q-Q plots.
+library(dplyr)        #  Manipulació de datasets i  data.frames.
+library(pROC)         #  Representar i calcular corbes ROC i AUROC.
+```
+
+<!-- 
+<P style="page-break-before: always">
+-->
+
+<p style="color:black"><b>
+DEFINIR EL DIRECTORI DE TREBALL.</b>
+<br>
+</p>
+
+
+```{r}
+# Fixem la carpeta o directori treball. Serà el suposat si s'omiteix la ruta origen o destí d'un fitxer.
+# Localització del fitxer de fonts de dades 'rawData.csv'.
+setwd("D:/_UOC/CursMaster/11-Tipologia_i_Cicle_de_Vida_de_Dades/PRACTICA_2/codi")
+```
+
+
+<p style="color:royalblue"><b>
+ CARREGAR L'ARXIU DE DADES A L’ENTORN DE TREBALL DE R (R STUDIO) - winequality-red.csv i winequality-white.csv
+</b></p>
+
+```{r}
+# Lectura del fitxer amb la funció 'read.csv' perque visualitzats els separadors es la que
+# per defecte ja té definits els paràmetres més correctes.
+# El contingut queda en una variable data.frame (d).
+nom1<-"winequality-red.csv"
+nom2<-"winequality-white.csv"
+n1<-read.csv(file.path(getwd(),nom1), sep=";", encoding="UTF-8")
+n2<-read.csv(file.path(getwd(),nom2), sep=";", encoding="UTF-8")
+# Observem que els fitxers originals tenen iguals capçaleres i podrem combinar els 2 datasets.
+
+# Comprovació de la bona lectura/transferència de dades, visualitzant una mostra de 6 linies o registres.
+# Amb el segon parametre de l'ordre 'head', podem definir el nº de linies desitjat, per defecte 2. 
+head(n1,2)
+head(n2,2)
+```
+
+## 1. DESCRIPCIÓ DEL DATASET.
+<p style="color:royalblue"><b> 
+1. DESCRIPCIÓ DEL DATASET. PERQUÈ ÉS IMPORTANT I QUINA PREGUNTA PRETÉN RESPONDRE?</b>
+</p>
+
+<p>
+El dataset 'Red Wine' emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi negre de la zona nord de Portugal. Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d'alcohol, nivell d'acidesa, contingut residual de sucres etc...). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
+</p>
+
+<p>
+Emprearem aquest dataset per respondre a la pregunta de <b>quínes característiques principals defineixen un vi de qualitat?, Varien si es tracta d'un vi negre o blanc?.</b> 
+</p>
+
+<p> 
+Descripció dels atributs o camps del datatset:
+</p>
+<ul>
+<li><b>fixed.acidity</b> (Acidesa fixe): És la quantitat d'àcidesa que no s'evapora i per tant resta fixe al vi.</li>
+<li><b>volatile.acidity</b> (Acidesa volàtil): La quantitat en excès d'àcid acètic en vi, pot afegir sabor amarg o avinagrat, si les quantitats són altes.</li>
+<li><b>citric.acid</b> Àcid cítric: trobat en petites quantitas, l'àcid cítric pot afegir frescor i sabor als vins.</li>
+<li><b>residual.sugar</b> Sucre residual: Quantitat de sucre derivada del procés de fermentació (normalment trobem més de 1 gr/litre i si supera els 45grm./litre considerem el vi dolç.</li>
+<li><b>chlorides</b> Clorurs: la quantitat de sal del vi</li>
+<li><b>free.sulfur.dioxide</b> Diòxid de sofre: Prevé el creixement microbià i l'oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits</li>
+<li><b>total.sulfur.dioxide</b> total diòxide de sofre total (lliure i unit): concentracions per sobre de 50 ppm, Es detecta per olfacte i tast. Les quantitats excessives de SO2 poden inhibir la fermentació i causar efectes sensorials indesitjables.</li>
+<li><b>density</b> Densitat: serà propera a la de l'aigua (997 kg/m³) i variaria segons les quantitats de sucre i alcohol, segons la qualitat de la fermentació.</li>
+<li><b>pH</b> pH: descriu com un vi àcid o bàsic és a una escala de 0 (molt àcida) a 14 (molt bàsica); la majoria dels vins tenen entre 3-4 a l'escala de pH.</li>
+<li><b>sulphates</b> Sulfats: un additiu de vi que pot contribuir als nivells de diòxid de sofre (S02), que actuen com a antimicrobians i antioxidants</li>
+<li><b>alcohol</b> Alcohol: el percentatge de contingut alcohòlic del vi, és una variable de sortida (basada en dades sensorials)</li>
+<li><b>quality</b> Qualitat (escala 0-10).</li>
+<li><b>color</b> Determina si el vi és blanc o negre.</li>
+</ul>
+</p>
+
+##2. Integració i selecció.
+<p style="color:royalblue"><b>
+Integració i selecció de les dades d’interès a analitzar</b>
+</p>
+
+<p>
+Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l'altre dels vins negres, per tant ens interesera comprovar que tenen les mateixes capçalers i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna 'color' que identificara la font de les files o mostres emmagatzemant el color del vi amb valors (blanc)
+</p>
+
+```{r}
+# Volem analitzar el dataset de Red Wine tenint en compte el color del vi, afegim una columna 'color',
+# i fusionem les dades tant dels vins blancs com dels negres, diferentciant-los per el camp color.
+
+# Afegim el camp 'color' a cada datatset
+n1["color"]<-"negre"
+n2["color"]<-"blanc"
+
+# Tenim capçaleres iguals, si la suma de noms iguals és la suma total de camps.
+a<-colnames(n1)
+b<-colnames(n2)
+cat(paste0("El nombre de camps (",ncol(n1),") és igual al nombre de camps iguals ",sum(a==b)))
+
+# Combinem les mostres dels dos fitxers i factoritzem el camp color per determinar 
+# els valors que pren: 'blanc i 'negre'
+d<-rbind(n1,n2)
+d$color<-factor(d$color)
+
+# Dimensions del dataset:
+cat("Files - Instàncies:",nrow(d),"\nColumnes-Atributs-Variables:",ncol(d),"\n")
+
+# L'estructura de camps del datatset: tipus i rang de valors els podem obtenir de l'ordre Summary():
+summary(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+
+```
+
+<p>
+En principi ens quedem amb tots els atributs i més tard en la fase d'analisi determinarem si es possible una reducció de camps.
+ara per ara podem comptar amb tots els camps disponibles al dataset per esbrinar quíns ens determinaran els vins de millor qualitat.
+</p>
+
+

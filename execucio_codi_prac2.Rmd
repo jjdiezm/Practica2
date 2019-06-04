@@ -1,0 +1,50 @@
+---
+title: "Execucio_codi_prac2"
+author: "Quim de Dalmases Juanet"
+date: "4 de junio de 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+setwd("D:/_UOC/CursMaster/11-Tipologia_i_Cicle_de_Vida_de_Dades/PRACTICA_2/codi")
+
+# Lectura del fitxer amb la funció 'read.csv' perque visualitzats els separadors es la que
+# per defecte ja té definits els paràmetres més correctes.
+# El contingut queda en una variable data.frame (d).
+nom1<-"winequality-red.csv"
+nom2<-"winequality-white.csv"
+n1<-read.csv(file.path(getwd(),nom1), sep=";", encoding="UTF-8")
+n2<-read.csv(file.path(getwd(),nom2), sep=";", encoding="UTF-8")
+
+# Volem analitzar el dataset de Red Wine tenint en compte el color del vi, afegim una columna 'color',
+# i fusionem les dades tant dels vins blancs com dels negres, diferentciant-los per el camp color.
+
+n1["color"]<-"negre"
+n2["color"]<-"blanc"
+d<-rbind(n1,n2)
+d$color<-factor(d$color)
+
+# L'estructura de camps del datatset: tipus i rang de valors els podem obtenir de l'ordre Summary():
+summary(d)
+cat("Nombre de files:",nrow(d),"\nNombre d'atributs:",ncol(d))
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
