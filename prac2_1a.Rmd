@@ -90,7 +90,7 @@ DEFINIR EL DIRECTORI DE TREBALL.</b>
 ```{r}
 # Fixem la carpeta o directori treball. Serà el suposat si s'omiteix la ruta origen o destí d'un fitxer.
 # Localització del fitxer de fonts de dades 'rawData.csv'.
-setwd("D:/_UOC/CursMaster/11-Tipologia_i_Cicle_de_Vida_de_Dades/PRACTICA_2/codi")
+setwd("D:/_UOC/CursMaster/11-Tipologia_i_Cicle_de_Vida_de_Dades/PRACTICA_2/codi/codiH/Practica2")
 ```
 
 
