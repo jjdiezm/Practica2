@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE,
                       tidy.opts=list(width.cutoff=60))
 ```
 
-```{r load_libraries, include=FALSE}
+```{r load_libraries, include=FALSE, message=F, warning=F}
 library(knitr)
 library(stringr)
 if(!require(psych)){
@@ -86,16 +86,99 @@ Aquesta pràctica s'ha desenvolupat seguintla bibliografia recomanada: [@apuntsU
 
 ## 2.1 Descripció del dataset.
 
-> Perquè és important i quina pregunta/problema pretén respondre?
-
 Per l'elaboració de la pràctica s'ha triat:  
 
 * el repositori de *Kaggle* [**Red Wine Quality**](https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009)
 * que correspon amb el repositori de *UCI* [**Wine Quality Data Set**](https://archive.ics.uci.edu/ml/datasets/wine+quality) i
 * l'accés a les dades completes es pot trobar a [*aquest enllaç*](https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/).
 
+### 2.1.1 Càrrega de dades
+```{r load_data}
+# Fixem el directori de treball:
+setwd("C:/Users/juanj/OneDrive/Documentos/GitHub/Practica2")
+
+# Llegim els fitxers amb les dades de vins blancs i negres
+# Ho ubiquem a dos datasets dsRed i dsWhite.
+redFile <-"winequality-red.csv"
+whiteFile <-"winequality-white.csv"
+dsRed <-read.csv(file.path(getwd(), redFile), sep=";", encoding="UTF-8")
+dsWhite <-read.csv(file.path(getwd(), whiteFile), sep=";", encoding="UTF-8")
+# Observem que els fitxers originals tenen iguals capçaleres.
+
+# Comprobació de la bona lectura/transferència de dades, mirem les dues primeres fileres 
+# de cada dataset i vegem la composició . 
+head(dsRed,2)
+head(dsWhite,2)
+
+summary(dsRed)
+summary(dsWhite)
+```
+
+**Perquè és important i quina pregunta/problema pretén respondre?**
+
+El dataset ‘*Red Wine*’ emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi negre de la zona nord de Portugal. 
+
+Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d’alcohol, nivell d’acidesa, contingut residual de sucres etc…). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
+
+Emprearem aquest dataset per respondre a la pregunta de quínes característiques principals defineixen un vi de qualitat?, Varien si es tracta d’un vi negre o blanc?.
+
+Descripció dels atributs o camps del datatset:
+
+Atribut               | Traducció         | Descripció
+----------------------|-------------------|-------------------------------------------------------------
+**fixed.acidity** | *Acidesa fixe* | És la quantitat d’àcidesa que no s’evapora i per tant resta fixe al vi.
+**volatile.acidity** | *Acidesa volàtil* | La quantitat en excès d’àcid acètic en vi, pot afegir sabor amarg o avinagrat, si les quantitats són altes.
+**citric.acid** | *Àcid cítric* | Trobat en petites quantitas, l’àcid cítric pot afegir frescor i sabor als vins.
+**residual.sugar** | *Sucre residual* | Quantitat de sucre derivada del procés de fermentació (normalment trobem més de 1 gr/litre i si supera els 45grm./litre considerem el vi dolç.
+**chlorides** | *Clorurs* | La quantitat de sal del vi.
+**free.sulfur.dioxide** | *Diòxid de sofre* | Prevé el creixement microbià i l’oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits.
+**total.sulfur.dioxide** | *diòxide de sofre total* | Concentracions per sobre de 50 ppm (tant lliure com unit), Es detecta per olfacte i tast. Les quantitats excessives de SO2 poden inhibir la fermentació i causar efectes sensorials indesitjables.
+**density** | *Densitat* | Serà propera a la de l’aigua (997 kg/m³) i variaria segons les quantitats de sucre i alcohol, segons la qualitat de la fermentació.
+**pH** | *pH* | Descriu com un vi àcid o bàsic és a una escala de 0 (molt àcida) a 14 (molt bàsica); la majoria dels vins tenen entre 3-4 a l’escala de pH.
+**sulphates** | *Sulfats* | Un additiu de vi que pot contribuir als nivells de diòxid de sofre (S02), que actuen com a antimicrobians i antioxidants
+**alcohol** | *Alcohol* | El percentatge de contingut alcohòlic del vi, és una variable de sortida (basada en dades sensorials)
+**quality** | *Qualitat* | (escala 0-10) És la qualitat atorgada la vi.
+**color** | *Color* | Determina si el vi és blanc o negre. Afegida per nosaltres a efectes de integrar les dades.
 
 ## 2.2 Integració i selecció de les dades d'interés a analitzar.
+
+Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l'altre dels vins negres, per tant ens interesera comprovar que tenen les mateixes capçalers i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna 'color' que identificara la font de les files o mostres emmagatzemant el color del vi amb valors (blanc)
+
+```{r integration}
+# Volem analitzar el dataset de Red Wine tenint en compte el color del vi, 
+# afegim una columna 'color' i fusionem les dades tant dels vins blancs com 
+# dels negres, diferentciant-los per el camp color.
+
+# Afegim el camp 'color' a cada datatset
+dsRed["color"]<-"negre"
+dsWhite["color"]<-"blanc"
+
+# Tenim capçaleres iguals, si la suma de noms iguals és la suma total de camps.
+a<-colnames(dsRed)
+b<-colnames(dsWhite)
+cat(paste0("El nombre de camps (",ncol(dsRed),") és igual al nombre de camps iguals ",
+           sum(a==b),"\n"))
+cat("Files - Instàncies de vi negre:",nrow(dsRed),"\nColumnes-Atributs-Variables:",
+    ncol(dsRed),"\n")
+cat("Files - Instàncies de vi blanc:",nrow(dsWhite),"\nColumnes-Atributs-Variables:",
+    ncol(dsWhite),"\n")
+# Combinem les mostres dels dos fitxers i factoritzem el camp color per determinar 
+# els valors que pren: 'blanc i 'negre'
+d<-rbind(dsRed,dsWhite)
+d$color<-factor(d$color)
+
+# Dimensions del dataset:
+cat("Files - Instàncies:",nrow(d),"\nColumnes-Atributs-Variables:",ncol(d),"\n")
+
+# Revisem l'estructura de camps del datatset:
+summary(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+
+```
+
+Com es pot veure ens quedem amb tots els atributs i més tard en la fase d'analisi determinarem si es possible una reducció de camps. Ara per ara podem comptar amb tots els camps disponibles al dataset per esbrinar quíns ens determinaran els vins de millor qualitat.
+
+Si revisem les dades de color podem comprovar que els nombres quadren amb els elements dels datasets originals, pel que s'ens reafirma la correcta integració dels dos.
 
 ## 2.3 Neteja de les dades.
 
