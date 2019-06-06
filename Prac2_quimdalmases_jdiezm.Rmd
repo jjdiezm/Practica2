@@ -47,6 +47,7 @@ if(!require(gridExtra)){
   install.packages('gridExtra', repos='http://cran.us.r-project.org')
   library(gridExtra)
 }
+
 ```
 
 \newpage
@@ -184,7 +185,27 @@ Si revisem les dades de color podem comprovar que els nombres quadren amb els el
 
 ## 2.3 Neteja de les dades.
 
+
+
 ### 2.3.1 Zeros i elements buits.
+
+Cerquem elements buits i Na:
+
+```{r na_void}
+cat("Valors ´na´: \n")
+colSums(is.na(d))
+cat("Valors buits: \n")
+colSums(d=="")
+cat("Zeros: \n")
+colSums(d==0)
+cat("Vegem si els valors son numérics: \n")
+str(d)
+
+```
+
+Podem veure que el dataset no presenta valors nulls (´na´) ni buids ("") i que els zeros s'identifiquen bé: només el camp citric.acid conté valors 0 i que tots els camps son numérics llevat de quality que es sencer i color que és un factor amb dos valors (blanc i negre).
+
+Amb lo que es pot concloure que hem verificat que **no cal tractar buids i Na**.
 
 ### 2.3.2 Identificació i tractament de valors extrems.
 

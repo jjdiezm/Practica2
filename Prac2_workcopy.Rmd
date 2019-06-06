@@ -184,7 +184,107 @@ Si revisem les dades de color podem comprovar que els nombres quadren amb els el
 
 ### 2.3.1 Zeros i elements buits.
 
+Cerquem elements buits i Na:
+
+```{r na_void}
+cat("Valors ´na´: \n")
+colSums(is.na(d))
+cat("Valors buits: \n")
+colSums(d=="")
+cat("Zeros: \n")
+colSums(d==0)
+cat("Vegem si els valors son numérics: \n")
+str(d)
+
+```
+
+Podem veure que el dataset no presenta valors nulls (´na´) ni buids ("") i que els zeros s'identifiquen bé: només el camp citric.acid conté valors 0 i que tots els camps son numérics llevat de quality que es sencer i color que és un factor amb dos valors (blanc i negre).
+
+Amb lo que es pot concloure que hem verificat que **no cal tractar buids i Na**.
+
 ### 2.3.2 Identificació i tractament de valors extrems.
+
+Representarem boxplots per a les variables numériques i senceres, també destacarem els valors que es troben 3 desviacions típiques per damunt de la mitjana o 3 per davall:
+
+```{r extem_values}
+# Prenem els noms de les columnes
+columns = colnames(d)
+# Excloem el color (és un factor amb 2 valors i no té sentit fer un boxplot)
+columns = columns[1:12]
+# Montem els boxplots:
+for (colu in 1:12){
+  boxplot(d[,colu],
+          main=columns[colu], 
+          col = "orange",
+          border = "brown")
+}
+
+# Montem un dataframe per a mostrar els valors mínims i màxmims
+# la mitjana i el valor de mitjana +- 3*std per veure si hi ha 
+# valors molt allunyats
+
+tableOutliers <- data.frame(
+  variables = columns,
+  stringsAsFactors = FALSE
+)
+
+# Valor Mínim
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(min(d[,colu])) 
+}
+tableOutliers[,"Valor mínim"] <- vectorTemp
+
+# Mitjana - 3sd
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(mean(d[,colu])-3*sd(d[,colu])) 
+}
+tableOutliers[,"Mitjana - 3 std"] <- vectorTemp
+
+# Mitjana
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(mean(d[,colu]))
+}
+tableOutliers[,"Mitjana"] <- vectorTemp
+
+# Mitjana + 3sd
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(mean(d[,colu])+3*sd(d[,colu])) 
+}
+tableOutliers[,"Mitjana + 3 std"] <- vectorTemp
+
+# Valor Máxim
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(max(d[,colu])) 
+}
+tableOutliers[,"Valor máxim"] <- vectorTemp
+
+# Pintem la taula
+knitr::kable(tableOutliers)%>%kable_styling(bootstrap_options = c("striped", "hover"))
+
+```
+
+La taula que em pintat es coherent amb els boxplots, tots ténen outliers mes allunyats per adalt que per abaix, podem veure que no es dona cap cas que el mínim sia inferior a mitjana - 3xstd, però els valors superiors si son en general mes alts que mitjana + 3xstd, les dades de sulfurs i de sucre son molt superiors.
+
+Tot i això com que son mesures químiques **suposarem les dades correctes** ja que no podem afirmar que noes puguin trobar 440 de sulfurs per exemple.
+
+Una altra opció sería limitar substituir els màxims molt allunyats a 3 vegades la std però no ho farem. 
+
+```{r extem_values2}
+# df[df==""]<-NA
+dfinal <- d
+for (colu in columns){
+  dfinal[dfinal>mean(dfinal[,colu])+3*sd(dfinal[,colu]),colu]<-mean(dfinal[,colu])+3*sd(dfinal[,colu])
+  print(max(d[,colu]))
+  print(max(dfinal[,colu]))
+}
+
+
+```
 
 ## 2.4 Anàlisi de les dades.
 

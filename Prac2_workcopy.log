@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.24)  5 JUN 2019 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.24)  5 JUN 2019 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -975,25 +975,293 @@ Package xcolor Warning: Incompatible color definition on input line 623.
 
 Package xcolor Warning: Incompatible color definition on input line 623.
 
-[7] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 693.
-[9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 693.
+
+Package xcolor Warning: Incompatible color definition on input line 641.
+
+
+Package xcolor Warning: Incompatible color definition on input line 645.
+
+
+Package xcolor Warning: Incompatible color definition on input line 645.
+
+
+Package xcolor Warning: Incompatible color definition on input line 651.
+
+[7]
+
+Package xcolor Warning: Incompatible color definition on input line 655.
+
+
+Package xcolor Warning: Incompatible color definition on input line 655.
+
+
+Package xcolor Warning: Incompatible color definition on input line 670.
+
+
+Package xcolor Warning: Incompatible color definition on input line 674.
+
+
+Package xcolor Warning: Incompatible color definition on input line 674.
+
+
+Package xcolor Warning: Incompatible color definition on input line 680.
+
+
+Package xcolor Warning: Incompatible color definition on input line 684.
+
+
+Package xcolor Warning: Incompatible color definition on input line 684.
+
+
+Package xcolor Warning: Incompatible color definition on input line 699.
+
+
+Package xcolor Warning: Incompatible color definition on input line 703.
+
+
+Package xcolor Warning: Incompatible color definition on input line 703.
+
+
+Package xcolor Warning: Incompatible color definition on input line 709.
+
+
+Package xcolor Warning: Incompatible color definition on input line 713.
+
+
+Package xcolor Warning: Incompatible color definition on input line 713.
+
+
+Package xcolor Warning: Incompatible color definition on input line 728.
+
+[8]
+
+Package xcolor Warning: Incompatible color definition on input line 732.
+
+
+Package xcolor Warning: Incompatible color definition on input line 732.
+
+
+Package xcolor Warning: Incompatible color definition on input line 738.
+
+
+Package xcolor Warning: Incompatible color definition on input line 742.
+
+
+Package xcolor Warning: Incompatible color definition on input line 742.
+
+
+Overfull \hbox (34.24352pt too wide) in paragraph at lines 759--759
+[]\T1/lmtt/m/n/10 ##  $ chlorides           : num  0.076 0.098 0.092 0.075 0.07
+6 0.075 0.069 0.065 0.073 0.071 ...[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 776.
+
+
+Package xcolor Warning: Incompatible color definition on input line 790.
+
+
+Package xcolor Warning: Incompatible color definition on input line 790.
+
+<Prac2_workcopy_files/figure-latex/extem_values-1.pdf, id=118, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-1.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-1.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-1.pdf  
+used on input line 792.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-2.pdf, id=119, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-2.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-2.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-2.pdf  
+used on input line 793.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-3.pdf, id=120, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-3.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-3.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-3.pdf  
+used on input line 794.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-4.pdf, id=121, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-4.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-4.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-4.pdf  
+used on input line 795.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-5.pdf, id=122, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-5.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-5.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-5.pdf  
+used on input line 796.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-6.pdf, id=123, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-6.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-6.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-6.pdf  
+used on input line 797.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-7.pdf, id=124, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-7.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-7.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-7.pdf  
+used on input line 798.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-8.pdf, id=125, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-8.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-8.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-8.pdf  
+used on input line 799.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-9.pdf, id=126, 469.755pt x 325.
+215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-9.pdf Graphic file (type p
+df)
+<use Prac2_workcopy_files/figure-latex/extem_values-9.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-9.pdf  
+used on input line 800.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-10.pdf, id=127, 469.755pt x 325
+.215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-10.pdf Graphic file (type 
+pdf)
+<use Prac2_workcopy_files/figure-latex/extem_values-10.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-10.pdf 
+ used on input line 801.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-11.pdf, id=128, 469.755pt x 325
+.215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-11.pdf Graphic file (type 
+pdf)
+<use Prac2_workcopy_files/figure-latex/extem_values-11.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-11.pdf 
+ used on input line 802.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<Prac2_workcopy_files/figure-latex/extem_values-12.pdf, id=129, 469.755pt x 325
+.215pt>
+File: Prac2_workcopy_files/figure-latex/extem_values-12.pdf Graphic file (type 
+pdf)
+<use Prac2_workcopy_files/figure-latex/extem_values-12.pdf>
+Package pdftex.def Info: Prac2_workcopy_files/figure-latex/extem_values-12.pdf 
+ used on input line 803.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--804
+[]
+ []
+
+[9] [10 <./Prac2_workcopy_files/figure-latex/extem_values-1.pdf>] [11 <./Prac2_
+workcopy_files/figure-latex/extem_values-2.pdf>] [12 <./Prac2_workcopy_files/fi
+gure-latex/extem_values-3.pdf>] [13 <./Prac2_workcopy_files/figure-latex/extem_
+values-4.pdf>] [14 <./Prac2_workcopy_files/figure-latex/extem_values-5.pdf>] [1
+5 <./Prac2_workcopy_files/figure-latex/extem_values-6.pdf>] [16 <./Prac2_workco
+py_files/figure-latex/extem_values-7.pdf>] [17 <./Prac2_workcopy_files/figure-l
+atex/extem_values-8.pdf>] [18 <./Prac2_workcopy_files/figure-latex/extem_values
+-9.pdf>] [19 <./Prac2_workcopy_files/figure-latex/extem_values-10.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 805.
+
+[20 <./Prac2_workcopy_files/figure-latex/extem_values-11.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 854.
+
+
+Package xcolor Warning: Incompatible color definition on input line 854.
+
+
+Package xcolor Warning: Incompatible color definition on input line 854.
+
+[21 <./Prac2_workcopy_files/figure-latex/extem_values-12.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 854.
+
+
+Package xcolor Warning: Incompatible color definition on input line 854.
+
+[22] [23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 953.
+[24]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 953.
 (./Prac2_workcopy.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 693.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 693.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 953.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 953.
 Package rerunfilecheck Info: File `Prac2_workcopy.out' has not changed.
 (rerunfilecheck)             Checksum: FCA64AFE4B4C53F39A8EAC4338D50E45;2412.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 693.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 953.
  ) 
 Here is how much of TeX's memory you used:
- 12642 strings out of 494562
- 181001 string characters out of 6176064
- 270412 words of memory out of 5000000
- 16052 multiletter control sequences out of 15000+600000
- 47911 words of font info for 46 fonts, out of 8000000 for 9000
+ 12709 strings out of 494562
+ 184229 string characters out of 6176064
+ 270419 words of memory out of 5000000
+ 16103 multiletter control sequences out of 15000+600000
+ 48216 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 28i,6n,35p,460b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,9n,35p,460b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/juanj/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.
 enc}{c:/Users/juanj/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec
 .enc}<c:/Users/juanj/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/l
@@ -1006,10 +1274,10 @@ fonts/type1/public/lm/lmri12.pfb><c:/Users/juanj/AppData/Roaming/TinyTeX/texmf-
 dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/juanj/AppData/Roaming/TinyTeX/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/juanj/AppData/Roaming/Tiny
 TeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on Prac2_workcopy.pdf (9 pages, 247703 bytes).
+Output written on Prac2_workcopy.pdf (24 pages, 334661 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 328 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
