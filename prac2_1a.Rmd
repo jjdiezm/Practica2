@@ -282,19 +282,213 @@ bxplot_hist<- function(camp,lbcamp){
   }
 ```
 
-```{r}
+<p>
+Per cada atribut mirem de trobar els valors extrems i decidim quína estratègia seguir:
+</p>
+<p>
+<u>Atribut: <b<fixed.acidity</b></u>
+</p>
+
+```{r, out.width='60%'}
 # Valors extrems de 'fixed.acidity'
-#bxp<-boxplot.stats(d$fixed.acidity)
-bxplot_hist(d[,'fixed.acidity'],'fixed.acidity')
-
-
+cat("Vi negre")
+bxplot_hist(n1$fixed.acidity,'fixed.acidity')
+cat("Vi blanc")
+bxplot_hist(n2$fixed.acidity,'fixed.acidity')
+cat("Vinho verde sense diferenciar color")
+bxplot_hist(d$fixed.acidity,'fixed.acidity')
 
 ```
 
+<p>
+No tenim constància de que les dades tinguin errors de captura. Els valors poden ser correctes. Els llindars per els valors extrems serien:
 
+```{r}
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar inferior:",mean(n1$fixed.acidity)-3*sd(n1$fixed.acidity))
+# Llindar superior per el valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n1$fixed.acidity)+3*sd(n1$fixed.acidity))
 
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'fixed.acidity'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$fixed.acidity)-3*sd(n2$fixed.acidity))
+# Llindar superior per el valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n2$fixed.acidity)+3*sd(n2$fixed.acidity))
 
+```
 
+En aquest cas no modifiquem els valors extrems detectats per els camp 'fixed.acidity.
+</p>
 
+<p>
+<u>Atribut: <b>volatile.acidity</b></u>
+</p>
 
+```{r, out.width='60%'}
+# Valors extrems de 'volatile.acidity'
+cat("Vi negre")
+bxplot_hist(n1$volatile.acidity,'volatile.acidity')
+cat("Vi blanc")
+bxplot_hist(n2$volatile.acidity,'volatile.acidity')
 
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar inferior:",mean(n1$volatile.acidity)-3*sd(n1$volatile.acidity))
+# Llindar superior per el valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n1$volatile.acidity)+3*sd(n1$volatile.acidity))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'volatile.acidity'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$volatile.acidity)-3*sd(n2$volatile.acidity))
+# Llindar superior per el valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n2$volatile.acidity)+3*sd(n2$volatile.acidity))
+
+```
+
+<p>
+La variació d'aquests valors no afecta sensiblement als paràmetres representatius de la seva distribució, 
+però si ho necessitem més endavant podriem substituïr el seu valor per el de la mediana `r median(n1$volatile.acidity)`,
+ com a valor representatiu de la seva distribució. Mètodes més robustos com  la imputació de dades amb kNN, 
+ package R "DMwR" mitjançant la función <b<knnImputation()</b>, o el package R "VIM" usant la funció <b<kNN()</b>.
+</p>
+
+<u>Atribut: <b>citric.acid</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'citric.acid'
+cat("Vi negre")
+bxplot_hist(n1$citric.acid,'citric.acid')
+cat("Vi blanc")
+bxplot_hist(n2$citric.acid,'citric.acid')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar inferior:",mean(n1$citric.acid)-3*sd(n1$citric.acid))
+# Llindar superior per el valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar superior:",mean(n1$citric.acid)+3*sd(n1$citric.acid))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'citric.acid'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$citric.acid)-3*sd(n2$citric.acid))
+# Llindar superior per el valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar superior:",mean(n2$citric.acid)+3*sd(n2$citric.acid))
+```
+
+<p>
+En aquest cas, suposem que tot i que hem trobat valors atípics per el vi negre, amb valor de citric.acid=1.0, 
+podrien ser correctes en cassos on es busca donar frescor al vi, (característica d'aquests vins) i tampoc modifiquem 
+el valor. Els valors atípics per el vi blanc estàn dintre dels valors correctes del vi negre, i poden ser correctes
+per tant els mantenim.<br>
+Prenem nota de que el nombre de zeros, és alt (`r length(n1[n1$citric.acid==0,'citric.acid'])`), respecte el total
+ de instàncies `r length(n1[,'citric.acid'])` en el cas del vi negre. Podria ser que la característica de 'frescor' fos més
+ freqüent en aquest tipus de vi.
+</p>
+
+<u>Atribut: <b>residual.sugar</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'residual.sugar'
+cat("Vi negre")
+bxplot_hist(n1$residual.sugar,'residual.sugar')
+cat("Vi blanc")
+bxplot_hist(n2$residual.sugar,'residual.sugar')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar inferior:",mean(n1$residual.sugar)-3*sd(n1$residual.sugar))
+# Llindar superior per el valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar superior:",mean(n1$residual.sugar)+3*sd(n1$residual.sugar))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'residual.sugar'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$residual.sugar)-3*sd(n2$residual.sugar))
+# Llindar superior per el valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar superior:",mean(n2$residual.sugar)+3*sd(n2$residual.sugar))
+```
+
+<p>
+En aquest cas hem trobat valors atípics molt extrems.<br> Si tenim en compte l'escala de dolçor dels vins:<br>
+<ul>
+<li>0-9 g/l Sucre residual (SR): Sec</li>
+<li>9-18 g/l: No Sec</li>
+<li>18-50 g/l: Mig sec-Semi dolç</li>
+<li>50-120 g/l: mig-dolç</li>
+<li>120 g/l Dolç-Molt dolç</li>
+</ul>
+
+Deduïm que el 'Vinho verde' és un vi que pot ser 'Sec', 'No sec', 'Mig sec' però no 'Semi dolç', 'Mig dolç' o
+'Dolç-Molt dolç'. Per tant establim un llindar lògic de residual.sugar=18. Decidim eliminar aquests valors atípics
+que hem trobat en el vi blanc, per considerar que són poques instàncies, que representen
+un `r round(length(n2[n2$residual.sugar>18,'residual.sugar'])/length(n2[,'residual.sugar'])*100,0)`% del total
+d'instàncies de vi blanc. Hem observat que la majoria de valors eliminats tenia un valor de qualitat 5,6,7,8 
+i això implicaria que un valor incorrecte del 'sucre residual' no fos una característica que ens ajudes a 
+discriminar la qualitat del vi.
+</p>
+
+```{r}
+# Eliminem les instàncies amb valors atípics incorrectes.
+n2<-n2[n2$residual.sugar<=18,]
+```
+
+<u>Atribut: <b>chlorides</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'chlorides'
+cat("Vi negre")
+bxplot_hist(n1$chlorides,'chlorides')
+cat("Vi blanc")
+bxplot_hist(n2$chlorides,'chlorides')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar inferior:",mean(n1$chlorides)-3*sd(n1$chlorides))
+# Llindar superior per el valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar superior:",mean(n1$chlorides)+3*sd(n1$chlorides))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'chlorides'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$chlorides)-3*sd(n2$chlorides))
+# Llindar superior per el valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar superior:",mean(n2$chlorides)+3*sd(n2$chlorides))
+```
+
+<p>
+En el cas dels clorurs també trobem valors extrems molt alts. Per tant actuem de la mateixa manera que amb el sucre residual. 
+Eliminem aquells valors que no estan en un rang de valors adient per Europa, ja que sabem que els vins són de Portugal i aquest
+valor de clorurs és força atípic.<br>
+El percentatge d'instàncies eliminades no és gaire gran: <br>
+<b>`r round(length(n1[n1$chlorides>0.22,'chlorides'])/length(n1[,'chlorides'])*100,0)`</b>% (vi negre).<br>
+<b>`r round(length(n2[n2$chlorides>0.11,'chlorides'])/length(n2[,'chlorides'])*100,0)`</b>% (vi blanc).
+
+</p>
+
+<u>Atribut: <b>free.sulfur.dioxide</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'free.sulfur.dioxide'
+cat("Vi negre")
+bxplot_hist(n1$free.sulfur.dioxide,'free.sulfur.dioxide')
+cat("Vi blanc")
+bxplot_hist(n2$free.sulfur.dioxide,'free.sulfur.dioxide')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar inferior:",mean(n1$free.sulfur.dioxide)-3*sd(n1$free.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n1$free.sulfur.dioxide)+3*sd(n1$free.sulfur.dioxide))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'free.sulfur.dioxide'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$free.sulfur.dioxide)-3*sd(n2$free.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n2$free.sulfur.dioxide)+3*sd(n2$free.sulfur.dioxide))
+```
+
+<p>
+En aquest cas suposem ....
+</p>
