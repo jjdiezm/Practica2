@@ -273,18 +273,131 @@ La taula que em pintat es coherent amb els boxplots, tots ténen outliers mes al
 Tot i això com que son mesures químiques **suposarem les dades correctes** ja que no podem afirmar que noes puguin trobar 440 de sulfurs per exemple.
 
 Una altra opció sería limitar substituir els màxims molt allunyats a 3 vegades la std però no ho farem. 
+Mostrem un exemple de com seria, tot i que no ho aplicarem:
 
 ```{r extem_values2}
 # df[df==""]<-NA
-dfinal <- d
-for (colu in columns){
-  dfinal[dfinal>mean(dfinal[,colu])+3*sd(dfinal[,colu]),colu]<-mean(dfinal[,colu])+3*sd(dfinal[,colu])
-  print(max(d[,colu]))
-  print(max(dfinal[,colu]))
-}
+# Exemple per fitar el máxims valors a mean + 3*std ho fem a un dataset auxiliar
+daux <- d
+# fixed.acidity
+daux$fixed.acidity[daux$fixed.acidity < (mean(daux$fixed.acidity)-3*sd(daux$fixed.acidity))]<-
+  mean(daux$fixed.acidity)-3*sd(daux$fixed.acidity)
+daux$fixed.acidity[daux$fixed.acidity > (mean(daux$fixed.acidity)+3*sd(daux$fixed.acidity))]<-
+  mean(daux$fixed.acidity)+3*sd(daux$fixed.acidity)
+# volatile.acidity
+daux$volatile.acidity[daux$volatile.acidity < (mean(daux$volatile.acidity)-
+                                                 3*sd(daux$volatile.acidity))]<-
+  mean(daux$volatile.acidity)-3*sd(daux$volatile.acidity)
+daux$volatile.acidity[daux$volatile.acidity > (mean(daux$volatile.acidity)+
+                                                  3*sd(daux$volatile.acidity))]<-
+  mean(daux$volatile.acidity)+3*sd(daux$volatile.acidity)
+# citric.acid
+daux$citric.acid[daux$citric.acid < (mean(daux$citric.acid)-3*sd(daux$citric.acid))]<-
+  mean(daux$citric.acid)-3*sd(daux$citric.acid)
+daux$citric.acid[daux$citric.acid > (mean(daux$citric.acid)+3*sd(daux$citric.acid))]<-
+  mean(daux$citric.acid)+3*sd(daux$citric.acid)
+# residual.sugar
+daux$residual.sugar[daux$residual.sugar < (mean(daux$residual.sugar)-
+                                             3*sd(daux$residual.sugar))]<-
+  mean(daux$residual.sugar)-3*sd(daux$residual.sugar)
+daux$residual.sugar[daux$residual.sugar > (mean(daux$residual.sugar)+
+                                             3*sd(daux$residual.sugar))]<-
+  mean(daux$residual.sugar)+3*sd(daux$residual.sugar)
+# chlorides
+daux$chlorides[daux$chlorides < (mean(daux$chlorides)-3*sd(daux$chlorides))]<-
+  mean(daux$chlorides)-3*sd(daux$chlorides)
+daux$chlorides[daux$chlorides > (mean(daux$chlorides)+3*sd(daux$chlorides))]<-
+  mean(daux$chlorides)+3*sd(daux$chlorides)
+# free.sulfur.dioxide
+daux$free.sulfur.dioxide[daux$free.sulfur.dioxide < (mean(daux$free.sulfur.dioxide)-
+                                                       3*sd(daux$free.sulfur.dioxide))]<-
+  mean(daux$free.sulfur.dioxide)-3*sd(daux$free.sulfur.dioxide)
+daux$free.sulfur.dioxide[daux$free.sulfur.dioxide > (mean(daux$free.sulfur.dioxide)+
+                                                       3*sd(daux$free.sulfur.dioxide))]<-
+  mean(daux$free.sulfur.dioxide)+3*sd(daux$free.sulfur.dioxide)
+# total.sulfur.dioxide
+daux$total.sulfur.dioxide[daux$total.sulfur.dioxide < (mean(daux$total.sulfur.dioxide)-
+                                                       3*sd(daux$total.sulfur.dioxide))]<-
+  mean(daux$total.sulfur.dioxide)-3*sd(daux$total.sulfur.dioxide)
+daux$total.sulfur.dioxide[daux$total.sulfur.dioxide > (mean(daux$total.sulfur.dioxide)+
+                                                       3*sd(daux$total.sulfur.dioxide))]<-
+  mean(daux$total.sulfur.dioxide)+3*sd(daux$total.sulfur.dioxide)
+# density
+daux$density[daux$density < (mean(daux$density)-3*sd(daux$density))]<-
+  mean(daux$density)-3*sd(daux$density)
+daux$density[daux$density > (mean(daux$density)+3*sd(daux$density))]<-
+  mean(daux$density)+3*sd(daux$density)
+# pH
+daux$pH[daux$pH < (mean(daux$pH)-3*sd(daux$pH))]<-
+  mean(daux$pH)-3*sd(daux$pH)
+daux$pH[daux$pH > (mean(daux$pH)+3*sd(daux$pH))]<-
+  mean(daux$pH)+3*sd(daux$pH)
+# sulphates
+daux$sulphates[daux$sulphates < (mean(daux$sulphates)-3*sd(daux$sulphates))]<-
+  mean(daux$sulphates)-3*sd(daux$sulphates)
+daux$sulphates[daux$sulphates > (mean(daux$sulphates)+3*sd(daux$sulphates))]<-
+  mean(daux$sulphates)+3*sd(daux$sulphates)
+# alcohol
+daux$alcohol[daux$alcohol < (mean(daux$alcohol)-3*sd(daux$alcohol))]<-
+  mean(daux$alcohol)-3*sd(daux$alcohol)
+daux$alcohol[daux$alcohol > (mean(daux$alcohol)+3*sd(daux$alcohol))]<-
+  mean(daux$alcohol)+3*sd(daux$alcohol)
 
+# cat("Valor màxim al dataset original: ",max(d$fixed.acidity), "\n")
+# cat("Valor de mean + 3*std al dataset original: ",
+#    mean(d$fixed.acidity)+3*sd(d$fixed.acidity), "\n")
+# cat("Valor màxim al dataset auxiliar: ",max(daux$fixed.acidity), "\n")
+
+
+# Tornem a montar el dataframe per a mostrar els valors mínims i màxmims
+# la mitjana i el valor de mitjana +- 3*std al DataSet Auxiliar
+
+tableOutliers <- data.frame(
+  variables = columns,
+  stringsAsFactors = FALSE
+)
+
+# Valor Mínim
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(min(daux[,colu])) 
+}
+tableOutliers[,"Valor mínim"] <- vectorTemp
+
+# Mitjana - 3sd
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(mean(d[,colu])-3*sd(d[,colu])) 
+}
+tableOutliers[,"Mitjana - 3 std"] <- vectorTemp
+
+# Mitjana
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(mean(d[,colu]))
+}
+tableOutliers[,"Mitjana"] <- vectorTemp
+
+# Mitjana + 3sd
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(mean(d[,colu])+3*sd(d[,colu])) 
+}
+tableOutliers[,"Mitjana + 3 std"] <- vectorTemp
+
+# Valor Máxim
+vectorTemp = c()
+for (colu in columns) {
+   vectorTemp[colu] <- c(max(daux[,colu])) 
+}
+tableOutliers[,"Valor máxim"] <- vectorTemp
+
+# Pintem la taula
+knitr::kable(tableOutliers)%>%kable_styling(bootstrap_options = c("striped", "hover"))
 
 ```
+
+Tot i això al DataSet que fem servir **mantenim els outliers**. Aquest dataset auxiliar ens pot servir per fer comparacions.
 
 ## 2.4 Anàlisi de les dades.
 
