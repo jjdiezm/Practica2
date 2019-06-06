@@ -404,7 +404,7 @@ library(pROC)         #  Representar i calcular corbes ROC i AUROC.</code></pre>
 # Localització del fitxer de fonts de dades 'rawData.csv'.
 setwd(&quot;D:/_UOC/CursMaster/11-Tipologia_i_Cicle_de_Vida_de_Dades/PRACTICA_2/codi/codiH/Practica2&quot;)</code></pre>
 <p style="color:royalblue">
-<b> CARREGAR L’ARXIU DE DADES A L’ENTORN DE TREBALL DE R (R STUDIO) - winequality-red.csv i winequality-white.csv </b>
+<b> CARREGAR ELS ARXIUS DE DADES A L’ENTORN DE TREBALL DE R (R STUDIO) - winequality-red.csv i winequality-white.csv </b>
 </p>
 <pre class="r"><code># Lectura del fitxer amb la funció 'read.csv' perque visualitzats els separadors es la que
 # per defecte ja té definits els paràmetres més correctes.
@@ -443,47 +443,50 @@ head(n1,2)</code></pre>
 <b> 1. DESCRIPCIÓ DEL DATASET. PERQUÈ ÉS IMPORTANT I QUINA PREGUNTA PRETÉN RESPONDRE?</b>
 </p>
 <p>
-El dataset ‘Red Wine’ emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi negre de la zona nord de Portugal. Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d’alcohol, nivell d’acidesa, contingut residual de sucres etc…). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
+El dataset ‘Red Wine’ emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi “Vinho Verde”, <b>negre</b> i 4898 de &lt;b&lt;blanc</b>, de la zona nord de Portugal. Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d’alcohol, nivell d’acidesa, contingut residual de sucres etc…). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
 </p>
 <p>
-Emprearem aquest dataset per respondre a la pregunta de <b>quínes característiques principals defineixen un vi de qualitat?, Varien si es tracta d’un vi negre o blanc?.</b>
+Emprearem aquest dataset per respondre a la pregunta de <b>quínes característiques principals defineixen un vi de qualitat?. Cercarem si aquestes canvien segons el color del vi, negre o blanc.</b>
+</p>
+<p>
+Infromació a tenir en compte:<br> ‘Vinho verde’ és un producte únic de la regió de Minho (nord-oest) de Portugal. Es apreciat per les característiques: Alcohol grau mig, i especialment per la seva frescor.
 </p>
 <p>
 Descripció dels atributs o camps del datatset:
 </p>
 <ul>
 <li>
-<b>fixed.acidity</b> (Acidesa fixe): És la quantitat d’àcidesa que no s’evapora i per tant resta fixe al vi.
+<b>fixed.acidity</b> (Acidesa fixe) [Unitats: g(tartaric acid)/l]: És la quantitat d’àcidesa que no s’evapora i per tant resta fixe al vi.
 </li>
 <li>
-<b>volatile.acidity</b> (Acidesa volàtil): La quantitat en excès d’àcid acètic en vi, pot afegir sabor amarg o avinagrat, si les quantitats són altes.
+<b>volatile.acidity</b> (Acidesa volàtil)[Unitats: g(acetic acid)/l]: La quantitat en excès d’àcid acètic en vi, pot afegir sabor amarg o avinagrat, si les quantitats són altes.
 </li>
 <li>
-<b>citric.acid</b> Àcid cítric: trobat en petites quantitas, l’àcid cítric pot afegir frescor i sabor als vins.
+<b>citric.acid</b> (Àcid cítric) [Unitats: g/l]: trobat en petites quantitas, l’àcid cítric pot afegir frescor i sabor als vins.
 </li>
 <li>
-<b>residual.sugar</b> Sucre residual: Quantitat de sucre derivada del procés de fermentació (normalment trobem més de 1 gr/litre i si supera els 45grm./litre considerem el vi dolç.
+<b>residual.sugar</b> (Sucre residual) [Unitats: g/l]: Quantitat de sucre derivada del procés de fermentació (normalment trobem més de 1 gr/litre i si supera els 45grm./litre considerem el vi dolç.
 </li>
 <li>
-<b>chlorides</b> Clorurs: la quantitat de sal del vi
+<b>chlorides</b> (Clorurs) [Unitats: g(sodium chloride)/l]: la quantitat de sal del vi
 </li>
 <li>
-<b>free.sulfur.dioxide</b> Diòxid de sofre: Prevé el creixement microbià i l’oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits
+<b>free.sulfur.dioxide</b> (Diòxid de sofre) [Unitats: mg/l]: Prevé el creixement microbià i l’oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits
 </li>
 <li>
-<b>total.sulfur.dioxide</b> total diòxide de sofre total (lliure i unit): concentracions per sobre de 50 ppm, Es detecta per olfacte i tast. Les quantitats excessives de SO2 poden inhibir la fermentació i causar efectes sensorials indesitjables.
+<b>total.sulfur.dioxide</b> (Diòxide de sofre (lliure i unit) [Unitats: mg/l]: concentracions per sobre de 50 ppm, Es detecta per olfacte i tast. Les quantitats excessives de SO2 poden inhibir la fermentació i causar efectes sensorials indesitjables.
 </li>
 <li>
-<b>density</b> Densitat: serà propera a la de l’aigua (997 kg/m³) i variaria segons les quantitats de sucre i alcohol, segons la qualitat de la fermentació.
+<b>density</b> (Densitat) [Unitats: g/dl]: serà propera a la de l’aigua (997 kg/m³) i variaria segons les quantitats de sucre i alcohol, segons la qualitat de la fermentació.
 </li>
 <li>
-<b>pH</b> pH: descriu com un vi àcid o bàsic és a una escala de 0 (molt àcida) a 14 (molt bàsica); la majoria dels vins tenen entre 3-4 a l’escala de pH.
+<b>pH</b> (pH): descriu com un vi àcid o bàsic és a una escala de 0 (molt àcida) a 14 (molt bàsica); la majoria dels vins tenen entre 3-4 a l’escala de pH.
 </li>
 <li>
-<b>sulphates</b> Sulfats: un additiu de vi que pot contribuir als nivells de diòxid de sofre (S02), que actuen com a antimicrobians i antioxidants
+<b>sulphates</b> (Sulfats) [Unitats: g(potassium sulphate)/l]: un additiu de vi que pot contribuir als nivells de diòxid de sofre (S02), que actuen com a antimicrobians i antioxidants
 </li>
 <li>
-<b>alcohol</b> Alcohol: el percentatge de contingut alcohòlic del vi, és una variable de sortida (basada en dades sensorials)
+<b>alcohol</b> (Alcohol) [Unitats: vol.%]: el percentatge de contingut alcohòlic del vi, és una variable de sortida (basada en dades sensorials)
 </li>
 <li>
 <b>quality</b> Qualitat (escala 0-10).
@@ -493,12 +496,14 @@ Descripció dels atributs o camps del datatset:
 </li>
 </ul>
 </p>
-##2. Integració i selecció.
+</div>
+<div id="integracio-i-seleccio." class="section level2">
+<h2>2. Integració i selecció.</h2>
 <p style="color:royalblue">
-<b> Integració i selecció de les dades d’interès a analitzar</b>
+<b> Integració i selecció de les dades d’interès a analitzar.</b>
 </p>
 <p>
-Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l’altre dels vins negres, per tant ens interesera comprovar que tenen les mateixes capçalers i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna ‘color’ que identificara la font de les files o mostres emmagatzemant el color del vi amb valors (blanc)
+Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l’altre dels vins negres, per tant epodem comprovar que tenen les mateixes capçalers i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna ‘color’ que identificara la font de les files o mostres emmagatzemant el color del vi amb valors (blanc/negre).
 </p>
 <pre class="r"><code># Volem analitzar el dataset de Red Wine tenint en compte el color del vi, afegim una columna 'color',
 # i fusionem les dades tant dels vins blancs com dels negres, diferentciant-los per el camp color.
@@ -521,7 +526,31 @@ d$color&lt;-factor(d$color)
 cat(&quot;Files - Instàncies:&quot;,nrow(d),&quot;\nColumnes-Atributs-Variables:&quot;,ncol(d),&quot;\n&quot;)</code></pre>
 <pre><code>## Files - Instàncies: 6497 
 ## Columnes-Atributs-Variables: 13</code></pre>
+<p>
+En aquest moment cal revisar l’estructura del dataset i veure que cada camp està ben definit amb el seu tipus de dades correcte, mitjançant l’ordre ‘str’:
+</p>
 <pre class="r"><code># L'estructura de camps del datatset: tipus i rang de valors els podem obtenir de l'ordre Summary():
+str(d)</code></pre>
+<pre><code>## 'data.frame':    6497 obs. of  13 variables:
+##  $ fixed.acidity       : num  7.4 7.8 7.8 11.2 7.4 7.4 7.9 7.3 7.8 7.5 ...
+##  $ volatile.acidity    : num  0.7 0.88 0.76 0.28 0.7 0.66 0.6 0.65 0.58 0.5 ...
+##  $ citric.acid         : num  0 0 0.04 0.56 0 0 0.06 0 0.02 0.36 ...
+##  $ residual.sugar      : num  1.9 2.6 2.3 1.9 1.9 1.8 1.6 1.2 2 6.1 ...
+##  $ chlorides           : num  0.076 0.098 0.092 0.075 0.076 0.075 0.069 0.065 0.073 0.071 ...
+##  $ free.sulfur.dioxide : num  11 25 15 17 11 13 15 15 9 17 ...
+##  $ total.sulfur.dioxide: num  34 67 54 60 34 40 59 21 18 102 ...
+##  $ density             : num  0.998 0.997 0.997 0.998 0.998 ...
+##  $ pH                  : num  3.51 3.2 3.26 3.16 3.51 3.51 3.3 3.39 3.36 3.35 ...
+##  $ sulphates           : num  0.56 0.68 0.65 0.58 0.56 0.56 0.46 0.47 0.57 0.8 ...
+##  $ alcohol             : num  9.4 9.8 9.8 9.8 9.4 9.4 9.4 10 9.5 10.5 ...
+##  $ quality             : int  5 5 5 6 5 5 5 7 7 5 ...
+##  $ color               : Factor w/ 2 levels &quot;blanc&quot;,&quot;negre&quot;: 2 2 2 2 2 2 2 2 2 2 ...</code></pre>
+<pre class="r"><code># write.csv(d,&quot;Dataset_inicial.csv&quot;,row.names = FALSE)</code></pre>
+<p>
+Per obtenir un resum descriptiu estadístic de cada atribut usem l’ordre ‘summary()’:
+</p>
+<pre class="r"><code># Resum de dades del datatset: min, max, mediana, mitjana i existència de valors NA, 
+#☺ factors en camps categòrics etc...  -&gt;ordre Summary():
 summary(d)</code></pre>
 <pre><code>##  fixed.acidity    volatile.acidity  citric.acid     residual.sugar  
 ##  Min.   : 3.800   Min.   :0.0800   Min.   :0.0000   Min.   : 0.600  
@@ -553,8 +582,65 @@ summary(d)</code></pre>
 ##  Max.   :9.000</code></pre>
 <pre class="r"><code># write.csv(d,&quot;Dataset_inicial.csv&quot;,row.names = FALSE)</code></pre>
 <p>
-En principi ens quedem amb tots els atributs i més tard en la fase d’analisi determinarem si es possible una reducció de camps. ara per ara podem comptar amb tots els camps disponibles al dataset per esbrinar quíns ens determinaran els vins de millor qualitat.
+Per tal de seleccionar les dades adequades podem observar com és comporta la variable depenent ‘qualitat’ en quan a que la mostra que disposem sigui representativa
 </p>
+<p>
+En principi ens quedem amb tots els atributs i més tard en la fase d’analisi determinarem si es possible una reducció de camps. Ara per ara podem comptar amb tots els camps disponibles al dataset per esbrinar quíns ens determinaran els vins de millor qualitat, ja que cada característica és candidata per formar part de la composició del vi, i el color ens permerà comparar el seu grau d’importància segons tipus de vi.
+</p>
+<p>
+A més a més, de la recerca que hem fet sobre el vi ‘Vinho verde’, sabem que tant el camp ‘alcohol’, com el camp ‘citric.acid’ seràn importants, ja que són característiques importants del vi (graduació mitjana en alcohol i sabor fresc).
+</p>
+<pre class="r"><code>cat(&quot;Atributs considerats:\n &quot;)</code></pre>
+<pre><code>## Atributs considerats:
+## </code></pre>
+<pre class="r"><code>colnames(d)</code></pre>
+<pre><code>##  [1] &quot;fixed.acidity&quot;        &quot;volatile.acidity&quot;     &quot;citric.acid&quot;         
+##  [4] &quot;residual.sugar&quot;       &quot;chlorides&quot;            &quot;free.sulfur.dioxide&quot; 
+##  [7] &quot;total.sulfur.dioxide&quot; &quot;density&quot;              &quot;pH&quot;                  
+## [10] &quot;sulphates&quot;            &quot;alcohol&quot;              &quot;quality&quot;             
+## [13] &quot;color&quot;</code></pre>
+</div>
+<div id="neteja-de-dades." class="section level2">
+<h2>3. Neteja de dades.</h2>
+<p style="color:royalblue">
+<b> <br> 3.1. Les dades contenen zeros o elements buits? Com gestionaries aquests casos?<br> 3.2. Identificació i tractament de valors extrems.<br></b>
+</p>
+<p>
+Per la ordre ‘summary()’, pogut observar que no tenim valors nuls, però també ho podem comprovar mitjançant la següent ordre, que ens permet contar tots els valors NULL del dataframe. Un valor de zero ens confirma que no n’hi ha cap.
+</p>
+<pre class="r"><code># Si la suma és major que 0 significa que algun valor NA o NULL existeix en el dataframe.
+sum(is.na.data.frame(d))</code></pre>
+<pre><code>## [1] 0</code></pre>
+<p>
+No es necessari per tant, replenar valors de camps on el valor és NULL.<br> La gestió d’aquests cassos, per aquest dataset podria ser omplir el valor faltant amb el resultat d’usar la imputació per kNN, (‘k-Nearest Neighbors’, es a dir els k-veïns més propers) per omplir els valors perduts (‘NA’).<br> Per defecte s’utilitza un valor de <b>k</b>=<b>5</b> que representa els 5 registres veïns més propers. La mètrica usada podría ser la distància de Gower, usant la resta de variables. El valor usat en la substitució és la mediana d’aquests 5 valors.<br> Aquesta tècnica és robusta quan existeixen valors extrems (en anglès ‘outliers’). Si sabem que els valors de la mitjana i la mediana són molt propers, podem substituïr els valors faltants per la mitjana o mediana de l’atribut en qüestió.
+</p>
+<p>
+<p>Per identificar els valors extrems, podem utilitzar l’ordre ‘boxplot.stats’ i el paràmetre de sortida ‘out’ que determina els valors extrems. Es consideren normalment valors extrems o atípics en una mostra, aquells que superen els límits de 3 vegades la desviació típica a banda i banda de la mitjana de la mostra.<br> Per descriure els valors extrems i la distribució de cada variable hem definit una funció personalitzada on podem observar el histograma, el boxplot (amb valors descriptius com bigotis i mediana) en la mateixa escala i els valors extrems cercats:</p>
+</p>
+<pre class="r"><code>bxplot_hist&lt;- function(camp,lbcamp){
+  par(mfrow=c(2,1))
+  boxplot(camp,border=&quot;dodgerblue&quot;, ylim=c(min(camp,na.rm = TRUE),max(camp,na.rm = TRUE)), horizontal = TRUE)
+  hist(camp,xlim = c(min(camp,na.rm = TRUE),max(camp,na.rm = TRUE)), main=&quot;&quot;,xlab = lbcamp, ylab=&quot;Freqüència&quot;, border=&quot;blue&quot;)
+  # Descripció dels valors dels límits d'interpretació del boxplot
+  # Vector $Stats indica consecutivament els valors de:
+  #    Bigoti inferior, Q1(25%), Mediana, Q3(75%), Bigoti superior.
+  # Vector $out  ens proporciona els valors atípics ordenats ascendentment.
+  r&lt;-boxplot.stats(camp)
+  cat(&quot;Valors atípics:\n  &quot;,r$out,&quot;\n&quot;)
+  cat(&quot;Valors del boxplot:\n1) Bigoti inf.:&quot;,r$stats[1],&quot;\n2) Q1(25%)    :&quot;, r$stats[2],&quot;\n3) Mediana    :&quot;,r$stats[3],&quot;\n4) Q3(75%)    :&quot;, r$stats[4],&quot;\n5) Bigoti Sup.:&quot;, r$stats[5],&quot;\n&quot;)
+  }</code></pre>
+<pre class="r"><code># Valors extrems de 'fixed.acidity'
+#bxp&lt;-boxplot.stats(d$fixed.acidity)
+bxplot_hist(d[,'fixed.acidity'],'fixed.acidity')</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAAA21BMVEUAAAAAADoAAGYAAP8AOjoAOmYAOpAAZmYAZrYekP86AAA6OgA6Ojo6OmY6ZmY6ZpA6ZrY6kJA6kNtmAABmADpmOgBmOjpmOmZmZjpmZmZmZpBmkLZmkNtmtrZmtttmtv+QOgCQZjqQZmaQkDqQkGaQkJCQkLaQtraQttuQ29uQ2/+2ZgC2Zjq2kDq2kGa2tpC2tra2ttu227a229u22/+2///bkDrbkGbbtmbbtpDbtrbbttvb25Db27bb29vb2//b/7bb////tmb/25D/27b/29v//7b//9v///89zERaAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO3de2Pb1pngYSoTZxTFHnvsdaZuuk7c2Zl4K4/rblLVzm6ciXyRvv8nWgK84UZJfHUInEM9zx+tLFPQG4L4GSBBcHYJQMhs6gEASiWgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEECChAkoABBAgoQJKAAQQIKECSgAEEC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" width="672" style="display: block; margin: auto;" /></p>
+<pre><code>## Valors atípics:
+##    11.2 10.2 9.7 10.1 11.5 12.8 12.8 11 9.7 11.6 12 15 15 10.8 11.1 10 12.5 11.8 11.5 11.5 10.9 11.5 10.3 11.4 9.9 9.9 12 11.6 11 10.4 13.3 10.8 10.6 11.1 10.3 10.3 10.3 10.3 9.8 9.8 10.3 10 10 11.6 10.3 13.4 10.7 10.2 10.2 11.9 12.4 12.5 12.2 10.6 10.9 10.9 11.9 13.8 10.7 13.5 11.5 10.5 11.9 12.6 11.9 12.5 12.8 10 12.8 10.4 10.3 14 11.5 11.5 11.4 13.7 13.7 12.7 12 11.5 11.5 12.2 11.4 9.8 12 10.4 12.5 9.9 10.6 11.9 10.5 12.8 10.5 11.9 12.3 10.4 12.3 11.1 10.4 12.6 11.9 15.6 10 12.5 11.9 11.9 10.4 11.3 10.4 11.6 11 11.5 10 10.3 11.4 13 12.5 9.9 10.5 10.4 10.6 10.6 10.6 10.6 10.2 10.2 10.2 11.6 10.7 10.7 10.4 10.4 10.5 10.5 10.2 10.4 11.2 10 13.3 12.4 10 10.7 10.5 10.5 12.5 10.4 10.9 9.8 10.4 9.9 11.9 11.9 10.3 10 9.9 12.9 11.2 11.2 14.3 10.6 12.4 15.5 15.5 10.9 15.6 10.9 13 12.7 13 12.7 9.8 11.5 10.2 10.5 10.6 12.3 9.9 10.6 12.3 12.3 11.7 12 11.8 11.1 10.2 9.9 12.4 11.9 12.7 13.2 13.2 10.1 13.2 11.5 11.4 11.3 10 10.4 10.1 9.9 9.9 9.9 10.7 9.8 15.9 9.7 10.7 12 10.1 12.1 11.3 10 11.3 9.8 10.8 10.8 10.8 13.3 9.8 11.8 10.6 9.7 10.6 9.9 11.6 11.1 9.9 9.9 10 10 10.1 10.8 12.9 10.8 12.6 10.8 9.8 10.8 10.4 11.6 10.1 11.1 10.6 9.9 11.7 10.4 10.7 10.7 10.1 10 12 9.9 10.1 9.8 10.2 10.2 10.2 10.4 10.4 10.1 12.2 12.2 9.8 9.7 10 9.9 10.5 11.3 11.3 10.1 9.9 11.6 10.2 11.1 11.1 9.9 10.3 11.6 11.6 10 10.8 10.7 10 10.5 10.4 10.4 10 10 10.2 10.6 9.9 9.7 9.8 10.2 9.9 9.9 10.2 10.9 10.9 10.5 12.6 10.2 9.8 9.8 10.4 9.8 11.3 9.7 9.7 9.9 9.7 11.5 11.6 11.6 9.9 10 10 10.2 10.2 10 11.7 10 9.9 9.9 11.1 11.2 9.8 9.8 10.2 10 10.3 9.8 9.8 9.7 10.3 9.7 10.7 10.7 9.8 14.2 9.8 10 10 9.9 11.8 9.8 9.9 9.8 4.2 9.7 9.7 4.2 3.8 4.4 4.4 3.9 4.4 
+## Valors del boxplot:
+## 1) Bigoti inf.: 4.5 
+## 2) Q1(25%)    : 6.4 
+## 3) Mediana    : 7 
+## 4) Q3(75%)    : 7.7 
+## 5) Bigoti Sup.: 9.6</code></pre>
 </div>
 
 

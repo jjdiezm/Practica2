@@ -95,7 +95,7 @@ setwd("D:/_UOC/CursMaster/11-Tipologia_i_Cicle_de_Vida_de_Dades/PRACTICA_2/codi/
 
 
 <p style="color:royalblue"><b>
- CARREGAR L'ARXIU DE DADES A L’ENTORN DE TREBALL DE R (R STUDIO) - winequality-red.csv i winequality-white.csv
+ CARREGAR ELS ARXIUS DE DADES A L’ENTORN DE TREBALL DE R (R STUDIO) - winequality-red.csv i winequality-white.csv
 </b></p>
 
 ```{r}
@@ -120,40 +120,45 @@ head(n2,2)
 </p>
 
 <p>
-El dataset 'Red Wine' emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi negre de la zona nord de Portugal. Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d'alcohol, nivell d'acidesa, contingut residual de sucres etc...). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
+El dataset 'Red Wine' emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi "Vinho Verde", <b>negre</b> i 4898 de <b<blanc</b>, de la zona nord de Portugal. Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d'alcohol, nivell d'acidesa, contingut residual de sucres etc...). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
 </p>
 
 <p>
-Emprearem aquest dataset per respondre a la pregunta de <b>quínes característiques principals defineixen un vi de qualitat?, Varien si es tracta d'un vi negre o blanc?.</b> 
+Emprearem aquest dataset per respondre a la pregunta de <b>quínes característiques principals defineixen un vi de qualitat?. Cercarem si aquestes canvien segons el color del vi, negre o blanc.</b> 
+</p>
+<p>
+Infromació a tenir en compte:<br>
+'Vinho verde' és un producte únic de la regió de Minho (nord-oest) de Portugal. 
+Es apreciat per les característiques: Alcohol grau mig, i especialment per la seva frescor.
 </p>
 
 <p> 
 Descripció dels atributs o camps del datatset:
 </p>
 <ul>
-<li><b>fixed.acidity</b> (Acidesa fixe): És la quantitat d'àcidesa que no s'evapora i per tant resta fixe al vi.</li>
-<li><b>volatile.acidity</b> (Acidesa volàtil): La quantitat en excès d'àcid acètic en vi, pot afegir sabor amarg o avinagrat, si les quantitats són altes.</li>
-<li><b>citric.acid</b> Àcid cítric: trobat en petites quantitas, l'àcid cítric pot afegir frescor i sabor als vins.</li>
-<li><b>residual.sugar</b> Sucre residual: Quantitat de sucre derivada del procés de fermentació (normalment trobem més de 1 gr/litre i si supera els 45grm./litre considerem el vi dolç.</li>
-<li><b>chlorides</b> Clorurs: la quantitat de sal del vi</li>
-<li><b>free.sulfur.dioxide</b> Diòxid de sofre: Prevé el creixement microbià i l'oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits</li>
-<li><b>total.sulfur.dioxide</b> total diòxide de sofre total (lliure i unit): concentracions per sobre de 50 ppm, Es detecta per olfacte i tast. Les quantitats excessives de SO2 poden inhibir la fermentació i causar efectes sensorials indesitjables.</li>
-<li><b>density</b> Densitat: serà propera a la de l'aigua (997 kg/m³) i variaria segons les quantitats de sucre i alcohol, segons la qualitat de la fermentació.</li>
-<li><b>pH</b> pH: descriu com un vi àcid o bàsic és a una escala de 0 (molt àcida) a 14 (molt bàsica); la majoria dels vins tenen entre 3-4 a l'escala de pH.</li>
-<li><b>sulphates</b> Sulfats: un additiu de vi que pot contribuir als nivells de diòxid de sofre (S02), que actuen com a antimicrobians i antioxidants</li>
-<li><b>alcohol</b> Alcohol: el percentatge de contingut alcohòlic del vi, és una variable de sortida (basada en dades sensorials)</li>
+<li><b>fixed.acidity</b> (Acidesa fixe) [Unitats: g(tartaric acid)/l]: És la quantitat d'àcidesa que no s'evapora i per tant resta fixe al vi.</li>
+<li><b>volatile.acidity</b> (Acidesa volàtil)[Unitats: g(acetic acid)/l]: La quantitat en excès d'àcid acètic en vi, pot afegir sabor amarg o avinagrat, si les quantitats són altes.</li>
+<li><b>citric.acid</b> (Àcid cítric) [Unitats: g/l]: trobat en petites quantitas, l'àcid cítric pot afegir frescor i sabor als vins.</li>
+<li><b>residual.sugar</b> (Sucre residual) [Unitats: g/l]: Quantitat de sucre derivada del procés de fermentació (normalment trobem més de 1 gr/litre i si supera els 45grm./litre considerem el vi dolç.</li>
+<li><b>chlorides</b> (Clorurs) [Unitats: g(sodium chloride)/l]: la quantitat de sal del vi</li>
+<li><b>free.sulfur.dioxide</b> (Diòxid de sofre)  [Unitats: mg/l]: Prevé el creixement microbià i l'oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits</li>
+<li><b>total.sulfur.dioxide</b> (Diòxide de sofre (lliure i unit) [Unitats: mg/l]: concentracions per sobre de 50 ppm, Es detecta per olfacte i tast. Les quantitats excessives de SO2 poden inhibir la fermentació i causar efectes sensorials indesitjables.</li>
+<li><b>density</b> (Densitat) [Unitats: g/dl]: serà propera a la de l'aigua (997 kg/m³) i variaria segons les quantitats de sucre i alcohol, segons la qualitat de la fermentació.</li>
+<li><b>pH</b> (pH): descriu com un vi àcid o bàsic és a una escala de 0 (molt àcida) a 14 (molt bàsica); la majoria dels vins tenen entre 3-4 a l'escala de pH.</li>
+<li><b>sulphates</b> (Sulfats) [Unitats: g(potassium sulphate)/l]: un additiu de vi que pot contribuir als nivells de diòxid de sofre (S02), que actuen com a antimicrobians i antioxidants</li>
+<li><b>alcohol</b> (Alcohol) [Unitats: vol.%]: el percentatge de contingut alcohòlic del vi, és una variable de sortida (basada en dades sensorials)</li>
 <li><b>quality</b> Qualitat (escala 0-10).</li>
 <li><b>color</b> Determina si el vi és blanc o negre.</li>
 </ul>
 </p>
 
-##2. Integració i selecció.
+## 2. Integració i selecció.
 <p style="color:royalblue"><b>
-Integració i selecció de les dades d’interès a analitzar</b>
+Integració i selecció de les dades d’interès a analitzar.</b>
 </p>
 
 <p>
-Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l'altre dels vins negres, per tant ens interesera comprovar que tenen les mateixes capçalers i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna 'color' que identificara la font de les files o mostres emmagatzemant el color del vi amb valors (blanc)
+Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l'altre dels vins negres, per tant epodem comprovar que tenen les mateixes capçalers i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna 'color' que identificara la font de les files o mostres emmagatzemant el color del vi amb valors (blanc/negre).
 </p>
 
 ```{r}
@@ -177,15 +182,119 @@ d$color<-factor(d$color)
 # Dimensions del dataset:
 cat("Files - Instàncies:",nrow(d),"\nColumnes-Atributs-Variables:",ncol(d),"\n")
 
-# L'estructura de camps del datatset: tipus i rang de valors els podem obtenir de l'ordre Summary():
-summary(d)
-# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+
 
 ```
 
 <p>
-En principi ens quedem amb tots els atributs i més tard en la fase d'analisi determinarem si es possible una reducció de camps.
-ara per ara podem comptar amb tots els camps disponibles al dataset per esbrinar quíns ens determinaran els vins de millor qualitat.
+En aquest moment cal revisar l'estructura del dataset i veure que cada camp està ben definit amb el seu tipus 
+de dades correcte, mitjançant l'ordre 'str':
 </p>
+
+```{r}
+# L'estructura de camps del datatset: tipus i rang de valors els podem obtenir de l'ordre Summary():
+str(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+```
+
+<p>
+Per obtenir un resum descriptiu estadístic de cada atribut usem l'ordre 'summary()':
+</p>
+
+```{r}
+# Resum de dades del datatset: min, max, mediana, mitjana i existència de valors NA, 
+#☺ factors en camps categòrics etc...  ->ordre Summary():
+summary(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+```
+
+<p>
+Per tal de seleccionar les dades adequades podem observar com és comporta la variable depenent 'qualitat'
+en quan a que la mostra que disposem sigui representativa
+</p>
+<p>
+En principi ens quedem amb tots els atributs i més tard en la fase d'analisi determinarem si es possible una reducció de camps.
+Ara per ara podem comptar amb tots els camps disponibles al dataset per esbrinar quíns ens determinaran els vins de millor qualitat, ja que cada característica és candidata per formar part de la composició del vi, i el color ens permerà comparar el seu grau d'importància segons tipus de vi.
+</p>
+
+<p>
+A més a més, de la recerca que hem fet sobre el vi 'Vinho verde', sabem que tant el camp 'alcohol', com el camp 'citric.acid' seràn importants, ja que són característiques importants del vi (graduació mitjana en alcohol i sabor fresc).
+</p>
+
+```{r}
+cat("Atributs considerats:\n ")
+colnames(d)
+
+```
+
+## 3. Neteja de dades.
+<p style="color:royalblue"><b>
+<br>
+3.1. Les dades contenen zeros o elements buits? Com gestionaries aquests casos?<br>
+3.2. Identificació i tractament de valors extrems.<br></b>
+</p>
+
+<p>
+Per la ordre 'summary()', pogut observar que no tenim valors nuls, però també ho podem comprovar mitjançant 
+la següent ordre, que ens permet contar tots els valors NULL del dataframe. Un valor de zero ens confirma que
+no n'hi ha cap.
+</p>
+
+```{r}
+# Si la suma és major que 0 significa que algun valor NA o NULL existeix en el dataframe.
+sum(is.na.data.frame(d))
+
+```
+
+<p>
+No es necessari per tant, replenar valors de camps on el valor és NULL.<br>
+La gestió d'aquests cassos, per aquest dataset podria ser omplir el valor faltant amb el resultat d'usar 
+la imputació per kNN, ('k-Nearest Neighbors', es a dir els k-veïns més propers) per omplir els valors perduts ('NA').<br>
+Per defecte s'utilitza un valor de <b>k</b>=<b>5</b> que representa els 5 registres veïns més propers. La mètrica usada podría
+ser la distància de Gower, usant la resta de variables. El valor usat en la substitució és la mediana d'aquests 5 valors.<br>
+Aquesta tècnica és robusta quan existeixen valors extrems (en anglès 'outliers'). Si sabem que els valors de la mitjana i la mediana
+són molt propers, podem substituïr els valors faltants per la mitjana o mediana de l'atribut en qüestió.
+</p>
+
+
+
+<p>
+Per identificar els valors extrems, podem utilitzar l'ordre 'boxplot.stats' i el paràmetre de sortida 'out' que determina 
+els valors extrems. Es consideren normalment valors extrems o atípics en una mostra, aquells que superen els límits de 3 vegades 
+la desviació típica a banda i banda de la mitjana de la mostra.<br>
+Per descriure els valors extrems i la distribució de cada variable hem definit una funció personalitzada on podem observar el histograma, 
+el boxplot (amb valors descriptius com bigotis i mediana) en la mateixa escala i els valors extrems cercats:
+
+</p>
+
+```{r}
+bxplot_hist<- function(camp,lbcamp){
+  par(mfrow=c(2,1))
+  boxplot(camp,border="dodgerblue", ylim=c(min(camp,na.rm = TRUE),max(camp,na.rm = TRUE)), horizontal = TRUE)
+  hist(camp,xlim = c(min(camp,na.rm = TRUE),max(camp,na.rm = TRUE)), main="",xlab = lbcamp, ylab="Freqüència", border="blue")
+  # Descripció dels valors dels límits d'interpretació del boxplot
+  # Vector $Stats indica consecutivament els valors de:
+  #    Bigoti inferior, Q1(25%), Mediana, Q3(75%), Bigoti superior.
+  # Vector $out  ens proporciona els valors atípics ordenats ascendentment.
+  r<-boxplot.stats(camp)
+  cat("Valors atípics:\n  ",r$out,"\n")
+  cat("Valors del boxplot:\n1) Bigoti inf.:",r$stats[1],"\n2) Q1(25%)    :", r$stats[2],"\n3) Mediana    :",r$stats[3],"\n4) Q3(75%)    :", r$stats[4],"\n5) Bigoti Sup.:", r$stats[5],"\n")
+  }
+```
+
+```{r}
+# Valors extrems de 'fixed.acidity'
+#bxp<-boxplot.stats(d$fixed.acidity)
+bxplot_hist(d[,'fixed.acidity'],'fixed.acidity')
+
+
+
+```
+
+
+
+
+
+
 
 
