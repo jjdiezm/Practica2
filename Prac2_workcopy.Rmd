@@ -47,6 +47,17 @@ if(!require(gridExtra)){
   install.packages('gridExtra', repos='http://cran.us.r-project.org')
   library(gridExtra)
 }
+
+# Per correlacions
+if(!require(Hmisc)){
+  install.packages('Hmisc', repos='http://cran.us.r-project.org')
+  library(Hmisc)
+}
+
+if(!require(corrgram)){
+  install.packages('corrgram', repos='http://cran.us.r-project.org')
+  library(corrgram)
+}
 ```
 
 \newpage
@@ -402,8 +413,117 @@ Tot i això al DataSet que fem servir **mantenim els outliers**. Aquest dataset 
 ## 2.4 Anàlisi de les dades.
 
 ### 2.4.1 Selecció dels grups de dades i planificació dels anàlisis.
+Aplicarem l'estudi a totes les variables, estudiant de per una banda les dades de vins blancs, per una altra les dades de vins negres i finalment en conjunt.
+
+També comprovarem si es viable reduïr les variables.
+
+Abans de res mirarem la influencia de cada variable amb la qualitat del vi:
+
+```{r seleccio_dades}
+# Creem un nou atribut factoritzant qualitat per fer gràfiques
+dsRed$quality.factor <- as.factor(dsRed$quality)
+dsWhite$quality.factor <- as.factor(dsWhite$quality)
+d$quality.factor <- as.factor(d$quality)
+daux$quality.factor <- as.factor(daux$quality)
+
+# Fem BoxPlots correlacionant amb la qualitat
+gg1 <- ggplot(dsRed, aes(x = quality.factor, y = fixed.acidity))
+gg1 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg2 <- ggplot(dsRed, aes(x = quality.factor, y = volatile.acidity))
+gg2 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg3 <- ggplot(dsRed, aes(x = quality.factor, y = citric.acid))
+gg3 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg4 <- ggplot(dsRed, aes(x = quality.factor, y = residual.sugar))
+gg4 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg5 <- ggplot(dsRed, aes(x = quality.factor, y = chlorides))
+gg5 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg6 <- ggplot(dsRed, aes(x = quality.factor, y = free.sulfur.dioxide))
+gg6 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg7 <- ggplot(dsRed, aes(x = quality.factor, y = total.sulfur.dioxide))
+gg7 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg8 <- ggplot(dsRed, aes(x = quality.factor, y = density))
+gg8 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg9 <- ggplot(dsRed, aes(x = quality.factor, y = pH))
+gg9 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg10 <- ggplot(dsRed, aes(x = quality.factor, y = sulphates))
+gg10 + geom_boxplot(fill = "orange", colour = "brown")
+
+gg11 <- ggplot(dsRed, aes(x = quality.factor, y = alcohol))
+gg11 + geom_boxplot(fill = "orange", colour = "brown")
+
+
+# Vins vermells
+# Correlació de les variables amb la Qualitat:
+var.corr <- dsRed[1:11]
+cor(var.corr, dsRed$quality)
+
+# Visualització
+corrgram(dsRed[1:12], order=NULL, lower.panel=panel.shade,
+  upper.panel=NULL, text.panel=panel.txt,
+  main="Correlació de variables")
+
+# Vins blancs
+# Correlació de les variables amb la Qualitat:
+var.corr <- dsWhite[1:11]
+cor(var.corr, dsWhite$quality)
+
+# Visualització
+corrgram(dsWhite[1:12], order=NULL, lower.panel=panel.shade,
+  upper.panel=NULL, text.panel=panel.txt,
+  main="Correlació de variables")
+
+# Vins en conjunt
+# Correlació de les variables amb la Qualitat:
+var.corr <- d[1:11]
+cor(var.corr, d$quality)
+
+# Visualització
+corrgram(d[1:12], order=NULL, lower.panel=panel.shade,
+  upper.panel=NULL, text.panel=panel.txt,
+  main="Correlació de variables")
+
+
+```
+
+Podem veure que ténen correlació amb la qualitat del vi les variables:
+
+
+**Correlació de les variables amb la qualitat**
+
+| Variable | Correlació amb Vermell | Correlació amb Blanc | Correlació en conjunt |
+| -------- | ---------------------- | -------------------- | --------------------- |
+| Alcohol | 0.48 | 0.44 | 0.44 |
+| Sulfats | 0.25 | 0.05 | 0.04 |
+| Àcid Cítric | 0.22 | -0.01 | 0.09 |
+| Acidesa volàtil | -0.39 | -0.19 | -0.27 |
+| Densitat | -0.17 | -0.31 | -0.31 |
+| Clorurs | -0.12 | -0.21 | -0.20 |
+
+Valors negatius indiquen correlació inversa, a més quantita menys qualitat.
+
+La resta ténen correlacions molt baixes, només per sobre de +- 0.20 les considerem rellevants.
 
 ### 2.4.2 Comprovació de la normalitat i homogeneïtat de la variància.
+
+Comprobem la normalitat dels atributs, farem servir QQ plots:
+
+```{r normalitat}
+
+qqnorm(d$fixed.acidity)
+qqline(d$fixed.acidity, col=2)
+
+
+
+```
 
 ### 2.4.3 Aplicació de proves estadístiques per comparar els grups de dades. 
 
