@@ -121,14 +121,14 @@ head(n2,2)
 </p>
 
 <p>
-El dataset 'Red Wine' emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi "Vinho Verde", <b>negre</b> i 4898 de <b<blanc</b>, de la zona nord de Portugal. Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d'alcohol, nivell d'acidesa, contingut residual de sucres etc...). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
+El dataset 'Red Wine' emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi "Vinho Verde", <b>negre</b> i 4898 de <b>blanc</b>, de la zona nord de Portugal. Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d'alcohol, nivell d'acidesa, contingut residual de sucres etc...). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
 </p>
 
 <p>
 Emprearem aquest dataset per respondre a la pregunta de <b>quínes característiques principals defineixen un vi de qualitat?. Cercarem si aquestes canvien segons el color del vi, negre o blanc.</b> 
 </p>
 <p>
-Infromació a tenir en compte:<br>
+Informació a tenir en compte:<br>
 'Vinho verde' és un producte únic de la regió de Minho (nord-oest) de Portugal. 
 Es apreciat per les característiques: Alcohol grau mig, i especialment per la seva frescor.
 </p>
@@ -142,7 +142,7 @@ Descripció dels atributs o camps del datatset:
 <li><b>citric.acid</b> (Àcid cítric) [Unitats: g/l]: trobat en petites quantitas, l'àcid cítric pot afegir frescor i sabor als vins.</li>
 <li><b>residual.sugar</b> (Sucre residual) [Unitats: g/l]: Quantitat de sucre derivada del procés de fermentació (normalment trobem més de 1 gr/litre i si supera els 45grm./litre considerem el vi dolç.</li>
 <li><b>chlorides</b> (Clorurs) [Unitats: g(sodium chloride)/l]: la quantitat de sal del vi</li>
-<li><b>free.sulfur.dioxide</b> (Diòxid de sofre)  [Unitats: mg/l]: Prevé el creixement microbià i l'oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits</li>
+<li><b>free.sulfur.dioxide</b> (Diòxid de sofre)  [Unitats: mg/l]: Prevenció per el creixement microbià i l'oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits</li>
 <li><b>total.sulfur.dioxide</b> (Diòxide de sofre (lliure i unit) [Unitats: mg/l]: concentracions per sobre de 50 ppm, Es detecta per olfacte i tast. Les quantitats excessives de SO2 poden inhibir la fermentació i causar efectes sensorials indesitjables.</li>
 <li><b>density</b> (Densitat) [Unitats: g/dl]: serà propera a la de l'aigua (0.997 g/dl) i variaria segons les quantitats de sucre i alcohol, segons la qualitat de la fermentació.</li>
 <li><b>pH</b> (pH): descriu com un vi àcid o bàsic és a una escala de 0 (molt àcida) a 14 (molt bàsica); la majoria dels vins tenen entre 3-4 a l'escala de pH.</li>
@@ -159,7 +159,7 @@ Integració i selecció de les dades d’interès a analitzar.</b>
 </p>
 
 <p>
-Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l'altre dels vins negres, per tant epodem comprovar que tenen les mateixes capçalers i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna 'color' que identificara la font de les files o mostres emmagatzemant el color del vi amb valors (blanc/negre).
+Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l'altre dels vins negres, per tant podem comprovar que tenen les mateixes capçaleres i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna 'color' que identificarà la font de les files gurdant el color del vi amb valors (blanc/negre).
 </p>
 
 ```{r}
@@ -208,12 +208,9 @@ summary(d)
 ```
 
 <p>
-Per tal de seleccionar les dades adequades podem observar com és comporta la variable depenent 'qualitat'
-en quan a que la mostra que disposem sigui representativa
-</p>
-<p>
-En principi ens quedem amb tots els atributs i més tard en la fase d'analisi determinarem si es possible una reducció de camps.
-Ara per ara podem comptar amb tots els camps disponibles al dataset per esbrinar quíns ens determinaran els vins de millor qualitat, ja que cada característica és candidata per formar part de la composició del vi, i el color ens permerà comparar el seu grau d'importància segons tipus de vi.
+En principi ens quedem amb tots els atributs i més tard un cop explorades les dades, determinarem si es possible una reducció de camps.
+Ara per ara podem comptar amb tots els camps disponibles al dataset, per esbrinar quíns ens determinaran la qualitat del vi. Cada característica
+és candidata per formar part de la composició del vi, i el color ens permerà comparar el seu grau d'importància segons tipus de vi.
 </p>
 
 <p>
@@ -223,7 +220,6 @@ A més a més, de la recerca que hem fet sobre el vi 'Vinho verde', sabem que ta
 ```{r}
 cat("Atributs considerats:\n ")
 colnames(d)
-
 ```
 
 ## 3. Neteja de dades.
@@ -234,7 +230,7 @@ colnames(d)
 </p>
 
 <p>
-Per la ordre 'summary()', pogut observar que no tenim valors nuls, però també ho podem comprovar mitjançant 
+Per la ordre 'summary()', hem pogut observar que no tenim valors nuls, però també ho podem comprovar mitjançant 
 la següent ordre, que ens permet contar tots els valors NULL del dataframe. Un valor de zero ens confirma que
 no n'hi ha cap.
 </p>
@@ -349,7 +345,8 @@ cat("Vi negre\nLlindar superior:",mean(n2$volatile.acidity)+3*sd(n2$volatile.aci
 La variació d'aquests valors no afecta sensiblement als paràmetres representatius de la seva distribució, 
 però si ho necessitem més endavant podriem substituïr el seu valor per el de la mediana `r median(n1$volatile.acidity)`,
  com a valor representatiu de la seva distribució. Mètodes més robustos com  la imputació de dades amb kNN, 
- package R "DMwR" mitjançant la función <b<knnImputation()</b>, o el package R "VIM" usant la funció <b<kNN()</b>.
+ package R "DMwR" mitjançant la función <b<knnImputation()</b>, o el package R "VIM" usant la funció <b<kNN()</b> també són
+ una opció.
 </p>
 
 <u>Atribut: <b>citric.acid</b></u>
@@ -489,10 +486,10 @@ cat("Vi negre\nLlindar superior:",mean(n2$free.sulfur.dioxide)+3*sd(n2$free.sulf
 ```
 
 <p>
-En el cas del dioxid de sofre, sabem que la normativa admet fins valors de <b<300 g/l</b> tot i que a Europa no es solen
+En el cas del 'free.sulfur.dioxide', sabem que la normativa admet fins valors de <b<300 g/l</b> tot i que a Europa no es solen
 observar valors superiors a <b>50 g/l</b>. Observem que els valors atípics tenen valors alts sobretot en el vi blanc, 
 però com no sobrepasen la normativa i poden ser correctes i els valors estan representats en totes les categories de
-qualitat del vi, decidim no modificar les dades. L'ús del diòxid de sofre en el vi és com a conservant i volem mantenir
+qualitat del vi, decidim no modificar les dades. L'ús del 'free.sulfur.dioxide' en el vi és com a conservant i volem mantenir
 l'efecte de que és més usat en el vi blanc. 
 </p>
 
@@ -580,8 +577,8 @@ cat("Vi negre\nLlindar superior:",mean(n2$pH)+3*sd(n2$pH))
 <p>
 En el cas del 'pH', és igual que el cas anterior, podem mantenir els valors atípics, ja que poden ser valors correctes i no
 tenim seguretat d'error. En general abans de modificar les dades cal estar segur de que realment és necessari, perque podriem
-estar eliminant patrons en les dades que per no semblar-nos 'coherents' d'entrada són valors que indiquen una variació en una
-tendència incipient.Sabem que el pH marca la acidesa del vi, per tant és probable que el pH tingui alguna correlació amb els
+estar eliminant patrons en les dades que per no semblar-nos 'coherents' d'entrada, són valors que indiquen una variació en una
+tendència incipient.Sabem que el 'pH' marca la acidesa del vi, per tant és probable que el 'pH' tingui alguna correlació amb els
 atributs 'fixed.acidity' o 'citric.acid'.
 </p>
 
@@ -609,7 +606,7 @@ cat("Vi negre\nLlindar superior:",mean(n2$sulphates)+3*sd(n2$sulphates))
 ```
 
 <p>
-Els sulfats de sodi i calci apareixen en l'aigua i per tant el raïm i el vi poden contenir-los. Una alta concentració dels 
+Els 'sulphates' i calci apareixen en l'aigua i per tant el raïm i el vi poden contenir-los. Una alta concentració dels 
 mateixos podria fer que una aigua no fos de qualitat alimentària. Una aigua amb una quantitat de sulfats inferior a 250mg /l 
 es considera en aquest aspecte una aigua de qualitat i amb valors superiors a 400 mg / l insalubre.<br>
 Per tant suposem aquest camp important per determinar la qualitat del vi. Igual que en els dos darrers cassos no trobem valors
@@ -697,14 +694,17 @@ Finalment crearem un model de regressió lineal multiple utilitzant 5 regressors
 de la qualitat del vi.
 </p>
 
-```{r}
+<p>
+Primer de tot analitzem la variable de qualitat del vi per saber si depen del color:<br>
+</p>
+```{r, out.width='60%'}
 # Visualitzem el boxplot de la qualitat segons color del vi.
 par(mfrow=c(1,2))
 
 # Vi negre
-boxplot(d[d$color=='negre',"quality"], ylim=c(3,9), col="lightblue", xlab="Vi Negre")
+boxplot(d[d$color=='negre',"quality"], ylim=c(3,9), col="lightblue", xlab="Qualitat\nVi Negre")
 # Vi blanc
-boxplot(d[d$color=='blanc',"quality"], col="lightblue", xlab="Vi Blanc")
+boxplot(d[d$color=='blanc',"quality"], col="lightblue", xlab="Qualitat\nVi Blanc")
 
 par(mfrow=c(1,1))
 ```
@@ -799,27 +799,13 @@ kable(ah_Class,caption=paste0("Taula ",1,": Classificació de la graduació dels
 ```
  
 ```{r}
-# Real
-#d1<-d
-#d1["alcohol_class"]<-""
-#d1[d1$alcohol<12.5,'alcohol_class']<-"Molt Baixa"
-#d1[d1$alcohol>=12.5 & d1$alcohol<13.5,'alcohol_class']<-"Moderadament Baixa"
-#d1[d1$alcohol>=13.5 & d1$alcohol<=14.5,'alcohol_class']<-"Alta"
-#d1[d1$alcohol>14.5,'alcohol_class']<-"Molt alta"
-
-# Adaptada
+# Definició de grups de graduació d'alcohol en el vi.
 d1<-d
 d1["alcohol_class"]<-""
 d1[d1$alcohol<9.5,'alcohol_class']<-"Molt_Baixa"
 d1[d1$alcohol>=9.5 & d1$alcohol<12.5,'alcohol_class']<-"Moderadament_Baixa"
 d1[d1$alcohol>=12.5 & d1$alcohol<=14,'alcohol_class']<-"Alta"
 d1[d1$alcohol>14,'alcohol_class']<-"Molt_Alta"
-
-#d1<-d
-#d1["alcohol_class"]<-""
-#d1[d1$alcohol<9.5,'alcohol_class']<-"Baixa"
-#d1[d1$alcohol>=9.5 & d1$alcohol<14,'alcohol_class']<-"Mitjana"
-#d1[d1$alcohol>=14 & d1$alcohol<=26,'alcohol_class']<-"Alta"
 
 ```
  
@@ -926,6 +912,7 @@ d’anàlisi diferents.<br>
 </p>
 
 <p>
+Com els tests de no normalitat, són afirmatius haurem de comparar dades amb proves no paramètriques.
 Per l'atribut alcohol disposem d'una categorització de 4 valors. Volem comprovar si els grups creats són estadísticament significatius. Per
 fer-ho aplicarem el <b<test de kruskal-Wallis</b> que ens permet veure si la 'qualitat' del vi és estadisticament diferent per cada grup de 
 graduació d'alcohol definit en el cas de disposar de 3 o més grups:
@@ -941,14 +928,14 @@ kr1<-kruskal.test(d1$quality~d1$alcohol_class)
 ```
 
 <p>
-Amb un nivell de significancia de .05, arrivem a la conclusió de que la qualitat del vi per els grups de graduació 
-considerats (Molt_Baixa, Moderadament_Baixa, Alta i Molt_Alta) <b<és diferent</b>. 
+Amb un nivell de significancia de <b>0.05</b>, arrivem a la conclusió de que la qualitat del vi per els grups de graduació 
+considerats (<b>Molt_Baixa</b>, <b>Moderadament_Baixa</b>, <b>Alta</b> i <b>Molt_Alta</b>) <b>és diferent</b>. 
 </p>
 
 <p>
-Finalment generem un model de reressió lineal múltiple per els atributs: <b>alcohol</b>, <b>citric.acid</b>, 
+Finalment generem un model de regressió lineal múltiple per els atributs: <b>alcohol</b>, <b>citric.acid</b>, 
 <b>sulphates</b>, <b>pH</b> i <b>color</b> amb variable depenent <b>quality</b>:<br>
-LA variable <b>color</b>, és categòrica per tant definirem un variable dummy, indicant quína serà la categoria de referencia 
+La variable <b>color</b>, és categòrica per tant definirem un variable dummy, indicant quína serà la categoria de referència 
 ('negre'):
 </p>
 
@@ -980,14 +967,14 @@ summary(m1)
 ```
 
 <p>
-De la sortida resum del model podem observar que el <b>p-value</b> associat al contrast és inferior a <b>0.05</b>. Per tant com a mínim <b>1</b> de les variables explicatives contribueix de manera significativa a explicar la variable <b>Y</b> de la qualitat del vi. 
+De la sortida resum del model podem observar que el <b>p-value</b> associat al contrast és inferior a <b>0.05</b>. Per tant com a mínim <b>una</b> de les variables explicatives contribueix de manera significativa a explicar la variable <b>Y</b> de la qualitat del vi. 
 </p>
 
 <p style="color:royalblue">
 Bondat de l'ajust
 </p>
 
-De la sortida del model, obtenim <b>R<sup>2</sup> ajustat</b> = `r summary(m1)$adj.r.squared`. Les variables utilitzades expliquen en un <b>`r round(summary(m1)$adj.r.squared*100,2)`%</b> el model, però no és un valor proper a 1 com nosaltres voldriem. Cal utilitzar el <b>coeficient de determinació ajustat</b> perque a diferencia del coeficient de determinació no ajustat, no incrementa sempre quan augmentem el nombre de variables en el model.
+De la sortida del model, obtenim <b>R<sup>2</sup> ajustat</b> = <b>`r summary(m1)$adj.r.squared`</b>. Les variables utilitzades expliquen en un <b>`r round(summary(m1)$adj.r.squared*100,2)`%</b> el model, però no és un valor proper a 1 com nosaltres voldriem. Cal utilitzar el <b>coeficient de determinació ajustat</b> perque a diferència del coeficient de determinació no ajustat, no incrementa sempre quan augmentem el nombre de variables en el model.
 
 Els coeficients estimats i els seus p-valor són:<br>
 ```{r}
@@ -1006,7 +993,7 @@ i el model queda definit per la següent equació de regressió d'ajust:<br>
 <p style="margin-left:3cm;text-indent:-2.2cm"> <b>quality</b><sub>i</sub> = <b>`r  round(m1$coefficients[1],2)`</b> + <b>`r  round(m1$coefficients[2],2)`</b>·X1 + <b>`r  round(m1$coefficients[3],2)`</b>·X2 + <b>`r round(m1$coefficients[4],2)`</b>·X3 + <b>`r round(m1$coefficients[5],2)`·X4</b> + <b>`r  round(m1$coefficients[6],2)`</b>·X5  + <b>e</b></p>
 
 <p>
-En un model de regressió multilineal, els coeficients de regressió associats a cadascuna de les <b>variables fictícies</b> (en anglès <b>dummy</b>) són interpretades com la diferencia esperada entre la mitjana de la sortida de la propia variable en comparació amb la del seu valor de referència, quan la resta de variables són constants. I si volem comparar dues categories qualsevols d'una variable dummy aleshores podem fer la diferencia entre els seus coeficients estimats.
+En un model de regressió multilineal, els coeficients de regressió associats a cadascuna de les <b>variables fictícies</b> (en anglès <b>dummy</b>) són interpretades com la diferència esperada entre la mitjana de la sortida de la propia variable en comparació amb la del seu valor de referència, quan la resta de variables són constants. I si volem comparar dues categories qualsevols d'una variable 'dummy' aleshores podem fer la diferència entre els seus coeficients estimats.
 </p>
 
 <p>
@@ -1082,12 +1069,13 @@ summary(m3)
 Al llarg de la pràctica hem anat combinant les operacions i anàlisis realitzats amb visualitzacions gràfiques dels resultats
 (matrius  de correlació, gràfics Q-Q Plot, histogrames, taules en els models de regressió).<br>
 En aquest cas visualitzarem el comportament de la categorització de la graduació d'alcohol, que com a resultat
-dels nostres anàlisi, pot estar categoritzat i ens pot permetre determinar la qualitat del vi.<br> 
+dels nostres anàlisis, pot estar categoritzada i ens pot permetre determinar la qualitat del vi.<br> 
 En l'apartat d'anàlisi hem obtingut que els grups definits eren estadísticament diferents a partir de les dades disponibles.
 Utilitzant un gràfic de boxplot, podem veure que:
 </p>
 
 ```{r}
+# Gràfics boxplot de la qualitat del vi per cada tipus de vi respecte cada categoria definida en la graduació.
 par(mfrow=c(1,2))
 boxplot(d1[d1$color=='negre','quality']~d1[d1$color=='negre','alcohol_class'],ylab='Quality', main='Alcohol\nen Vi Negre', las=2)
 boxplot(d1[d1$color=='blanc','quality']~d1[d1$color=='blanc','alcohol_class'],ylab='Quality', main='Alcohol\nen Vi Blanc', las=2)
@@ -1121,12 +1109,13 @@ Apartir dels resultats obtinguts, quines són les conclusions? Els resultats per
 </p>
 <p>
 En les conclusions finals, podem resumir que tenim la seguretat de que la qualitat del vi no depen del seu color, i que
-ens hem de centrar en la seva composició per fer pronostics de qualitat de cada tipus de vi per separat.<br>
+ens hem de centrar en la seva composició per fer pronòstics de qualitat per cada tipus de vi per separat.<br>
 També podem concloure que la graduació d'alcohol és el element que més ens pot determinar més la qualitat del vi d'entre
 els que disposem però tampoc amb un grau de correlació molt alt (0.44). Segons aquests resultats hem definit varies categories 
-de graduació i hem analitzat si les podiem considerar diferents amb resultats satisfactoris, i hem pogut determinar la qualitat
-del vi segons la seva graduació, sempre tenint en compte el tipus de vi primer. Els resultats obtinguts si que ens permeten 
-respondre al problema però no amb resultats satisfactoris. La conclusió és que cal revisar el dataset i potser equilibrar-lo
-millor en quan a la quantitat de mostres de cada qualitat de vi.
+de graduació. A més a més hem analitzat si les podiem considerar diferents amb resultats satisfactoris. També hem pogut determinar la qualitat
+del vi segons la seva graduació, sempre tenint en compte el tipus de vi (negre o blanc). Els resultats obtinguts si que ens permeten 
+respondre al problema però no amb resultats molt satisfactoris. La conclusió és que cal revisar el dataset i potser equilibrar-lo
+millor en quan a la quantitat de mostres de cada qualitat de vi, per mirar de millorar els resultats.
+del vi.
 </p>
 
