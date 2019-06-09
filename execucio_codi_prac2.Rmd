@@ -52,8 +52,392 @@ cat("Files - Instàncies:",nrow(d),"\nColumnes-Atributs-Variables:",ncol(d),"\n"
 summary(d)
 # write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
 
+# L'estructura de camps del datatset: tipus i rang de valors els podem obtenir de l'ordre Summary():
+str(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+
+# Resum de dades del datatset: min, max, mediana, mitjana i existència de valors NA, 
+#☺ factors en camps categòrics etc...  ->ordre Summary():
+summary(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+
+cat("Atributs considerats:\n ")
+colnames(d)
+
+# Si la suma és major que 0 significa que algun valor NA o NULL existeix en el dataframe.
+sum(is.na.data.frame(d))
+
+bxplot_hist<- function(camp,lbcamp){
+  par(mfrow=c(2,1))
+  boxplot(camp,border="dodgerblue", ylim=c(min(camp,na.rm = TRUE),max(camp,na.rm = TRUE)), horizontal = TRUE)
+  hist(camp,xlim = c(min(camp,na.rm = TRUE),max(camp,na.rm = TRUE)), main="",xlab = lbcamp, ylab="Freqüència", border="blue")
+  # Descripció dels valors dels límits d'interpretació del boxplot
+  # Vector $Stats indica consecutivament els valors de:
+  #    Bigoti inferior, Q1(25%), Mediana, Q3(75%), Bigoti superior.
+  # Vector $out  ens proporciona els valors atípics ordenats ascendentment.
+  r<-boxplot.stats(camp)
+  cat("Valors atípics:\n  ",r$out,"\n")
+  cat("Valors del boxplot:\n1) Bigoti inf.:",r$stats[1],"\n2) Q1(25%)    :", r$stats[2],"\n3) Mediana    :",r$stats[3],"\n4) Q3(75%)    :", r$stats[4],"\n5) Bigoti Sup.:", r$stats[5],"\n")
+}
+
+# Valors extrems de 'fixed.acidity'
+cat("Vi negre")
+bxplot_hist(n1$fixed.acidity,'fixed.acidity')
+cat("Vi blanc")
+bxplot_hist(n2$fixed.acidity,'fixed.acidity')
+cat("Vinho verde sense diferenciar color")
+bxplot_hist(d$fixed.acidity,'fixed.acidity')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar inferior:",mean(n1$fixed.acidity)-3*sd(n1$fixed.acidity))
+# Llindar superior per el valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n1$fixed.acidity)+3*sd(n1$fixed.acidity))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'fixed.acidity'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$fixed.acidity)-3*sd(n2$fixed.acidity))
+# Llindar superior per el valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n2$fixed.acidity)+3*sd(n2$fixed.acidity))
+
+# Valors extrems de 'volatile.acidity'
+cat("Vi negre")
+bxplot_hist(n1$volatile.acidity,'volatile.acidity')
+cat("Vi blanc")
+bxplot_hist(n2$volatile.acidity,'volatile.acidity')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar inferior:",mean(n1$volatile.acidity)-3*sd(n1$volatile.acidity))
+# Llindar superior per el valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n1$volatile.acidity)+3*sd(n1$volatile.acidity))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'volatile.acidity'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$volatile.acidity)-3*sd(n2$volatile.acidity))
+# Llindar superior per el valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n2$volatile.acidity)+3*sd(n2$volatile.acidity))
+
+# Valors extrems de 'citric.acid'
+cat("Vi negre")
+bxplot_hist(n1$citric.acid,'citric.acid')
+cat("Vi blanc")
+bxplot_hist(n2$citric.acid,'citric.acid')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar inferior:",mean(n1$citric.acid)-3*sd(n1$citric.acid))
+# Llindar superior per el valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar superior:",mean(n1$citric.acid)+3*sd(n1$citric.acid))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'citric.acid'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$citric.acid)-3*sd(n2$citric.acid))
+# Llindar superior per el valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar superior:",mean(n2$citric.acid)+3*sd(n2$citric.acid))
+
+# Valors extrems de 'residual.sugar'
+cat("Vi negre")
+bxplot_hist(n1$residual.sugar,'residual.sugar')
+cat("Vi blanc")
+bxplot_hist(n2$residual.sugar,'residual.sugar')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar inferior:",mean(n1$residual.sugar)-3*sd(n1$residual.sugar))
+# Llindar superior per el valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar superior:",mean(n1$residual.sugar)+3*sd(n1$residual.sugar))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'residual.sugar'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$residual.sugar)-3*sd(n2$residual.sugar))
+# Llindar superior per el valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar superior:",mean(n2$residual.sugar)+3*sd(n2$residual.sugar))
+
+# Eliminem les instàncies amb valors atípics incorrectes.
+n2<-n2[n2$residual.sugar<=18,]
+
+# Valors extrems de 'chlorides'
+cat("Vi negre")
+bxplot_hist(n1$chlorides,'chlorides')
+cat("Vi blanc")
+bxplot_hist(n2$chlorides,'chlorides')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar inferior:",mean(n1$chlorides)-3*sd(n1$chlorides))
+# Llindar superior per el valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar superior:",mean(n1$chlorides)+3*sd(n1$chlorides))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'chlorides'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$chlorides)-3*sd(n2$chlorides))
+# Llindar superior per el valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar superior:",mean(n2$chlorides)+3*sd(n2$chlorides))
+
+# Valors extrems de 'free.sulfur.dioxide'
+cat("Vi negre")
+bxplot_hist(n1$free.sulfur.dioxide,'free.sulfur.dioxide')
+cat("Vi blanc")
+bxplot_hist(n2$free.sulfur.dioxide,'free.sulfur.dioxide')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar inferior:",mean(n1$free.sulfur.dioxide)-3*sd(n1$free.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n1$free.sulfur.dioxide)+3*sd(n1$free.sulfur.dioxide))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'free.sulfur.dioxide'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$free.sulfur.dioxide)-3*sd(n2$free.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n2$free.sulfur.dioxide)+3*sd(n2$free.sulfur.dioxide))
 
 
+# Valors extrems de 'total.sulfur.dioxide'
+cat("Vi negre")
+bxplot_hist(n1$total.sulfur.dioxide,'total.sulfur.dioxide')
+cat("Vi blanc")
+bxplot_hist(n2$total.sulfur.dioxide,'total.sulfur.dioxide')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'total.sulfur.dioxide'.
+cat("Vi negre\nLlindar inferior:",mean(n1$total.sulfur.dioxide)-3*sd(n1$total.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'total.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n1$total.sulfur.dioxide)+3*sd(n1$total.sulfur.dioxide))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'total.sulfur.dioxide'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$total.sulfur.dioxide)-3*sd(n2$total.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'total.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n2$total.sulfur.dioxide)+3*sd(n2$total.sulfur.dioxide))
+
+# Valors extrems de 'density'
+cat("Vi negre")
+bxplot_hist(n1$density,'density')
+cat("Vi blanc")
+bxplot_hist(n2$density,'density')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'density'.
+cat("Vi negre\nLlindar inferior:",mean(n1$density)-3*sd(n1$density))
+# Llindar superior per el valors atípics de 'density'.
+cat("Vi negre\nLlindar superior:",mean(n1$density)+3*sd(n1$density))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'density'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$density)-3*sd(n2$density))
+# Llindar superior per el valors atípics de 'density'.
+cat("Vi negre\nLlindar superior:",mean(n2$density)+3*sd(n2$density))
+
+# Valors extrems de 'pH'
+cat("Vi negre")
+bxplot_hist(n1$pH,'pH')
+cat("Vi blanc")
+bxplot_hist(n2$pH,'pH')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'pH'.
+cat("Vi negre\nLlindar inferior:",mean(n1$pH)-3*sd(n1$pH))
+# Llindar superior per el valors atípics de 'pH'.
+cat("Vi negre\nLlindar superior:",mean(n1$pH)+3*sd(n1$pH))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'pH'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$pH)-3*sd(n2$pH))
+# Llindar superior per el valors atípics de 'pH'.
+cat("Vi negre\nLlindar superior:",mean(n2$pH)+3*sd(n2$pH))
+
+# Valors extrems de 'sulphates'
+cat("Vi negre")
+bxplot_hist(n1$sulphates,'sulphates')
+cat("Vi blanc")
+bxplot_hist(n2$sulphates,'sulphates')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'sulphates'.
+cat("Vi negre\nLlindar inferior:",mean(n1$sulphates)-3*sd(n1$sulphates))
+# Llindar superior per el valors atípics de 'sulphates'.
+cat("Vi negre\nLlindar superior:",mean(n1$sulphates)+3*sd(n1$sulphates))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'sulphates'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$sulphates)-3*sd(n2$sulphates))
+# Llindar superior per el valors atípics de 'sulphates'.
+cat("Vi negre\nLlindar superior:",mean(n2$sulphates)+3*sd(n2$sulphates))
+
+# Valors extrems de 'alcohol'
+cat("Vi negre")
+bxplot_hist(n1$alcohol,'alcohol')
+cat("Vi blanc")
+bxplot_hist(n2$alcohol,'alcohol')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'alcohol'.
+cat("Vi negre\nLlindar inferior:",mean(n1$alcohol)-3*sd(n1$alcohol))
+# Llindar superior per el valors atípics de 'alcohol'.
+cat("Vi negre\nLlindar superior:",mean(n1$alcohol)+3*sd(n1$alcohol))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'alcohol'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$alcohol)-3*sd(n2$alcohol))
+# Llindar superior per el valors atípics de 'alcohol'.
+cat("Vi negre\nLlindar superior:",mean(n2$alcohol)+3*sd(n2$alcohol))
+
+# Tenim capçaleres iguals, si la suma de noms iguals és la suma total de camps.
+a<-colnames(n1)
+b<-colnames(n2)
+cat(paste0("El nombre de camps (",ncol(n1),") és igual al nombre de camps iguals ",sum(a==b)))
+
+# Combinem les mostres dels dos fitxers i factoritzem el camp color per determinar 
+# els valors que pren: 'blanc i 'negre'
+d<-rbind(n1,n2)
+d$color<-factor(d$color)
+
+# Dimensions del dataset:
+cat("Files - Instàncies:",nrow(d),"\nColumnes-Atributs-Variables:",ncol(d),"\n")
+
+# Comprovem els valors del dataset:
+head(d)
+tail(d)
+
+# Visualitzem el boxplot de la qualitat segons color del vi.
+par(mfrow=c(1,2))
+
+# Vi negre
+boxplot(d[d$color=='negre',"quality"], ylim=c(3,9), col="lightblue", xlab="Qualitat\nVi Negre")
+# Vi blanc
+boxplot(d[d$color=='blanc',"quality"], col="lightblue", xlab="Qualitat\nVi Blanc")
+
+par(mfrow=c(1,1))
+
+# Vi negre
+nc=ncol(n1)
+df <- n1[,1:11]
+df$quality <- as.integer(n1[,12])
+correlacio <- cor(df,method="pearson")
+corrplot(correlacio, number.cex = 2, method = "square", hclust.method = "ward", order = "FPC",
+         type = "full", tl.cex=0.8,tl.col = "navy")
+
+# Vi blanc
+nc=ncol(n2)
+df <- n2[,1:11]
+df$quality <- as.integer(n2[,12])
+correlacio <- cor(df,method="pearson")
+corrplot(correlacio, number.cex = 2, method = "square", hclust.method = "ward", order = "FPC",
+         type = "full", tl.cex=0.8,tl.col = "navy")
+
+ah_Class<-data.frame("Molt Baixa"="< 12.5%", "Moderadament baixa"="[12.5%, 13.5%)","Alta"="[13.5%, 14.5%]", "Molt Alta"=" > 14.5%")
+kable(ah_Class,caption=paste0("Taula ",1,": Classificació de la graduació dels vins."),  align=c('c','c','c','c')) %>% 
+  column_spec(1,  color='black', bold = T, background = "orange") %>%
+  column_spec(2,  color='white', bold = T, background = "blue") %>%
+  column_spec(3,  color='white', bold = T, background = "blue") %>%
+  column_spec(4,  color='black', bold = T, background = "orange") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+
+# Definició de grups de graduació d'alcohol en el vi.
+d1<-d
+d1["alcohol_class"]<-""
+d1[d1$alcohol<9.5,'alcohol_class']<-"Molt_Baixa"
+d1[d1$alcohol>=9.5 & d1$alcohol<12.5,'alcohol_class']<-"Moderadament_Baixa"
+d1[d1$alcohol>=12.5 & d1$alcohol<=14,'alcohol_class']<-"Alta"
+d1[d1$alcohol>14,'alcohol_class']<-"Molt_Alta"
+
+summary(d[,c("alcohol","color","quality")])
+
+par(mfrow=c(1,3))
+# Visualització de l'histograma
+hist(d[d$color=='negre',"quality"], 
+     breaks=length(unique(d[d$color=='negre',"quality"])), 
+     main="Qualitat del Vi Negre", 
+     xlab="Vi negre", ylab="Freqüència")
+hist(d[d$color=='blanc',"quality"], 
+     breaks=length(unique(d[d$color=='blanc',"quality"])), 
+     main="Qualitat del Vi Blanc", 
+     xlab="Vi blanc", ylab="Freqüència")
+hist(d[,"quality"], 
+     breaks=length(unique(d[,"quality"])), 
+     main="Qualitat del Vi", 
+     xlab="Vinho Verde", ylab="Freqüència")
+par(mfrow=c(1,1))
+
+# Gràfic QQ-plot de la variable 'quality' segons tipus de color ('negre','blanc').
+# Utilitzem la funció qqPlot de la llibreria "car".
+qqPlot(quality~color, data=d, envelope=.95, col='royalblue',col.lines='darkorange',lwd=1)
+
+shw_Negre<-shapiro.test(d[d$color=="negre",'quality'])
+shw_Blanc<-shapiro.test(d[d$color=="blanc",'quality'])
+shw_Negre
+shw_Blanc
+
+shw1_Negre<-shapiro.test(d[d$color=="negre",'alcohol'])
+shw1_Blanc<-shapiro.test(d[d$color=="blanc",'alcohol'])
+shw1_Negre
+shw1_Blanc
+
+# Aplicació del test de Kruskal-Wallis
+d1$alcohol<-d$alcohol
+# d1$alcohol_class<-factor(d1$alcohol_class,labels=c("Baixa","Mitjana","Alta"))
+d1$alcohol_class<-factor(d1$alcohol_class,labels=c("Molt_Baixa","Moderadament_Baixa","Alta","Molt_Alta"))
+kr1<-kruskal.test(d1$quality~d1$alcohol_class)
+
+# Definim la categoria de referència de colorR:
+d2<-d
+d2$colorR<-relevel(d2$color,ref='negre')
+head(d2,1)
+# Comprovem que ho hem definit bé:
+contrasts(d2$colorR)
+
+m1<-lm(quality~alcohol+citric.acid+sulphates+pH+colorR, data=d2)
+summary(m1)
+
+p_valor<-summary(m1)[["coefficients"]][, "Pr(>|t|)"]
+coefs<-m1$coefficients
+taula<-data.frame("Coeficients_Beta"=coefs,"P_Valor"=p_valor)
+
+kable(taula,caption=paste0("Taula ",2,": Paràmetres estimats i p-valor.")) %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+coefsr<-round(coefs,2)
+
+# Construïm la taula resum de les equacions del model:
+taula1=data.frame("colorRBlanc"=c(0,1), "Significat"=c("Vi negre.","Vi blanc"),"Equació_del_model"=c(paste0("Y'=\u1E9E",0," + ","\u1E9E",1,"·alcohol"," + ","\u1E9E",2,"·citric.acid"," + ","\u1E9E",3,"·sulphates"," + ","\u1E9E",4,"·pH"),paste0("Y'=\u1E9E",0," + ","\u1E9E",1,"·alcohol"," + ","\u1E9E",2,"·citric.acid"," + ","\u1E9E",3,"·sulphates"," + ","\u1E9E",4,"·pH"," + ","\u1E9E",5,"·1")),"Model"=c(paste0("Y'=",coefsr[1]," + ",coefsr[2],"·alcohol"," + ",coefsr[3],"·citric.acid"," + ",coefsr[4],"·sulphates"," + ",coefsr[5],"·pH"," + ",coefsr[6],"·1")))
+
+kable(taula1,caption=paste0("Taula ",3,": Equacions del model segons valors de les variables dummy."), align=c('c','c','c')) %>% 
+  column_spec(1, bold = T) %>% 
+  column_spec(2, bold = T) %>% 
+  column_spec(3, bold = T) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+
+# Elaboració de la taula resum de la interpretació del model creat amb variables categòriques.
+betas<-c(paste0("\u1E9E",0), paste0("\u1E9E",1), paste0("\u1E9E",2), paste0("\u1E9E",3), paste0("\u1E9E",4), paste0("\u1E9E",5))
+i0<-"Valor que pren la variable Y (quality) quan tots els regressors qualitatius són zero. La interpretació no la fem per no tenir sentit composició del vi igual a 0."
+i1<-paste("El coeficient estimat és positiu. La variable depenent 'quality' CREIX una proporció de", coefsr[2],"quan aumenta una unitat (1 grau) la graduació d'alcohol, i la resta de variables es mantenen constants. El p-valor de la variable 'alcohol' és inferior a 0.05 per tant rebutgem la hipotesi de que la variable no contribueix al model.")
+i2<-paste("El coeficient estimat és positiu. La variable depenent 'quality' s'INCREMENTA una proporció de", coefsr[3],"quan aumenta una unitat de citric.acid, i la resta de variables es mantenen constants. El p-valor de la variable 'citric.acid' és inferior a 0.05 per tant rebutgem la hipotesi de que la variable no contribueix al model.")
+i3<-paste("El coeficient estimat és positiu. La variable depenent 'quality' CREIX una proporció de", coefsr[4],"quan aumenta una unitat el component de sulphates, i la resta de variables es mantenen constants. El p-valor de la variable 'sulphates' és inferior a 0.05 per tant rebutgem la hipotesi de que la variable no contribueix al model.")
+i4<-paste("El coeficient estimat és positiu. La variable depenent 'quality' CREIX una proporció de", coefsr[5],"quan aumenta una unitat el component de pH, i la resta de variables es mantenen constants. El p-valor de la variable 'pH' és inferior a 0.05 per tant rebutgem la hipotesi de que la variable no contribueix al model.")
+i5<-paste0("El coeficient estimat és positiu. Al ser positiu representa un increment de satisfacció laboral ",coefsr[6]," (",round(coefsr[6]*100,2),"%) delvi blanc respecte el vi negre (que és la categoria de referència), quan la resta de variables resta constant. El seu p-valor es major a 0.05 per tant el coeficient no és significatiu i podríem eliminar la variable del model.")
+
+interpretacions<-c(i0,i1,i2,i3,i4,i5)
+
+kable(data.frame("Coef."=betas,"Estimacio Model"=coefsr, "Interpretació"=interpretacions),caption=paste0("Taula ",4,": Interpretació de paràmetres estimats."), align=c('c','c','l')) %>% 
+  column_spec(1, bold = T) %>% 
+  column_spec(2, bold = T) %>%
+  column_spec(3, bold = T) %>%
+  column_spec(4, border_right = T, border="solid 3px seagreen;") %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+
+# regressió lineal multiple sense el pH:
+m2<-lm(quality~alcohol+citric.acid+sulphates+colorR, data=d2)
+summary(m2)
+
+# regressió lineal amb els components més correlacionats amb la qualitat del vi:
+m3<-lm(quality~alcohol+volatile.acidity+sulphates+colorR, data=d2)
+summary(m3)
+
+# Gràfics boxplot de la qualitat del vi per cada tipus de vi respecte cada categoria definida en la graduació.
+par(mfrow=c(1,2))
+boxplot(d1[d1$color=='negre','quality']~d1[d1$color=='negre','alcohol_class'],ylab='Quality', main='Alcohol\nen Vi Negre', las=2)
+boxplot(d1[d1$color=='blanc','quality']~d1[d1$color=='blanc','alcohol_class'],ylab='Quality', main='Alcohol\nen Vi Blanc', las=2)
+par(mfrow=c(1,1))
 
 
 

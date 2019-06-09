@@ -459,8 +459,13 @@ valor de clorurs és força atípic.<br>
 El percentatge d'instàncies eliminades no és gaire gran: <br>
 <b>`r round(length(n1[n1$chlorides>0.22,'chlorides'])/length(n1[,'chlorides'])*100,0)`</b>% (vi negre).<br>
 <b>`r round(length(n2[n2$chlorides>0.11,'chlorides'])/length(n2[,'chlorides'])*100,0)`</b>% (vi blanc).
-
 </p>
+
+```{r}
+# Eliminem les instàncies amb valors atípics incorrectes.
+n1<-n1[n1$chlorides>0 & n1$chlorides<mean(n1$chlorides)+3*sd(n1$chlorides),]
+n2<-n2[n2$chlorides>0 & n2$chlorides<mean(n2$chlorides)+3*sd(n2$chlorides),]
+```
 
 <u>Atribut: <b>free.sulfur.dioxide</b></u>
 
@@ -1118,4 +1123,7 @@ respondre al problema però no amb resultats molt satisfactoris. La conclusió �
 millor en quan a la quantitat de mostres de cada qualitat de vi, per mirar de millorar els resultats.
 del vi.
 </p>
+```{r}
+head(d2)
+```
 
