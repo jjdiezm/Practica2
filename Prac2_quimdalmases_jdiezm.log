@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.24)  9 JUN 2019 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.24)  9 JUN 2019 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2565,24 +2565,33 @@ Package xcolor Warning: Incompatible color definition on input line 3355.
 Package xcolor Warning: Incompatible color definition on input line 3355.
 
 [55 <./Prac2_quimdalmases_jdiezm_files/figure-latex/resuts_boxplot-1.pdf>] [56]
+
+Package xcolor Warning: Incompatible color definition on input line 3484.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3489.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3489.
+
 [57]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3462.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3513.
 [58]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3462.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3513.
 (./Prac2_quimdalmases_jdiezm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3462.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3462.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3513.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3513.
 
 Package rerunfilecheck Info: File `Prac2_quimdalmases_jdiezm.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: CD854CDB38BF23DFA0BAFA64CBD49AE2;2412.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3462.
+(rerunfilecheck)             Checksum: 767079644936098AE6ED5BF1782C7F60;2412.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3513.
  ) 
 Here is how much of TeX's memory you used:
- 12854 strings out of 494562
- 192374 string characters out of 6176064
- 272835 words of memory out of 5000000
- 16194 multiletter control sequences out of 15000+600000
+ 12858 strings out of 494562
+ 192420 string characters out of 6176064
+ 272923 words of memory out of 5000000
+ 16196 multiletter control sequences out of 15000+600000
  48216 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  28i,9n,35p,471b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2602,10 +2611,10 @@ TeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/juanj/AppData/Roaming
 /TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/juanj/AppData/Ro
 aming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/juanj/AppDa
 ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on Prac2_quimdalmases_jdiezm.pdf (58 pages, 810816 bytes).
+Output written on Prac2_quimdalmases_jdiezm.pdf (58 pages, 811550 bytes).
 PDF statistics:
- 610 PDF objects out of 1000 (max. 8388607)
- 476 compressed objects within 5 object streams
- 104 named destinations out of 1000 (max. 500000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 483 compressed objects within 5 object streams
+ 106 named destinations out of 1000 (max. 500000)
  242 words of extra memory for PDF output out of 10000 (max. 10000000)
 

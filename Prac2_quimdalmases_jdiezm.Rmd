@@ -997,5 +997,34 @@ També hem pogut determinar la qualitat del vi segons la seva graduació, sempre
 
 Els resultats obtinguts si que ens permeten respondre al problema però no amb resultats gaire satisfactoris. La conclusió és que **cal revisar el dataset i potser equilibrar-lo millor** en quan a la quantitat de mostres de cada qualitat de vi per mirar de millorar els resultats del vi. Vegem que hi ha una sobre representació de vins de qualitat mitja i molts pocs vins de molt alta qualitat o qualitat baixa, i sabem que no respon a una distribució donat els resultats dels QQPlots i els Test de Shapiro-Wilk, per lo que pensem que per ventura la mostra estigui esbiaixada cap a vins de qualitat mitjana.
 
+### 2.6.1 Contribucions i dades
+
+**Contribucions**
+
+| Contribucions             | Firma                 |
+| ------------------------- | --------------------- |
+| Investigació prèvia       | quimdalmases i jdiezm |
+| Redacció de les respostes | quimdalmases i jdiezm |
+| Desenvolupament de codi   | quimdalmases i jdiezm |
+
+**Dades**
+
+Les dades originals provenen de:
+
+- wineQualityInfo.txt es pot descarregar [aquí](https://github.com/jjdiezm/Practica2/blob/master/wineQualityInfo.txt)
+- winequality-red.csv es pot descarregar [aquí](https://github.com/jjdiezm/Practica2/blob/master/winequality-red.csv)
+- winequality-white.csv es pot descarregar [aquí](https://github.com/jjdiezm/Practica2/blob/master/winequality-white.csv)
+- winequality.names es pot descarregar [aquí](https://github.com/jjdiezm/Practica2/blob/master/winequality.names)
+
+Les dades finals analitzades es poden trobar a:
+
+- dataset_final.csv es pot descarregar [aquí](https://github.com/jjdiezm/Practica2/blob/master/dataset_final.csv)
+
+
+```{r dades_finals}
+# Volquem el dataset final per a lliurar-lo
+write.csv(d1,"dataset_final.csv",row.names = TRUE)
+```
+
 \newpage
 # 3 Recursos
