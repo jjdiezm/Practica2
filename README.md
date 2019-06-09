@@ -42,4 +42,4 @@ Aquest codi es destina a presentar una pràctica del Master de Ciència de Dades
 Aquest projecte es lliura sota llicència [GPL3e](https://github.com/jjdiezm/Practica2/blob/master/LICENSE)  
 
 ## Reconeixements
-Agraim a Kaggle la disponibilidad de les dades per l'elaboració de la pràctica.  
+Agraim a [Kaggle](https://www.kaggle.com/) la disponibilidad de les dades per l'elaboració de la pràctica.  
