@@ -62,6 +62,15 @@ if(!require(car)){
 \newpage
 # 1 Introducció.
 
+Aquesta Pràctica es troba al repositori: <https://github.com/jjdiezm/Practica2>
+
+Es lliuren el Rmd i el Pdf:
+
+- Prac2_quimdalmases_jdiezm.rmd
+- Prac2_quimdalmases_jdiezm.pdf
+
+S'han mantigut diferents versions i fitxers que s'han usat al procés de desenvolupament, però no formen part de l'entregable.
+
 ## 1.1 Presentació.
 En aquesta pràctica s’elabora un cas pràctic orientat a aprendre a identificar les dades rellevants
 per un projecte analític i usar les eines d’integració, neteja, validació i anàlisi de les mateixes. Per

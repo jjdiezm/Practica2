@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.24)  9 JUN 2019 12:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.24)  9 JUN 2019 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,755 +860,740 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {c:/Users/juanj/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map}]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 174.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 162.
 
 (c:/Users/juanj/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [2]
 
-Package xcolor Warning: Incompatible color definition on input line 245.
+Package xcolor Warning: Incompatible color definition on input line 261.
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 246.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 262.
 
 (c:/Users/juanj/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 248.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 264.
 
-Package xcolor Warning: Incompatible color definition on input line 262.
-
-
-Package xcolor Warning: Incompatible color definition on input line 262.
+Package xcolor Warning: Incompatible color definition on input line 278.
 
 
-Package xcolor Warning: Incompatible color definition on input line 276.
+Package xcolor Warning: Incompatible color definition on input line 278.
 
 
-Package xcolor Warning: Incompatible color definition on input line 280.
+Package xcolor Warning: Incompatible color definition on input line 292.
 
 
-Package xcolor Warning: Incompatible color definition on input line 280.
+Package xcolor Warning: Incompatible color definition on input line 296.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
 
 [3]
 
-Package xcolor Warning: Incompatible color definition on input line 294.
+Package xcolor Warning: Incompatible color definition on input line 310.
 
 
-Package xcolor Warning: Incompatible color definition on input line 298.
+Package xcolor Warning: Incompatible color definition on input line 314.
 
 
-Package xcolor Warning: Incompatible color definition on input line 298.
+Package xcolor Warning: Incompatible color definition on input line 314.
 
 
-Package xcolor Warning: Incompatible color definition on input line 331.
+Package xcolor Warning: Incompatible color definition on input line 347.
 
 
-Package xcolor Warning: Incompatible color definition on input line 335.
+Package xcolor Warning: Incompatible color definition on input line 351.
 
 
-Package xcolor Warning: Incompatible color definition on input line 335.
+Package xcolor Warning: Incompatible color definition on input line 351.
 
 [4]
-Overfull \hbox (0.61446pt too wide) in paragraph at lines 455--457
+Overfull \hbox (0.61446pt too wide) in paragraph at lines 471--473
 []|\T1/lmr/bx/n/10 total.sulfur.dioxide|  
  []
 
 [5] [6]
 
-Package xcolor Warning: Incompatible color definition on input line 528.
+Package xcolor Warning: Incompatible color definition on input line 544.
 
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 531
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 547
 .
 (c:/Users/juanj/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-Package xcolor Warning: Incompatible color definition on input line 544.
+Package xcolor Warning: Incompatible color definition on input line 560.
 
 
-Package xcolor Warning: Incompatible color definition on input line 544.
+Package xcolor Warning: Incompatible color definition on input line 560.
 
 
-Package xcolor Warning: Incompatible color definition on input line 550.
+Package xcolor Warning: Incompatible color definition on input line 566.
 
 
-Package xcolor Warning: Incompatible color definition on input line 555.
+Package xcolor Warning: Incompatible color definition on input line 571.
 
 
-Package xcolor Warning: Incompatible color definition on input line 555.
+Package xcolor Warning: Incompatible color definition on input line 571.
 
 
-Package xcolor Warning: Incompatible color definition on input line 562.
+Package xcolor Warning: Incompatible color definition on input line 578.
 
 
-Package xcolor Warning: Incompatible color definition on input line 567.
+Package xcolor Warning: Incompatible color definition on input line 583.
 
 
-Package xcolor Warning: Incompatible color definition on input line 567.
+Package xcolor Warning: Incompatible color definition on input line 583.
 
 
-Package xcolor Warning: Incompatible color definition on input line 574.
+Package xcolor Warning: Incompatible color definition on input line 590.
 
 
-Package xcolor Warning: Incompatible color definition on input line 584.
+Package xcolor Warning: Incompatible color definition on input line 600.
 
 
-Package xcolor Warning: Incompatible color definition on input line 584.
+Package xcolor Warning: Incompatible color definition on input line 600.
 
 
-Package xcolor Warning: Incompatible color definition on input line 591.
+Package xcolor Warning: Incompatible color definition on input line 607.
 
 
-Package xcolor Warning: Incompatible color definition on input line 596.
+Package xcolor Warning: Incompatible color definition on input line 612.
 
 
-Package xcolor Warning: Incompatible color definition on input line 596.
+Package xcolor Warning: Incompatible color definition on input line 612.
 
 [7]
 
-Package xcolor Warning: Incompatible color definition on input line 629.
+Package xcolor Warning: Incompatible color definition on input line 645.
 
 
-Package xcolor Warning: Incompatible color definition on input line 633.
+Package xcolor Warning: Incompatible color definition on input line 649.
 
 
-Package xcolor Warning: Incompatible color definition on input line 633.
+Package xcolor Warning: Incompatible color definition on input line 649.
 
 
-Package xcolor Warning: Incompatible color definition on input line 647.
+Package xcolor Warning: Incompatible color definition on input line 663.
 
 
-Package xcolor Warning: Incompatible color definition on input line 651.
+Package xcolor Warning: Incompatible color definition on input line 667.
 
 
-Package xcolor Warning: Incompatible color definition on input line 651.
+Package xcolor Warning: Incompatible color definition on input line 667.
 
 
-Package xcolor Warning: Incompatible color definition on input line 658.
+Package xcolor Warning: Incompatible color definition on input line 674.
 
 
-Package xcolor Warning: Incompatible color definition on input line 662.
+Package xcolor Warning: Incompatible color definition on input line 678.
 
 
-Package xcolor Warning: Incompatible color definition on input line 662.
+Package xcolor Warning: Incompatible color definition on input line 678.
 
 [8]
 
-Package xcolor Warning: Incompatible color definition on input line 681.
+Package xcolor Warning: Incompatible color definition on input line 697.
 
 
-Package xcolor Warning: Incompatible color definition on input line 685.
+Package xcolor Warning: Incompatible color definition on input line 701.
 
 
-Package xcolor Warning: Incompatible color definition on input line 685.
+Package xcolor Warning: Incompatible color definition on input line 701.
 
 
-Package xcolor Warning: Incompatible color definition on input line 691.
+Package xcolor Warning: Incompatible color definition on input line 707.
 
 
-Package xcolor Warning: Incompatible color definition on input line 695.
+Package xcolor Warning: Incompatible color definition on input line 711.
 
 
-Package xcolor Warning: Incompatible color definition on input line 695.
+Package xcolor Warning: Incompatible color definition on input line 711.
 
 
-Package xcolor Warning: Incompatible color definition on input line 710.
+Package xcolor Warning: Incompatible color definition on input line 726.
 
 
-Package xcolor Warning: Incompatible color definition on input line 714.
+Package xcolor Warning: Incompatible color definition on input line 730.
 
 
-Package xcolor Warning: Incompatible color definition on input line 714.
+Package xcolor Warning: Incompatible color definition on input line 730.
 
 
-Package xcolor Warning: Incompatible color definition on input line 720.
+Package xcolor Warning: Incompatible color definition on input line 736.
 
 
-Package xcolor Warning: Incompatible color definition on input line 724.
+Package xcolor Warning: Incompatible color definition on input line 740.
 
 
-Package xcolor Warning: Incompatible color definition on input line 724.
+Package xcolor Warning: Incompatible color definition on input line 740.
 
 
-Package xcolor Warning: Incompatible color definition on input line 739.
+Package xcolor Warning: Incompatible color definition on input line 755.
 
 
-Package xcolor Warning: Incompatible color definition on input line 743.
+Package xcolor Warning: Incompatible color definition on input line 759.
 
 
-Package xcolor Warning: Incompatible color definition on input line 743.
+Package xcolor Warning: Incompatible color definition on input line 759.
 
 
-Package xcolor Warning: Incompatible color definition on input line 749.
+Package xcolor Warning: Incompatible color definition on input line 765.
 
 
-Package xcolor Warning: Incompatible color definition on input line 753.
+Package xcolor Warning: Incompatible color definition on input line 769.
 
 
-Package xcolor Warning: Incompatible color definition on input line 753.
+Package xcolor Warning: Incompatible color definition on input line 769.
 
 [9]
 
-Package xcolor Warning: Incompatible color definition on input line 768.
+Package xcolor Warning: Incompatible color definition on input line 784.
 
 
-Package xcolor Warning: Incompatible color definition on input line 772.
+Package xcolor Warning: Incompatible color definition on input line 788.
 
 
-Package xcolor Warning: Incompatible color definition on input line 772.
+Package xcolor Warning: Incompatible color definition on input line 788.
 
 
-Package xcolor Warning: Incompatible color definition on input line 778.
+Package xcolor Warning: Incompatible color definition on input line 794.
 
 
-Package xcolor Warning: Incompatible color definition on input line 782.
+Package xcolor Warning: Incompatible color definition on input line 798.
 
 
-Package xcolor Warning: Incompatible color definition on input line 782.
+Package xcolor Warning: Incompatible color definition on input line 798.
 
 
-Overfull \hbox (34.24352pt too wide) in paragraph at lines 799--799
+Overfull \hbox (34.24352pt too wide) in paragraph at lines 815--815
 []\T1/lmtt/m/n/10 ##  $ chlorides           : num  0.076 0.098 0.092 0.075 0.07
 6 0.075 0.069 0.065 0.073 0.071 ...[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 838.
+Package xcolor Warning: Incompatible color definition on input line 854.
 
 [10]
 
-Package xcolor Warning: Incompatible color definition on input line 858.
+Package xcolor Warning: Incompatible color definition on input line 874.
 
 
-Package xcolor Warning: Incompatible color definition on input line 858.
+Package xcolor Warning: Incompatible color definition on input line 874.
 
 
-Package xcolor Warning: Incompatible color definition on input line 866.
+Package xcolor Warning: Incompatible color definition on input line 882.
 
 
-Package xcolor Warning: Incompatible color definition on input line 871.
+Package xcolor Warning: Incompatible color definition on input line 887.
 
 
-Package xcolor Warning: Incompatible color definition on input line 871.
+Package xcolor Warning: Incompatible color definition on input line 887.
 
 
-Package xcolor Warning: Incompatible color definition on input line 877.
+Package xcolor Warning: Incompatible color definition on input line 893.
 
 
-Package xcolor Warning: Incompatible color definition on input line 881.
+Package xcolor Warning: Incompatible color definition on input line 897.
 
 
-Package xcolor Warning: Incompatible color definition on input line 881.
+Package xcolor Warning: Incompatible color definition on input line 897.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-1.pdf,
- id=127, 469.755pt x 325.215pt>
+ id=128, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-1
 .pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-1.
 pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_fixed_acidity-1.pdf  used on input line 883.
+ues_fixed_acidity-1.pdf  used on input line 899.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [11 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-
 1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 900.
+Package xcolor Warning: Incompatible color definition on input line 916.
 
 
-Package xcolor Warning: Incompatible color definition on input line 904.
+Package xcolor Warning: Incompatible color definition on input line 920.
 
 
-Package xcolor Warning: Incompatible color definition on input line 904.
+Package xcolor Warning: Incompatible color definition on input line 920.
 
 
-Package xcolor Warning: Incompatible color definition on input line 910.
+Package xcolor Warning: Incompatible color definition on input line 926.
 
 
-Package xcolor Warning: Incompatible color definition on input line 914.
+Package xcolor Warning: Incompatible color definition on input line 930.
 
 
-Package xcolor Warning: Incompatible color definition on input line 914.
+Package xcolor Warning: Incompatible color definition on input line 930.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-2.pdf,
- id=138, 469.755pt x 325.215pt>
+ id=139, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-2
 .pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-2.
 pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_fixed_acidity-2.pdf  used on input line 916.
+ues_fixed_acidity-2.pdf  used on input line 932.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [12 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-
 2.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 938.
+Package xcolor Warning: Incompatible color definition on input line 954.
 
 
-Package xcolor Warning: Incompatible color definition on input line 942.
+Package xcolor Warning: Incompatible color definition on input line 958.
 
 
-Package xcolor Warning: Incompatible color definition on input line 942.
+Package xcolor Warning: Incompatible color definition on input line 958.
 
 
-Package xcolor Warning: Incompatible color definition on input line 948.
+Package xcolor Warning: Incompatible color definition on input line 964.
 
 
-Package xcolor Warning: Incompatible color definition on input line 952.
+Package xcolor Warning: Incompatible color definition on input line 968.
 
 
-Package xcolor Warning: Incompatible color definition on input line 952.
+Package xcolor Warning: Incompatible color definition on input line 968.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-3.pdf,
- id=148, 469.755pt x 325.215pt>
+ id=150, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-3
 .pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-3.
 pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_fixed_acidity-3.pdf  used on input line 954.
+ues_fixed_acidity-3.pdf  used on input line 970.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [13 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_fixed_acidity-
 3.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 996.
+Package xcolor Warning: Incompatible color definition on input line 1012.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1002.
+Package xcolor Warning: Incompatible color definition on input line 1018.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1002.
+Package xcolor Warning: Incompatible color definition on input line 1018.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1009.
+Package xcolor Warning: Incompatible color definition on input line 1025.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1014.
+Package xcolor Warning: Incompatible color definition on input line 1030.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1014.
+Package xcolor Warning: Incompatible color definition on input line 1030.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1021.
+Package xcolor Warning: Incompatible color definition on input line 1037.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1027.
+Package xcolor Warning: Incompatible color definition on input line 1043.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1027.
+Package xcolor Warning: Incompatible color definition on input line 1043.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1034.
+Package xcolor Warning: Incompatible color definition on input line 1050.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1039.
+Package xcolor Warning: Incompatible color definition on input line 1055.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1039.
+Package xcolor Warning: Incompatible color definition on input line 1055.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1052.
+Package xcolor Warning: Incompatible color definition on input line 1068.
 
 [14]
 
-Package xcolor Warning: Incompatible color definition on input line 1057.
+Package xcolor Warning: Incompatible color definition on input line 1073.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1057.
+Package xcolor Warning: Incompatible color definition on input line 1073.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1063.
+Package xcolor Warning: Incompatible color definition on input line 1079.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1067.
+Package xcolor Warning: Incompatible color definition on input line 1083.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1067.
+Package xcolor Warning: Incompatible color definition on input line 1083.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_volatile_acidity-1.p
-df, id=165, 469.755pt x 325.215pt>
+df, id=166, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_volatile_acidit
 y-1.pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_volatile_acidity
 -1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_volatile_acidity-1.pdf  used on input line 1069.
+ues_volatile_acidity-1.pdf  used on input line 1085.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 
-Package xcolor Warning: Incompatible color definition on input line 1084.
+Package xcolor Warning: Incompatible color definition on input line 1100.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1088.
+Package xcolor Warning: Incompatible color definition on input line 1104.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1088.
+Package xcolor Warning: Incompatible color definition on input line 1104.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1094.
+Package xcolor Warning: Incompatible color definition on input line 1110.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1098.
+Package xcolor Warning: Incompatible color definition on input line 1114.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1098.
+Package xcolor Warning: Incompatible color definition on input line 1114.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_volatile_acidity-2.p
-df, id=166, 469.755pt x 325.215pt>
+df, id=167, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_volatile_acidit
 y-2.pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_volatile_acidity
 -2.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_volatile_acidity-2.pdf  used on input line 1100.
+ues_volatile_acidity-2.pdf  used on input line 1116.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [15 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_volatile_acidi
 ty-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1130.
+Package xcolor Warning: Incompatible color definition on input line 1146.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1136.
+Package xcolor Warning: Incompatible color definition on input line 1152.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1136.
+Package xcolor Warning: Incompatible color definition on input line 1152.
 
 [16 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_volatile_acidi
 ty-2.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1143.
+Package xcolor Warning: Incompatible color definition on input line 1159.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1148.
+Package xcolor Warning: Incompatible color definition on input line 1164.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1148.
+Package xcolor Warning: Incompatible color definition on input line 1164.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1155.
+Package xcolor Warning: Incompatible color definition on input line 1171.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1161.
+Package xcolor Warning: Incompatible color definition on input line 1177.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1161.
+Package xcolor Warning: Incompatible color definition on input line 1177.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1168.
+Package xcolor Warning: Incompatible color definition on input line 1184.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1173.
+Package xcolor Warning: Incompatible color definition on input line 1189.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1173.
+Package xcolor Warning: Incompatible color definition on input line 1189.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1191.
+Package xcolor Warning: Incompatible color definition on input line 1207.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1195.
+Package xcolor Warning: Incompatible color definition on input line 1211.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1195.
+Package xcolor Warning: Incompatible color definition on input line 1211.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1201.
+Package xcolor Warning: Incompatible color definition on input line 1217.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1205.
+Package xcolor Warning: Incompatible color definition on input line 1221.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1205.
+Package xcolor Warning: Incompatible color definition on input line 1221.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_citric_acid-1.pdf, i
-d=185, 469.755pt x 325.215pt>
+d=186, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_citric_acid-1.p
 df Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_citric_acid-1.pd
 f>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_citric_acid-1.pdf  used on input line 1207.
+ues_citric_acid-1.pdf  used on input line 1223.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [17]
 
-Package xcolor Warning: Incompatible color definition on input line 1221.
+Package xcolor Warning: Incompatible color definition on input line 1237.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1225.
+Package xcolor Warning: Incompatible color definition on input line 1241.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1225.
+Package xcolor Warning: Incompatible color definition on input line 1241.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1231.
+Package xcolor Warning: Incompatible color definition on input line 1247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1235.
+Package xcolor Warning: Incompatible color definition on input line 1251.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1235.
+Package xcolor Warning: Incompatible color definition on input line 1251.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_citric_acid-2.pdf, i
-d=191, 469.755pt x 325.215pt>
+d=192, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_citric_acid-2.p
 df Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_citric_acid-2.pd
 f>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_citric_acid-2.pdf  used on input line 1237.
+ues_citric_acid-2.pdf  used on input line 1253.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [18 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_citric_acid-1.
 pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1270.
+Package xcolor Warning: Incompatible color definition on input line 1286.
 
 [19 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_citric_acid-2.
 pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1276.
+Package xcolor Warning: Incompatible color definition on input line 1292.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1276.
+Package xcolor Warning: Incompatible color definition on input line 1292.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1283.
+Package xcolor Warning: Incompatible color definition on input line 1299.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1288.
+Package xcolor Warning: Incompatible color definition on input line 1304.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1288.
+Package xcolor Warning: Incompatible color definition on input line 1304.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1295.
+Package xcolor Warning: Incompatible color definition on input line 1311.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1301.
+Package xcolor Warning: Incompatible color definition on input line 1317.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1301.
+Package xcolor Warning: Incompatible color definition on input line 1317.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1308.
+Package xcolor Warning: Incompatible color definition on input line 1324.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1313.
+Package xcolor Warning: Incompatible color definition on input line 1329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1313.
+Package xcolor Warning: Incompatible color definition on input line 1329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1334.
+Package xcolor Warning: Incompatible color definition on input line 1350.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1339.
+Package xcolor Warning: Incompatible color definition on input line 1355.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1339.
+Package xcolor Warning: Incompatible color definition on input line 1355.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1345.
+Package xcolor Warning: Incompatible color definition on input line 1361.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1349.
+Package xcolor Warning: Incompatible color definition on input line 1365.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1349.
+Package xcolor Warning: Incompatible color definition on input line 1365.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_residual_sugar-1.pdf
-, id=211, 469.755pt x 325.215pt>
+, id=212, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_residual_sugar-
 1.pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_residual_sugar-1
 .pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_residual_sugar-1.pdf  used on input line 1351.
+ues_residual_sugar-1.pdf  used on input line 1367.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [20]
 
-Package xcolor Warning: Incompatible color definition on input line 1379.
+Package xcolor Warning: Incompatible color definition on input line 1395.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1383.
+Package xcolor Warning: Incompatible color definition on input line 1399.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1383.
+Package xcolor Warning: Incompatible color definition on input line 1399.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1389.
+Package xcolor Warning: Incompatible color definition on input line 1405.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1393.
+Package xcolor Warning: Incompatible color definition on input line 1409.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1393.
+Package xcolor Warning: Incompatible color definition on input line 1409.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_residual_sugar-2.pdf
-, id=217, 469.755pt x 325.215pt>
+, id=218, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_residual_sugar-
 2.pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_residual_sugar-2
 .pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_residual_sugar-2.pdf  used on input line 1395.
+ues_residual_sugar-2.pdf  used on input line 1411.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [21 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_residual_sugar
 -1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1409.
+Package xcolor Warning: Incompatible color definition on input line 1425.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1415.
+Package xcolor Warning: Incompatible color definition on input line 1431.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1415.
+Package xcolor Warning: Incompatible color definition on input line 1431.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1422.
+Package xcolor Warning: Incompatible color definition on input line 1438.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1427.
+Package xcolor Warning: Incompatible color definition on input line 1443.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1427.
+Package xcolor Warning: Incompatible color definition on input line 1443.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1434.
+Package xcolor Warning: Incompatible color definition on input line 1450.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1440.
+Package xcolor Warning: Incompatible color definition on input line 1456.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1440.
+Package xcolor Warning: Incompatible color definition on input line 1456.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1447.
+Package xcolor Warning: Incompatible color definition on input line 1463.
 
 [22 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_residual_sugar
 -2.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1452.
+Package xcolor Warning: Incompatible color definition on input line 1468.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1452.
+Package xcolor Warning: Incompatible color definition on input line 1468.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1487.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1492.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1492.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1497.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1502.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1502.
+Package xcolor Warning: Incompatible color definition on input line 1503.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1508.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1512.
+Package xcolor Warning: Incompatible color definition on input line 1508.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1512.
+Package xcolor Warning: Incompatible color definition on input line 1513.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1518.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1518.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1524.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1528.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1528.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_chlorides-1.pdf, id=
-236, 469.755pt x 325.215pt>
+237, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_chlorides-1.pdf
  Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_chlorides-1.pdf>
 
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_chlorides-1.pdf  used on input line 1514.
+ues_chlorides-1.pdf  used on input line 1530.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [23]
 
-Package xcolor Warning: Incompatible color definition on input line 1538.
+Package xcolor Warning: Incompatible color definition on input line 1554.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1542.
+Package xcolor Warning: Incompatible color definition on input line 1558.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1542.
+Package xcolor Warning: Incompatible color definition on input line 1558.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1548.
+Package xcolor Warning: Incompatible color definition on input line 1564.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1552.
+Package xcolor Warning: Incompatible color definition on input line 1568.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1552.
+Package xcolor Warning: Incompatible color definition on input line 1568.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_chlorides-2.pdf, id=
-242, 469.755pt x 325.215pt>
+243, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_chlorides-2.pdf
  Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_chlorides-2.pdf>
 
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_chlorides-2.pdf  used on input line 1554.
+ues_chlorides-2.pdf  used on input line 1570.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [24 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_chlorides-1.pd
 f>]
 
-Package xcolor Warning: Incompatible color definition on input line 1585.
+Package xcolor Warning: Incompatible color definition on input line 1601.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1591.
+Package xcolor Warning: Incompatible color definition on input line 1607.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1591.
+Package xcolor Warning: Incompatible color definition on input line 1607.
 
 [25 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_chlorides-2.pd
 f>]
 
-Package xcolor Warning: Incompatible color definition on input line 1598.
+Package xcolor Warning: Incompatible color definition on input line 1614.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1603.
+Package xcolor Warning: Incompatible color definition on input line 1619.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1603.
+Package xcolor Warning: Incompatible color definition on input line 1619.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1610.
+Package xcolor Warning: Incompatible color definition on input line 1626.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1616.
+Package xcolor Warning: Incompatible color definition on input line 1632.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1616.
+Package xcolor Warning: Incompatible color definition on input line 1632.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1623.
+Package xcolor Warning: Incompatible color definition on input line 1639.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1628.
+Package xcolor Warning: Incompatible color definition on input line 1644.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1628.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1651.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1657.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1657.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1662.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1667.
+Package xcolor Warning: Incompatible color definition on input line 1644.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1667.
@@ -1617,563 +1602,569 @@ Package xcolor Warning: Incompatible color definition on input line 1667.
 Package xcolor Warning: Incompatible color definition on input line 1673.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1677.
+Package xcolor Warning: Incompatible color definition on input line 1673.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1677.
+Package xcolor Warning: Incompatible color definition on input line 1678.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1683.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1683.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1689.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1693.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1693.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_free_sulfur_dioxide-
-1.pdf, id=262, 469.755pt x 325.215pt>
+1.pdf, id=263, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_free_sulfur_dio
 xide-1.pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_free_sulfur_diox
 ide-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_free_sulfur_dioxide-1.pdf  used on input line 1679.
+ues_free_sulfur_dioxide-1.pdf  used on input line 1695.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [26]
 
-Package xcolor Warning: Incompatible color definition on input line 1694.
+Package xcolor Warning: Incompatible color definition on input line 1710.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1698.
+Package xcolor Warning: Incompatible color definition on input line 1714.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1698.
+Package xcolor Warning: Incompatible color definition on input line 1714.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1704.
+Package xcolor Warning: Incompatible color definition on input line 1720.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1708.
+Package xcolor Warning: Incompatible color definition on input line 1724.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1708.
+Package xcolor Warning: Incompatible color definition on input line 1724.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_free_sulfur_dioxide-
-2.pdf, id=268, 469.755pt x 325.215pt>
+2.pdf, id=269, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_free_sulfur_dio
 xide-2.pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_free_sulfur_diox
 ide-2.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_free_sulfur_dioxide-2.pdf  used on input line 1710.
+ues_free_sulfur_dioxide-2.pdf  used on input line 1726.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [27 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_free_sulfur_di
 oxide-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1728.
+Package xcolor Warning: Incompatible color definition on input line 1744.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1735.
+Package xcolor Warning: Incompatible color definition on input line 1751.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1735.
+Package xcolor Warning: Incompatible color definition on input line 1751.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1742.
+Package xcolor Warning: Incompatible color definition on input line 1758.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1748.
+Package xcolor Warning: Incompatible color definition on input line 1764.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1748.
+Package xcolor Warning: Incompatible color definition on input line 1764.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1755.
+Package xcolor Warning: Incompatible color definition on input line 1771.
 
 [28 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_free_sulfur_di
 oxide-2.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1762.
+Package xcolor Warning: Incompatible color definition on input line 1778.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1762.
+Package xcolor Warning: Incompatible color definition on input line 1778.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1769.
+Package xcolor Warning: Incompatible color definition on input line 1785.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1775.
+Package xcolor Warning: Incompatible color definition on input line 1791.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1775.
+Package xcolor Warning: Incompatible color definition on input line 1791.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1796.
+Package xcolor Warning: Incompatible color definition on input line 1812.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1801.
+Package xcolor Warning: Incompatible color definition on input line 1817.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1801.
+Package xcolor Warning: Incompatible color definition on input line 1817.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1807.
+Package xcolor Warning: Incompatible color definition on input line 1823.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1811.
+Package xcolor Warning: Incompatible color definition on input line 1827.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1811.
+Package xcolor Warning: Incompatible color definition on input line 1827.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_total_sulfur_dioxide
--1.pdf, id=287, 469.755pt x 325.215pt>
+-1.pdf, id=288, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_total_sulfur_di
 oxide-1.pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_total_sulfur_dio
 xide-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_total_sulfur_dioxide-1.pdf  used on input line 1813.
+ues_total_sulfur_dioxide-1.pdf  used on input line 1829.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [29 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_total_sulfur_d
 ioxide-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1830.
+Package xcolor Warning: Incompatible color definition on input line 1846.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1834.
+Package xcolor Warning: Incompatible color definition on input line 1850.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1834.
+Package xcolor Warning: Incompatible color definition on input line 1850.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1840.
+Package xcolor Warning: Incompatible color definition on input line 1856.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1844.
+Package xcolor Warning: Incompatible color definition on input line 1860.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1844.
+Package xcolor Warning: Incompatible color definition on input line 1860.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_total_sulfur_dioxide
--2.pdf, id=299, 469.755pt x 325.215pt>
+-2.pdf, id=300, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_total_sulfur_di
 oxide-2.pdf Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_total_sulfur_dio
 xide-2.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_total_sulfur_dioxide-2.pdf  used on input line 1846.
+ues_total_sulfur_dioxide-2.pdf  used on input line 1862.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 
-Package xcolor Warning: Incompatible color definition on input line 1861.
+Package xcolor Warning: Incompatible color definition on input line 1877.
 
 [30 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_total_sulfur_d
 ioxide-2.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 1868.
+Package xcolor Warning: Incompatible color definition on input line 1884.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1868.
+Package xcolor Warning: Incompatible color definition on input line 1884.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1875.
+Package xcolor Warning: Incompatible color definition on input line 1891.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1881.
+Package xcolor Warning: Incompatible color definition on input line 1897.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1881.
+Package xcolor Warning: Incompatible color definition on input line 1897.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1888.
+Package xcolor Warning: Incompatible color definition on input line 1904.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1895.
+Package xcolor Warning: Incompatible color definition on input line 1911.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1895.
+Package xcolor Warning: Incompatible color definition on input line 1911.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1902.
+Package xcolor Warning: Incompatible color definition on input line 1918.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1908.
+Package xcolor Warning: Incompatible color definition on input line 1924.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1908.
+Package xcolor Warning: Incompatible color definition on input line 1924.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1923.
+Package xcolor Warning: Incompatible color definition on input line 1939.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1928.
+Package xcolor Warning: Incompatible color definition on input line 1944.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1928.
+Package xcolor Warning: Incompatible color definition on input line 1944.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1934.
+Package xcolor Warning: Incompatible color definition on input line 1950.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1938.
+Package xcolor Warning: Incompatible color definition on input line 1954.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1938.
+Package xcolor Warning: Incompatible color definition on input line 1954.
 
-<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-1.pdf, id=30
-9, 469.755pt x 325.215pt>
+<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-1.pdf, id=31
+0, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-1.pdf G
 raphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_density-1.pdf  used on input line 1940.
+ues_density-1.pdf  used on input line 1956.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [31]
 
-Package xcolor Warning: Incompatible color definition on input line 1959.
+Package xcolor Warning: Incompatible color definition on input line 1975.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1963.
+Package xcolor Warning: Incompatible color definition on input line 1979.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1963.
+Package xcolor Warning: Incompatible color definition on input line 1979.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1969.
+Package xcolor Warning: Incompatible color definition on input line 1985.
 
-
-Package xcolor Warning: Incompatible color definition on input line 1973.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1973.
-
-<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-2.pdf, id=31
-6, 469.755pt x 325.215pt>
-File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-2.pdf G
-raphic file (type pdf)
-<use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-2.pdf>
-Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_density-2.pdf  used on input line 1975.
-(pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
-[32 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-1.pdf>
-]
 
 Package xcolor Warning: Incompatible color definition on input line 1989.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1995.
+Package xcolor Warning: Incompatible color definition on input line 1989.
+
+<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-2.pdf, id=31
+7, 469.755pt x 325.215pt>
+File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-2.pdf G
+raphic file (type pdf)
+<use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-2.pdf>
+Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
+ues_density-2.pdf  used on input line 1991.
+(pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
+[32 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-1.pdf>
+]
+
+Package xcolor Warning: Incompatible color definition on input line 2005.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1995.
+Package xcolor Warning: Incompatible color definition on input line 2011.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2002.
+Package xcolor Warning: Incompatible color definition on input line 2011.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2007.
+Package xcolor Warning: Incompatible color definition on input line 2018.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2007.
+Package xcolor Warning: Incompatible color definition on input line 2023.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2014.
+Package xcolor Warning: Incompatible color definition on input line 2023.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2020.
+Package xcolor Warning: Incompatible color definition on input line 2030.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2020.
+Package xcolor Warning: Incompatible color definition on input line 2036.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2027.
+Package xcolor Warning: Incompatible color definition on input line 2036.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2043.
 
 [33 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_density-2.pdf>
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 2032.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2032.
+Package xcolor Warning: Incompatible color definition on input line 2048.
 
 
 Package xcolor Warning: Incompatible color definition on input line 2048.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2053.
+Package xcolor Warning: Incompatible color definition on input line 2064.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2053.
+Package xcolor Warning: Incompatible color definition on input line 2069.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2059.
+Package xcolor Warning: Incompatible color definition on input line 2069.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2063.
+Package xcolor Warning: Incompatible color definition on input line 2075.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2063.
+Package xcolor Warning: Incompatible color definition on input line 2079.
 
-<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-1.pdf, id=335, 46
+
+Package xcolor Warning: Incompatible color definition on input line 2079.
+
+<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-1.pdf, id=336, 46
 9.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-1.pdf Graphi
 c file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_ph-1.pdf  used on input line 2065.
+ues_ph-1.pdf  used on input line 2081.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 
-Package xcolor Warning: Incompatible color definition on input line 2081.
+Package xcolor Warning: Incompatible color definition on input line 2097.
 
 [34 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 2085.
+Package xcolor Warning: Incompatible color definition on input line 2101.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2085.
+Package xcolor Warning: Incompatible color definition on input line 2101.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2091.
+Package xcolor Warning: Incompatible color definition on input line 2107.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2095.
+Package xcolor Warning: Incompatible color definition on input line 2111.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2095.
+Package xcolor Warning: Incompatible color definition on input line 2111.
 
-<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-2.pdf, id=346, 46
+<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-2.pdf, id=347, 46
 9.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-2.pdf Graphi
 c file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-2.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_ph-2.pdf  used on input line 2097.
+ues_ph-2.pdf  used on input line 2113.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 
-Package xcolor Warning: Incompatible color definition on input line 2116.
+Package xcolor Warning: Incompatible color definition on input line 2132.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2122.
+Package xcolor Warning: Incompatible color definition on input line 2138.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2122.
+Package xcolor Warning: Incompatible color definition on input line 2138.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2129.
+Package xcolor Warning: Incompatible color definition on input line 2145.
 
 [35 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_ph-2.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 2134.
+Package xcolor Warning: Incompatible color definition on input line 2150.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2134.
+Package xcolor Warning: Incompatible color definition on input line 2150.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2141.
+Package xcolor Warning: Incompatible color definition on input line 2157.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2147.
+Package xcolor Warning: Incompatible color definition on input line 2163.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2147.
+Package xcolor Warning: Incompatible color definition on input line 2163.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2154.
+Package xcolor Warning: Incompatible color definition on input line 2170.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2159.
+Package xcolor Warning: Incompatible color definition on input line 2175.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2159.
+Package xcolor Warning: Incompatible color definition on input line 2175.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2180.
+Package xcolor Warning: Incompatible color definition on input line 2196.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2185.
+Package xcolor Warning: Incompatible color definition on input line 2201.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2185.
+Package xcolor Warning: Incompatible color definition on input line 2201.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2191.
+Package xcolor Warning: Incompatible color definition on input line 2207.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2195.
+Package xcolor Warning: Incompatible color definition on input line 2211.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2195.
+Package xcolor Warning: Incompatible color definition on input line 2211.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_sulphates-1.pdf, id=
-356, 469.755pt x 325.215pt>
+357, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_sulphates-1.pdf
  Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_sulphates-1.pdf>
 
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_sulphates-1.pdf  used on input line 2197.
+ues_sulphates-1.pdf  used on input line 2213.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [36]
 
-Package xcolor Warning: Incompatible color definition on input line 2214.
+Package xcolor Warning: Incompatible color definition on input line 2230.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2218.
+Package xcolor Warning: Incompatible color definition on input line 2234.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2218.
+Package xcolor Warning: Incompatible color definition on input line 2234.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2224.
+Package xcolor Warning: Incompatible color definition on input line 2240.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2228.
+Package xcolor Warning: Incompatible color definition on input line 2244.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2228.
+Package xcolor Warning: Incompatible color definition on input line 2244.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_sulphates-2.pdf, id=
-362, 469.755pt x 325.215pt>
+363, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_sulphates-2.pdf
  Graphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_sulphates-2.pdf>
 
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_sulphates-2.pdf  used on input line 2230.
+ues_sulphates-2.pdf  used on input line 2246.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [37 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_sulphates-1.pd
 f>]
 
-Package xcolor Warning: Incompatible color definition on input line 2252.
+Package xcolor Warning: Incompatible color definition on input line 2268.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2258.
+Package xcolor Warning: Incompatible color definition on input line 2274.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2258.
+Package xcolor Warning: Incompatible color definition on input line 2274.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2265.
+Package xcolor Warning: Incompatible color definition on input line 2281.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2270.
+Package xcolor Warning: Incompatible color definition on input line 2286.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2270.
+Package xcolor Warning: Incompatible color definition on input line 2286.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2277.
+Package xcolor Warning: Incompatible color definition on input line 2293.
 
 [38 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_sulphates-2.pd
 f>]
 
-Package xcolor Warning: Incompatible color definition on input line 2283.
+Package xcolor Warning: Incompatible color definition on input line 2299.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2283.
+Package xcolor Warning: Incompatible color definition on input line 2299.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2290.
+Package xcolor Warning: Incompatible color definition on input line 2306.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2295.
+Package xcolor Warning: Incompatible color definition on input line 2311.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2295.
+Package xcolor Warning: Incompatible color definition on input line 2311.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2315.
+Package xcolor Warning: Incompatible color definition on input line 2331.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2320.
+Package xcolor Warning: Incompatible color definition on input line 2336.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2320.
+Package xcolor Warning: Incompatible color definition on input line 2336.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2326.
+Package xcolor Warning: Incompatible color definition on input line 2342.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2330.
+Package xcolor Warning: Incompatible color definition on input line 2346.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2330.
+Package xcolor Warning: Incompatible color definition on input line 2346.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-1.pdf, id=38
-2, 469.755pt x 325.215pt>
+3, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-1.pdf G
 raphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_alcohol-1.pdf  used on input line 2332.
+ues_alcohol-1.pdf  used on input line 2348.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 [39 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-1.pdf>
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 2347.
+Package xcolor Warning: Incompatible color definition on input line 2363.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2351.
+Package xcolor Warning: Incompatible color definition on input line 2367.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2351.
+Package xcolor Warning: Incompatible color definition on input line 2367.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2357.
+Package xcolor Warning: Incompatible color definition on input line 2373.
 
-
-Package xcolor Warning: Incompatible color definition on input line 2361.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2361.
-
-<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-2.pdf, id=39
-3, 469.755pt x 325.215pt>
-File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-2.pdf G
-raphic file (type pdf)
-<use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-2.pdf>
-Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
-ues_alcohol-2.pdf  used on input line 2363.
-(pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 
 Package xcolor Warning: Incompatible color definition on input line 2377.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2383.
+Package xcolor Warning: Incompatible color definition on input line 2377.
+
+<Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-2.pdf, id=39
+4, 469.755pt x 325.215pt>
+File: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-2.pdf G
+raphic file (type pdf)
+<use Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-2.pdf>
+Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/extem_val
+ues_alcohol-2.pdf  used on input line 2379.
+(pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
+
+Package xcolor Warning: Incompatible color definition on input line 2393.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2383.
+Package xcolor Warning: Incompatible color definition on input line 2399.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2399.
 
 [40 <./Prac2_quimdalmases_jdiezm_files/figure-latex/extem_values_alcohol-2.pdf>
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 2390.
+Package xcolor Warning: Incompatible color definition on input line 2406.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2395.
+Package xcolor Warning: Incompatible color definition on input line 2411.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2395.
+Package xcolor Warning: Incompatible color definition on input line 2411.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2402.
+Package xcolor Warning: Incompatible color definition on input line 2418.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2408.
+Package xcolor Warning: Incompatible color definition on input line 2424.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2408.
+Package xcolor Warning: Incompatible color definition on input line 2424.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2415.
+Package xcolor Warning: Incompatible color definition on input line 2431.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2420.
+Package xcolor Warning: Incompatible color definition on input line 2436.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2420.
+Package xcolor Warning: Incompatible color definition on input line 2436.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2440.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2448.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2448.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2454.
+Package xcolor Warning: Incompatible color definition on input line 2456.
 
 
 Package xcolor Warning: Incompatible color definition on input line 2464.
@@ -2182,326 +2173,335 @@ Package xcolor Warning: Incompatible color definition on input line 2464.
 Package xcolor Warning: Incompatible color definition on input line 2464.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2471.
+Package xcolor Warning: Incompatible color definition on input line 2470.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2480.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2480.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2487.
 
 [41]
 
-Package xcolor Warning: Incompatible color definition on input line 2476.
+Package xcolor Warning: Incompatible color definition on input line 2492.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2476.
+Package xcolor Warning: Incompatible color definition on input line 2492.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2502.
+Package xcolor Warning: Incompatible color definition on input line 2518.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2506.
+Package xcolor Warning: Incompatible color definition on input line 2522.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2506.
+Package xcolor Warning: Incompatible color definition on input line 2522.
 
 [42]
 
-Package xcolor Warning: Incompatible color definition on input line 2558.
+Package xcolor Warning: Incompatible color definition on input line 2574.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2568.
+Package xcolor Warning: Incompatible color definition on input line 2584.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2568.
+Package xcolor Warning: Incompatible color definition on input line 2584.
 
-<Prac2_quimdalmases_jdiezm_files/figure-latex/seleccio_dades-1.pdf, id=412, 469
+<Prac2_quimdalmases_jdiezm_files/figure-latex/seleccio_dades-1.pdf, id=413, 469
 .755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/seleccio_dades-1.pdf Graphic
  file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/seleccio_dades-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/seleccio_
-dades-1.pdf  used on input line 2570.
+dades-1.pdf  used on input line 2586.
 (pdftex.def)             Requested size: 375.80452pt x 260.17235pt.
 
-Package xcolor Warning: Incompatible color definition on input line 2572.
+Package xcolor Warning: Incompatible color definition on input line 2588.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2576.
+Package xcolor Warning: Incompatible color definition on input line 2592.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2576.
+Package xcolor Warning: Incompatible color definition on input line 2592.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2590.
+Package xcolor Warning: Incompatible color definition on input line 2606.
 
 [43 <./Prac2_quimdalmases_jdiezm_files/figure-latex/seleccio_dades-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 2600.
+Package xcolor Warning: Incompatible color definition on input line 2616.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2600.
+Package xcolor Warning: Incompatible color definition on input line 2616.
 
-<Prac2_quimdalmases_jdiezm_files/figure-latex/selection_red-1.pdf, id=424, 469.
+<Prac2_quimdalmases_jdiezm_files/figure-latex/selection_red-1.pdf, id=425, 469.
 755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/selection_red-1.pdf Graphic 
 file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/selection_red-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/selection
-_red-1.pdf  used on input line 2602.
+_red-1.pdf  used on input line 2618.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Package xcolor Warning: Incompatible color definition on input line 2625.
+Package xcolor Warning: Incompatible color definition on input line 2641.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2635.
+Package xcolor Warning: Incompatible color definition on input line 2651.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2635.
+Package xcolor Warning: Incompatible color definition on input line 2651.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2635.
+Package xcolor Warning: Incompatible color definition on input line 2651.
 
 [44 <./Prac2_quimdalmases_jdiezm_files/figure-latex/selection_red-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 2635.
+Package xcolor Warning: Incompatible color definition on input line 2651.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2635.
+Package xcolor Warning: Incompatible color definition on input line 2651.
 
-<Prac2_quimdalmases_jdiezm_files/figure-latex/selection_white-1.pdf, id=438, 46
+<Prac2_quimdalmases_jdiezm_files/figure-latex/selection_white-1.pdf, id=439, 46
 9.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/selection_white-1.pdf Graphi
 c file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/selection_white-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/selection
-_white-1.pdf  used on input line 2637.
+_white-1.pdf  used on input line 2653.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [45 <./Prac2_quimdalmases_jdiezm_files/figure-latex/selection_white-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 2683.
+Package xcolor Warning: Incompatible color definition on input line 2699.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2697.
+Package xcolor Warning: Incompatible color definition on input line 2713.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2697.
+Package xcolor Warning: Incompatible color definition on input line 2713.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2712.
+Package xcolor Warning: Incompatible color definition on input line 2728.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2724.
+Package xcolor Warning: Incompatible color definition on input line 2740.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2724.
+Package xcolor Warning: Incompatible color definition on input line 2740.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2745.
+Package xcolor Warning: Incompatible color definition on input line 2761.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2762.
+Package xcolor Warning: Incompatible color definition on input line 2778.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2762.
+Package xcolor Warning: Incompatible color definition on input line 2778.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2762.
+Package xcolor Warning: Incompatible color definition on input line 2778.
 
 [46pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2762 \end{Shaded}
+l.2778 \end{Shaded}
                    ]
 
-Package xcolor Warning: Incompatible color definition on input line 2762.
+Package xcolor Warning: Incompatible color definition on input line 2778.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2762.
+Package xcolor Warning: Incompatible color definition on input line 2778.
 
 <Prac2_quimdalmases_jdiezm_files/figure-latex/quality_distribution-1.pdf, id=45
-6, 469.755pt x 325.215pt>
+7, 469.755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/quality_distribution-1.pdf G
 raphic file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/quality_distribution-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/quality_d
-istribution-1.pdf  used on input line 2764.
+istribution-1.pdf  used on input line 2780.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Package xcolor Warning: Incompatible color definition on input line 2766.
+Package xcolor Warning: Incompatible color definition on input line 2782.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2770.
+Package xcolor Warning: Incompatible color definition on input line 2786.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2770.
+Package xcolor Warning: Incompatible color definition on input line 2786.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2775.
+Package xcolor Warning: Incompatible color definition on input line 2791.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2781.
+Package xcolor Warning: Incompatible color definition on input line 2797.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2781.
+Package xcolor Warning: Incompatible color definition on input line 2797.
 
-<Prac2_quimdalmases_jdiezm_files/figure-latex/quality_qqplot-1.pdf, id=457, 469
+<Prac2_quimdalmases_jdiezm_files/figure-latex/quality_qqplot-1.pdf, id=458, 469
 .755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/quality_qqplot-1.pdf Graphic
  file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/quality_qqplot-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/quality_q
-qplot-1.pdf  used on input line 2783.
+qplot-1.pdf  used on input line 2799.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [47 <./Prac2_quimdalmases_jdiezm_files/figure-latex/quality_distribution-1.pdf>
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 2792.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2798.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2798.
-
-
 Package xcolor Warning: Incompatible color definition on input line 2808.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2812.
+Package xcolor Warning: Incompatible color definition on input line 2814.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2812.
+Package xcolor Warning: Incompatible color definition on input line 2814.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2818.
+Package xcolor Warning: Incompatible color definition on input line 2824.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2822.
+Package xcolor Warning: Incompatible color definition on input line 2828.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2822.
+Package xcolor Warning: Incompatible color definition on input line 2828.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2832.
+Package xcolor Warning: Incompatible color definition on input line 2834.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2838.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2838.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2848.
 
 [48 <./Prac2_quimdalmases_jdiezm_files/figure-latex/quality_qqplot-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 2836.
+Package xcolor Warning: Incompatible color definition on input line 2852.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2836.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2869.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2875.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2875.
+Package xcolor Warning: Incompatible color definition on input line 2852.
 
 
 Package xcolor Warning: Incompatible color definition on input line 2885.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2889.
+Package xcolor Warning: Incompatible color definition on input line 2891.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2889.
+Package xcolor Warning: Incompatible color definition on input line 2891.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2895.
+Package xcolor Warning: Incompatible color definition on input line 2901.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2899.
+Package xcolor Warning: Incompatible color definition on input line 2905.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2899.
+Package xcolor Warning: Incompatible color definition on input line 2905.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2909.
+Package xcolor Warning: Incompatible color definition on input line 2911.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2913.
+Package xcolor Warning: Incompatible color definition on input line 2915.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2913.
+Package xcolor Warning: Incompatible color definition on input line 2915.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2925.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2929.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2929.
 
 [49]
 
-Package xcolor Warning: Incompatible color definition on input line 2962.
+Package xcolor Warning: Incompatible color definition on input line 2978.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2970.
+Package xcolor Warning: Incompatible color definition on input line 2986.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2970.
+Package xcolor Warning: Incompatible color definition on input line 2986.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2982.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2989.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2989.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3000.
+Package xcolor Warning: Incompatible color definition on input line 2998.
 
 
 Package xcolor Warning: Incompatible color definition on input line 3005.
 
 
 Package xcolor Warning: Incompatible color definition on input line 3005.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3016.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3021.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3021.
 
 [50]
 
-Package xcolor Warning: Incompatible color definition on input line 3035.
+Package xcolor Warning: Incompatible color definition on input line 3051.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3040.
+Package xcolor Warning: Incompatible color definition on input line 3056.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3040.
+Package xcolor Warning: Incompatible color definition on input line 3056.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3084.
+Package xcolor Warning: Incompatible color definition on input line 3100.
 
 [51]
 
-Package xcolor Warning: Incompatible color definition on input line 3093.
+Package xcolor Warning: Incompatible color definition on input line 3109.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3093.
+Package xcolor Warning: Incompatible color definition on input line 3109.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3118.
+Package xcolor Warning: Incompatible color definition on input line 3134.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3122.
+Package xcolor Warning: Incompatible color definition on input line 3138.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3122.
+Package xcolor Warning: Incompatible color definition on input line 3138.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3142.
+Package xcolor Warning: Incompatible color definition on input line 3158.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3154.
+Package xcolor Warning: Incompatible color definition on input line 3170.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3154.
+Package xcolor Warning: Incompatible color definition on input line 3170.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3160.
+Package xcolor Warning: Incompatible color definition on input line 3176.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3167.
+Package xcolor Warning: Incompatible color definition on input line 3183.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3167.
+Package xcolor Warning: Incompatible color definition on input line 3183.
 
 
-Overfull \hbox (28.88pt too wide) in paragraph at lines 3173--3182
+Overfull \hbox (28.88pt too wide) in paragraph at lines 3189--3198
  [][] 
  []
 
@@ -2510,73 +2510,73 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3184 \newpage
+l.3200 \newpage
                ]
 
-Package xcolor Warning: Incompatible color definition on input line 3234.
+Package xcolor Warning: Incompatible color definition on input line 3250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3240.
+Package xcolor Warning: Incompatible color definition on input line 3256.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3240.
+Package xcolor Warning: Incompatible color definition on input line 3256.
 
 [53pdfTeX warning (ext4): destination with the same identifier (name{table.6}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.3265 \end{verbatim}
+l.3281 \end{verbatim}
                      ]
 
-Package xcolor Warning: Incompatible color definition on input line 3271.
+Package xcolor Warning: Incompatible color definition on input line 3287.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3277.
+Package xcolor Warning: Incompatible color definition on input line 3293.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3277.
+Package xcolor Warning: Incompatible color definition on input line 3293.
 
 [54]
 
-Package xcolor Warning: Incompatible color definition on input line 3322.
+Package xcolor Warning: Incompatible color definition on input line 3338.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3331.
+Package xcolor Warning: Incompatible color definition on input line 3347.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3331.
+Package xcolor Warning: Incompatible color definition on input line 3347.
 
-<Prac2_quimdalmases_jdiezm_files/figure-latex/resuts_boxplot-1.pdf, id=509, 469
+<Prac2_quimdalmases_jdiezm_files/figure-latex/resuts_boxplot-1.pdf, id=510, 469
 .755pt x 325.215pt>
 File: Prac2_quimdalmases_jdiezm_files/figure-latex/resuts_boxplot-1.pdf Graphic
  file (type pdf)
 <use Prac2_quimdalmases_jdiezm_files/figure-latex/resuts_boxplot-1.pdf>
 Package pdftex.def Info: Prac2_quimdalmases_jdiezm_files/figure-latex/resuts_bo
-xplot-1.pdf  used on input line 3333.
+xplot-1.pdf  used on input line 3349.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Package xcolor Warning: Incompatible color definition on input line 3335.
+Package xcolor Warning: Incompatible color definition on input line 3351.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3339.
+Package xcolor Warning: Incompatible color definition on input line 3355.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3339.
+Package xcolor Warning: Incompatible color definition on input line 3355.
 
 [55 <./Prac2_quimdalmases_jdiezm_files/figure-latex/resuts_boxplot-1.pdf>] [56]
 [57]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3446.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3462.
 [58]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3446.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3462.
 (./Prac2_quimdalmases_jdiezm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3446.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3446.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3462.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3462.
 
 Package rerunfilecheck Info: File `Prac2_quimdalmases_jdiezm.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: CD854CDB38BF23DFA0BAFA64CBD49AE2;2412.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3446.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3462.
  ) 
 Here is how much of TeX's memory you used:
  12854 strings out of 494562
@@ -2602,10 +2602,10 @@ TeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/juanj/AppData/Roaming
 /TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/juanj/AppData/Ro
 aming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/juanj/AppDa
 ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on Prac2_quimdalmases_jdiezm.pdf (58 pages, 810589 bytes).
+Output written on Prac2_quimdalmases_jdiezm.pdf (58 pages, 810816 bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 475 compressed objects within 5 object streams
+ 610 PDF objects out of 1000 (max. 8388607)
+ 476 compressed objects within 5 object streams
  104 named destinations out of 1000 (max. 500000)
  242 words of extra memory for PDF output out of 10000 (max. 10000000)
 
