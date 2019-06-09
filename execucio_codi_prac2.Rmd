@@ -1,0 +1,66 @@
+---
+title: "Execucio_codi_prac2"
+author: "Quim de Dalmases Juanet"
+date: "4 de junio de 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+setwd("D:/_UOC/CursMaster/11-Tipologia_i_Cicle_de_Vida_de_Dades/PRACTICA_2/codi")
+
+# Lectura del fitxer amb la funció 'read.csv' perque visualitzats els separadors es la que
+# per defecte ja té definits els paràmetres més correctes.
+# El contingut queda en una variable data.frame (d).
+nom1<-"winequality-red.csv"
+nom2<-"winequality-white.csv"
+n1<-read.csv(file.path(getwd(),nom1), sep=";", encoding="UTF-8")
+n2<-read.csv(file.path(getwd(),nom2), sep=";", encoding="UTF-8")
+# Observem que els fitxers originals tenen iguals capçaleres i podrem combinar els 2 datasets.
+
+# Comprovació de la bona lectura/transferència de dades, visualitzant una mostra de 6 linies o registres.
+# Amb el segon parametre de l'ordre 'head', podem definir el nº de linies desitjat, per defecte 2. 
+head(n1,2)
+head(n2,2)
+
+# Volem analitzar el dataset de Red Wine tenint en compte el color del vi, afegim una columna 'color',
+# i fusionem les dades tant dels vins blancs com dels negres, diferentciant-los per el camp color.
+
+# Afegim el camp 'color' a cada datatset
+n1["color"]<-"negre"
+n2["color"]<-"blanc"
+
+# Tenim capçaleres iguals, si la suma de noms iguals és la suma total de camps.
+a<-colnames(n1)
+b<-colnames(n2)
+cat(paste0("El nombre de camps (",ncol(n1),") és igual al nombre de camps iguals ",sum(a==b)))
+
+# Combinem les mostres dels dos fitxers i factoritzem el camp color per determinar 
+# els valors que pren: 'blanc i 'negre'
+d<-rbind(n1,n2)
+d$color<-factor(d$color)
+
+# Dimensions del dataset:
+cat("Files - Instàncies:",nrow(d),"\nColumnes-Atributs-Variables:",ncol(d),"\n")
+
+# L'estructura de camps del datatset: tipus i rang de valors els podem obtenir de l'ordre Summary():
+summary(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+
+
+
+
+
+
+
+
+
+
+```
+
+

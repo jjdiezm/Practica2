@@ -1,0 +1,790 @@
+---
+title: "TIPOLOGÍA I CICLE DE VIDA DE LES DADES.\n\nInforme Dinàmic  PRACTICA2 "
+author: "Joaquim de Dalmases Juanet"
+date: "20 de mayo de 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align='center')
+```
+
+<style>
+table {
+  border:2px solid blue;
+}
+th {
+  border:1px solid skyblue;
+  border-spacing: 1px;
+  font-size:14px;
+  color:white;
+  background-color: navy;
+} 
+td {
+  border:1px solid skyblue;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  font-family:arial;
+  color:royalblue;
+  font-size:12px;
+  padding:5px;
+  background-color: aliceblue;
+}
+p {
+    font-family: calibri; 
+    font-size:16px; 
+    color:black;
+    text-align:justify;
+}
+li {
+    font-family: calibri; 
+    font-size:16px; 
+    color:black;
+    text-align:justify;
+}
+caption {  
+  caption-side: bottom;
+  text-align:center;  
+  color:royalblue;
+  font-weight: bold;
+}
+.pregs {
+    font-family: calibri; 
+    font-size:16px; 
+    color:royalblue;
+    text-align:justify;
+}
+</style>
+
+<br>
+<p style="font-family: Calibri; font-size:36px; color:blue; background-color:skyblue">Activitat 3: Modelització predictiva</p>
+<br>
+
+
+```{r, message=F, warning=F}
+# Es realitza la PAC amb les següents variables de sessió: 
+# versió de R (data), Plataforma hardware, configuració local i el nom i versió de
+# les llibreries usades.
+xfun::session_info(dependencies = FALSE)
+# Carreguem les llibreries que s'utilitzaran a la PAC 2, evitant escriure en l'informe els 
+# missatges o alertes que es produeixin [{r, message=F, warning=F}].
+
+library(kableExtra)   #  Generar taules formatejades en el informe en markdown.
+library(stringr)      #  Manipulació de text. En concret per fer reemplaçaments de parts de text.
+library(Hmisc)        #  Visualització d'histogrames.
+library(car)          #  Q-Q plots.
+library(dplyr)        #  Manipulació de datasets i  data.frames.
+library(pROC)         #  Representar i calcular corbes ROC i AUROC.
+library(corrplot)     #  Aplicar index de correlació de Pearson.
+```
+
+<!-- 
+<P style="page-break-before: always">
+-->
+
+<p style="color:black"><b>
+DEFINIR EL DIRECTORI DE TREBALL.</b>
+<br>
+</p>
+
+
+```{r}
+# Fixem la carpeta o directori treball. Serà el suposat si s'omiteix la ruta origen o destí d'un fitxer.
+# Localització del fitxer de fonts de dades 'rawData.csv'.
+setwd("D:/_UOC/CursMaster/11-Tipologia_i_Cicle_de_Vida_de_Dades/PRACTICA_2/codi/codiH/Practica2")
+```
+
+
+<p style="color:royalblue"><b>
+ CARREGAR ELS ARXIUS DE DADES A L’ENTORN DE TREBALL DE R (R STUDIO) - winequality-red.csv i winequality-white.csv
+</b></p>
+
+```{r}
+# Lectura del fitxer amb la funció 'read.csv' perque visualitzats els separadors es la que
+# per defecte ja té definits els paràmetres més correctes.
+# El contingut queda en una variable data.frame (d).
+nom1<-"winequality-red.csv"
+nom2<-"winequality-white.csv"
+n1<-read.csv(file.path(getwd(),nom1), sep=";", encoding="UTF-8")
+n2<-read.csv(file.path(getwd(),nom2), sep=";", encoding="UTF-8")
+# Observem que els fitxers originals tenen iguals capçaleres i podrem combinar els 2 datasets.
+
+# Comprovació de la bona lectura/transferència de dades, visualitzant una mostra de 6 linies o registres.
+# Amb el segon parametre de l'ordre 'head', podem definir el nº de linies desitjat, per defecte 2. 
+head(n1,2)
+head(n2,2)
+```
+
+## 1. DESCRIPCIÓ DEL DATASET.
+<p style="color:royalblue"><b> 
+1. DESCRIPCIÓ DEL DATASET. PERQUÈ ÉS IMPORTANT I QUINA PREGUNTA PRETÉN RESPONDRE?</b>
+</p>
+
+<p>
+El dataset 'Red Wine' emmagatzema les característiques fisico-químiques de les mostres de vi blanc i negre junt amb el ratio de la qualitat otorgada, en una escala de 0 a 10. Conté 1599 mostres de vi "Vinho Verde", <b>negre</b> i 4898 de <b<blanc</b>, de la zona nord de Portugal. Cada mostra de vi té assignada un valor de qualitat resultats de proves realitzades en la seva composició (tests de quantitat d'alcohol, nivell d'acidesa, contingut residual de sucres etc...). En total són 12 atributs descrivint característiques entre fisicoquímiques i la classificació de qualitat de la mostra.
+</p>
+
+<p>
+Emprearem aquest dataset per respondre a la pregunta de <b>quínes característiques principals defineixen un vi de qualitat?. Cercarem si aquestes canvien segons el color del vi, negre o blanc.</b> 
+</p>
+<p>
+Infromació a tenir en compte:<br>
+'Vinho verde' és un producte únic de la regió de Minho (nord-oest) de Portugal. 
+Es apreciat per les característiques: Alcohol grau mig, i especialment per la seva frescor.
+</p>
+
+<p> 
+Descripció dels atributs o camps del datatset:
+</p>
+<ul>
+<li><b>fixed.acidity</b> (Acidesa fixe) [Unitats: g(tartaric acid)/l]: És la quantitat d'àcidesa que no s'evapora i per tant resta fixe al vi.</li>
+<li><b>volatile.acidity</b> (Acidesa volàtil)[Unitats: g(acetic acid)/l]: La quantitat en excès d'àcid acètic en vi, pot afegir sabor amarg o avinagrat, si les quantitats són altes.</li>
+<li><b>citric.acid</b> (Àcid cítric) [Unitats: g/l]: trobat en petites quantitas, l'àcid cítric pot afegir frescor i sabor als vins.</li>
+<li><b>residual.sugar</b> (Sucre residual) [Unitats: g/l]: Quantitat de sucre derivada del procés de fermentació (normalment trobem més de 1 gr/litre i si supera els 45grm./litre considerem el vi dolç.</li>
+<li><b>chlorides</b> (Clorurs) [Unitats: g(sodium chloride)/l]: la quantitat de sal del vi</li>
+<li><b>free.sulfur.dioxide</b> (Diòxid de sofre)  [Unitats: mg/l]: Prevé el creixement microbià i l'oxidació del vi (anti-oxidant). Els vins blancs mantenen millor l’aspecte de vi jove. La normativa de la Comunitat Europea obliga des de l’any 2005 que qualsevol aliment o beguda que contingui més de 10 mg/l de sulfits ha de portar-ho en l’etiqueta com advertència. El motiu és que aquest additiu té capacitat al·lèrgena, és a dir, un petit percentatge de la població pot ser sensible o al·lèrgic als sulfits</li>
+<li><b>total.sulfur.dioxide</b> (Diòxide de sofre (lliure i unit) [Unitats: mg/l]: concentracions per sobre de 50 ppm, Es detecta per olfacte i tast. Les quantitats excessives de SO2 poden inhibir la fermentació i causar efectes sensorials indesitjables.</li>
+<li><b>density</b> (Densitat) [Unitats: g/dl]: serà propera a la de l'aigua (0.997 g/dl) i variaria segons les quantitats de sucre i alcohol, segons la qualitat de la fermentació.</li>
+<li><b>pH</b> (pH): descriu com un vi àcid o bàsic és a una escala de 0 (molt àcida) a 14 (molt bàsica); la majoria dels vins tenen entre 3-4 a l'escala de pH.</li>
+<li><b>sulphates</b> (Sulfats) [Unitats: g(potassium sulphate)/l]: un additiu de vi que pot contribuir als nivells de diòxid de sofre (S02), que actuen com a antimicrobians i antioxidants</li>
+<li><b>alcohol</b> (Alcohol) [Unitats: vol.%]: el percentatge de contingut alcohòlic del vi, és una variable de sortida (basada en dades sensorials)</li>
+<li><b>quality</b> Qualitat (escala 0-10).</li>
+<li><b>color</b> Determina si el vi és blanc o negre.</li>
+</ul>
+</p>
+
+## 2. Integració i selecció.
+<p style="color:royalblue"><b>
+Integració i selecció de les dades d’interès a analitzar.</b>
+</p>
+
+<p>
+Disposem de dos fitxers de dades un que conté les característiques del vins blancs i l'altre dels vins negres, per tant epodem comprovar que tenen les mateixes capçalers i que els podem integrar en un sol dataset. A més per tal de no perdre informació en la integració afegirem una columna 'color' que identificara la font de les files o mostres emmagatzemant el color del vi amb valors (blanc/negre).
+</p>
+
+```{r}
+# Volem analitzar el dataset de Red Wine tenint en compte el color del vi, afegim una columna 'color',
+# i fusionem les dades tant dels vins blancs com dels negres, diferentciant-los per el camp color.
+
+# Afegim el camp 'color' a cada datatset
+n1["color"]<-"negre"
+n2["color"]<-"blanc"
+
+# Tenim capçaleres iguals, si la suma de noms iguals és la suma total de camps.
+a<-colnames(n1)
+b<-colnames(n2)
+cat(paste0("El nombre de camps (",ncol(n1),") és igual al nombre de camps iguals ",sum(a==b)))
+
+# Combinem les mostres dels dos fitxers i factoritzem el camp color per determinar 
+# els valors que pren: 'blanc i 'negre'
+d<-rbind(n1,n2)
+d$color<-factor(d$color)
+
+# Dimensions del dataset:
+cat("Files - Instàncies:",nrow(d),"\nColumnes-Atributs-Variables:",ncol(d),"\n")
+
+```
+
+<p>
+En aquest moment cal revisar l'estructura del dataset i veure que cada camp està ben definit amb el seu tipus 
+de dades correcte, mitjançant l'ordre 'str':
+</p>
+
+```{r}
+# L'estructura de camps del datatset: tipus i rang de valors els podem obtenir de l'ordre Summary():
+str(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+```
+
+<p>
+Per obtenir un resum descriptiu estadístic de cada atribut usem l'ordre 'summary()':
+</p>
+
+```{r}
+# Resum de dades del datatset: min, max, mediana, mitjana i existència de valors NA, 
+#☺ factors en camps categòrics etc...  ->ordre Summary():
+summary(d)
+# write.csv(d,"Dataset_inicial.csv",row.names = FALSE)
+```
+
+<p>
+Per tal de seleccionar les dades adequades podem observar com és comporta la variable depenent 'qualitat'
+en quan a que la mostra que disposem sigui representativa
+</p>
+<p>
+En principi ens quedem amb tots els atributs i més tard en la fase d'analisi determinarem si es possible una reducció de camps.
+Ara per ara podem comptar amb tots els camps disponibles al dataset per esbrinar quíns ens determinaran els vins de millor qualitat, ja que cada característica és candidata per formar part de la composició del vi, i el color ens permerà comparar el seu grau d'importància segons tipus de vi.
+</p>
+
+<p>
+A més a més, de la recerca que hem fet sobre el vi 'Vinho verde', sabem que tant el camp 'alcohol', com el camp 'citric.acid' seràn importants, ja que són característiques importants del vi (graduació mitjana en alcohol i sabor fresc).
+</p>
+
+```{r}
+cat("Atributs considerats:\n ")
+colnames(d)
+
+```
+
+## 3. Neteja de dades.
+<p style="color:royalblue"><b>
+<br>
+3.1. Les dades contenen zeros o elements buits? Com gestionaries aquests casos?<br>
+3.2. Identificació i tractament de valors extrems.<br></b>
+</p>
+
+<p>
+Per la ordre 'summary()', pogut observar que no tenim valors nuls, però també ho podem comprovar mitjançant 
+la següent ordre, que ens permet contar tots els valors NULL del dataframe. Un valor de zero ens confirma que
+no n'hi ha cap.
+</p>
+
+```{r}
+# Si la suma és major que 0 significa que algun valor NA o NULL existeix en el dataframe.
+sum(is.na.data.frame(d))
+
+```
+
+<p>
+No es necessari per tant, replenar valors de camps on el valor és NULL.<br>
+La gestió d'aquests cassos, per aquest dataset podria ser omplir el valor faltant amb el resultat d'usar 
+la imputació per kNN, ('k-Nearest Neighbors', es a dir els k-veïns més propers) per omplir els valors perduts ('NA').<br>
+Per defecte s'utilitza un valor de <b>k</b>=<b>5</b> que representa els 5 registres veïns més propers. La mètrica usada podría
+ser la distància de Gower, usant la resta de variables. El valor usat en la substitució és la mediana d'aquests 5 valors.<br>
+Aquesta tècnica és robusta quan existeixen valors extrems (en anglès 'outliers'). Si sabem que els valors de la mitjana i la mediana
+són molt propers, podem substituïr els valors faltants per la mitjana o mediana de l'atribut en qüestió.
+</p>
+
+
+
+<p>
+Per identificar els valors extrems, podem utilitzar l'ordre 'boxplot.stats' i el paràmetre de sortida 'out' que determina 
+els valors extrems. Es consideren normalment valors extrems o atípics en una mostra, aquells que superen els límits de 3 vegades 
+la desviació típica a banda i banda de la mitjana de la mostra.<br>
+Per descriure els valors extrems i la distribució de cada variable hem definit una funció personalitzada on podem observar el histograma, 
+el boxplot (amb valors descriptius com bigotis i mediana) en la mateixa escala i els valors extrems cercats:
+
+</p>
+
+```{r}
+bxplot_hist<- function(camp,lbcamp){
+  par(mfrow=c(2,1))
+  boxplot(camp,border="dodgerblue", ylim=c(min(camp,na.rm = TRUE),max(camp,na.rm = TRUE)), horizontal = TRUE)
+  hist(camp,xlim = c(min(camp,na.rm = TRUE),max(camp,na.rm = TRUE)), main="",xlab = lbcamp, ylab="Freqüència", border="blue")
+  # Descripció dels valors dels límits d'interpretació del boxplot
+  # Vector $Stats indica consecutivament els valors de:
+  #    Bigoti inferior, Q1(25%), Mediana, Q3(75%), Bigoti superior.
+  # Vector $out  ens proporciona els valors atípics ordenats ascendentment.
+  r<-boxplot.stats(camp)
+  cat("Valors atípics:\n  ",r$out,"\n")
+  cat("Valors del boxplot:\n1) Bigoti inf.:",r$stats[1],"\n2) Q1(25%)    :", r$stats[2],"\n3) Mediana    :",r$stats[3],"\n4) Q3(75%)    :", r$stats[4],"\n5) Bigoti Sup.:", r$stats[5],"\n")
+  }
+```
+
+<p>
+Per cada atribut mirem de trobar els valors extrems i decidim quína estratègia seguir:
+</p>
+<p>
+<u>Atribut: <b<fixed.acidity</b></u>
+</p>
+
+```{r, out.width='60%'}
+# Valors extrems de 'fixed.acidity'
+cat("Vi negre")
+bxplot_hist(n1$fixed.acidity,'fixed.acidity')
+cat("Vi blanc")
+bxplot_hist(n2$fixed.acidity,'fixed.acidity')
+cat("Vinho verde sense diferenciar color")
+bxplot_hist(d$fixed.acidity,'fixed.acidity')
+
+```
+
+<p>
+No tenim constància de que les dades tinguin errors de captura. Els valors poden ser correctes. Els llindars per els valors extrems serien:
+
+```{r}
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar inferior:",mean(n1$fixed.acidity)-3*sd(n1$fixed.acidity))
+# Llindar superior per el valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n1$fixed.acidity)+3*sd(n1$fixed.acidity))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'fixed.acidity'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$fixed.acidity)-3*sd(n2$fixed.acidity))
+# Llindar superior per el valors atípics de 'fixed.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n2$fixed.acidity)+3*sd(n2$fixed.acidity))
+
+```
+
+En aquest cas no modifiquem els valors extrems detectats per els camp 'fixed.acidity.
+</p>
+
+<p>
+<u>Atribut: <b>volatile.acidity</b></u>
+</p>
+
+```{r, out.width='60%'}
+# Valors extrems de 'volatile.acidity'
+cat("Vi negre")
+bxplot_hist(n1$volatile.acidity,'volatile.acidity')
+cat("Vi blanc")
+bxplot_hist(n2$volatile.acidity,'volatile.acidity')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar inferior:",mean(n1$volatile.acidity)-3*sd(n1$volatile.acidity))
+# Llindar superior per el valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n1$volatile.acidity)+3*sd(n1$volatile.acidity))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'volatile.acidity'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$volatile.acidity)-3*sd(n2$volatile.acidity))
+# Llindar superior per el valors atípics de 'volatile.acidity'.
+cat("Vi negre\nLlindar superior:",mean(n2$volatile.acidity)+3*sd(n2$volatile.acidity))
+
+```
+
+<p>
+La variació d'aquests valors no afecta sensiblement als paràmetres representatius de la seva distribució, 
+però si ho necessitem més endavant podriem substituïr el seu valor per el de la mediana `r median(n1$volatile.acidity)`,
+ com a valor representatiu de la seva distribució. Mètodes més robustos com  la imputació de dades amb kNN, 
+ package R "DMwR" mitjançant la función <b<knnImputation()</b>, o el package R "VIM" usant la funció <b<kNN()</b>.
+</p>
+
+<u>Atribut: <b>citric.acid</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'citric.acid'
+cat("Vi negre")
+bxplot_hist(n1$citric.acid,'citric.acid')
+cat("Vi blanc")
+bxplot_hist(n2$citric.acid,'citric.acid')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar inferior:",mean(n1$citric.acid)-3*sd(n1$citric.acid))
+# Llindar superior per el valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar superior:",mean(n1$citric.acid)+3*sd(n1$citric.acid))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'citric.acid'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$citric.acid)-3*sd(n2$citric.acid))
+# Llindar superior per el valors atípics de 'citric.acid'.
+cat("Vi negre\nLlindar superior:",mean(n2$citric.acid)+3*sd(n2$citric.acid))
+```
+
+<p>
+En aquest cas, suposem que tot i que hem trobat valors atípics per el vi negre, amb valor de citric.acid=1.0, 
+podrien ser correctes en cassos on es busca donar frescor al vi, (característica d'aquests vins) i tampoc modifiquem 
+el valor. Els valors atípics per el vi blanc estàn dintre dels valors correctes del vi negre, i poden ser correctes
+per tant els mantenim.<br>
+Prenem nota de que el nombre de zeros, és alt (`r length(n1[n1$citric.acid==0,'citric.acid'])`), respecte el total
+ de instàncies `r length(n1[,'citric.acid'])` en el cas del vi negre. Podria ser que la característica de 'frescor' fos més
+ freqüent en aquest tipus de vi.
+</p>
+
+<u>Atribut: <b>residual.sugar</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'residual.sugar'
+cat("Vi negre")
+bxplot_hist(n1$residual.sugar,'residual.sugar')
+cat("Vi blanc")
+bxplot_hist(n2$residual.sugar,'residual.sugar')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar inferior:",mean(n1$residual.sugar)-3*sd(n1$residual.sugar))
+# Llindar superior per el valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar superior:",mean(n1$residual.sugar)+3*sd(n1$residual.sugar))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'residual.sugar'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$residual.sugar)-3*sd(n2$residual.sugar))
+# Llindar superior per el valors atípics de 'residual.sugar'.
+cat("Vi negre\nLlindar superior:",mean(n2$residual.sugar)+3*sd(n2$residual.sugar))
+```
+
+<p>
+En aquest cas hem trobat valors atípics molt extrems.<br> Si tenim en compte l'escala de dolçor dels vins:<br>
+<ul>
+<li>0-9 g/l Sucre residual (SR): Sec</li>
+<li>9-18 g/l: No Sec</li>
+<li>18-50 g/l: Mig sec-Semi dolç</li>
+<li>50-120 g/l: mig-dolç</li>
+<li>120 g/l Dolç-Molt dolç</li>
+</ul>
+
+Deduïm que el 'Vinho verde' és un vi que pot ser 'Sec', 'No sec', 'Mig sec' però no 'Semi dolç', 'Mig dolç' o
+'Dolç-Molt dolç'. Per tant establim un llindar lògic de residual.sugar=18. Decidim eliminar aquests valors atípics
+que hem trobat en el vi blanc, per considerar que són poques instàncies, que representen
+un `r round(length(n2[n2$residual.sugar>18,'residual.sugar'])/length(n2[,'residual.sugar'])*100,0)`% del total
+d'instàncies de vi blanc. Hem observat que la majoria de valors eliminats tenia un valor de qualitat 5,6,7,8 
+i això implicaria que un valor incorrecte del 'sucre residual' no fos una característica que ens ajudes a 
+discriminar la qualitat del vi.
+</p>
+
+```{r}
+# Eliminem les instàncies amb valors atípics incorrectes.
+n2<-n2[n2$residual.sugar<=18,]
+```
+
+<u>Atribut: <b>chlorides</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'chlorides'
+cat("Vi negre")
+bxplot_hist(n1$chlorides,'chlorides')
+cat("Vi blanc")
+bxplot_hist(n2$chlorides,'chlorides')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar inferior:",mean(n1$chlorides)-3*sd(n1$chlorides))
+# Llindar superior per el valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar superior:",mean(n1$chlorides)+3*sd(n1$chlorides))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'chlorides'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$chlorides)-3*sd(n2$chlorides))
+# Llindar superior per el valors atípics de 'chlorides'.
+cat("Vi negre\nLlindar superior:",mean(n2$chlorides)+3*sd(n2$chlorides))
+```
+
+<p>
+En el cas dels clorurs també trobem valors extrems molt alts. Per tant actuem de la mateixa manera que amb el sucre residual. 
+Eliminem aquells valors que no estan en un rang de valors adient per Europa, ja que sabem que els vins són de Portugal i aquest
+valor de clorurs és força atípic.<br>
+El percentatge d'instàncies eliminades no és gaire gran: <br>
+<b>`r round(length(n1[n1$chlorides>0.22,'chlorides'])/length(n1[,'chlorides'])*100,0)`</b>% (vi negre).<br>
+<b>`r round(length(n2[n2$chlorides>0.11,'chlorides'])/length(n2[,'chlorides'])*100,0)`</b>% (vi blanc).
+
+</p>
+
+<u>Atribut: <b>free.sulfur.dioxide</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'free.sulfur.dioxide'
+cat("Vi negre")
+bxplot_hist(n1$free.sulfur.dioxide,'free.sulfur.dioxide')
+cat("Vi blanc")
+bxplot_hist(n2$free.sulfur.dioxide,'free.sulfur.dioxide')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar inferior:",mean(n1$free.sulfur.dioxide)-3*sd(n1$free.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n1$free.sulfur.dioxide)+3*sd(n1$free.sulfur.dioxide))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'free.sulfur.dioxide'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$free.sulfur.dioxide)-3*sd(n2$free.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'free.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n2$free.sulfur.dioxide)+3*sd(n2$free.sulfur.dioxide))
+```
+
+<p>
+En el cas del dioxid de sofre, sabem que la normativa admet fins valors de <b<300 g/l</b> tot i que a Europa no es solen
+observar valors superiors a <b>50 g/l</b>. Observem que els valors atípics tenen valors alts sobretot en el vi blanc, 
+però com no sobrepasen la normativa i poden ser correctes i els valors estan representats en totes les categories de
+qualitat del vi, decidim no modificar les dades. L'ús del diòxid de sofre en el vi és com a conservant i volem mantenir
+l'efecte de que és més usat en el vi blanc. 
+</p>
+
+<u>Atribut: <b>total.sulfur.dioxide</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'total.sulfur.dioxide'
+cat("Vi negre")
+bxplot_hist(n1$total.sulfur.dioxide,'total.sulfur.dioxide')
+cat("Vi blanc")
+bxplot_hist(n2$total.sulfur.dioxide,'total.sulfur.dioxide')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'total.sulfur.dioxide'.
+cat("Vi negre\nLlindar inferior:",mean(n1$total.sulfur.dioxide)-3*sd(n1$total.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'total.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n1$total.sulfur.dioxide)+3*sd(n1$total.sulfur.dioxide))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'total.sulfur.dioxide'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$total.sulfur.dioxide)-3*sd(n2$total.sulfur.dioxide))
+# Llindar superior per el valors atípics de 'total.sulfur.dioxide'.
+cat("Vi negre\nLlindar superior:",mean(n2$total.sulfur.dioxide)+3*sd(n2$total.sulfur.dioxide))
+```
+
+<p>
+En aquest obtenim valors força alts però sabem que aquest camp s'obté de la suma del diòxid de sofre lliure i el fixat, per tant
+preveiem que aquest atribut no l'utilitzem en els anàlisis, per ser combinació lineal de 'free.sulfur.dioxide'.
+</p>
+
+
+<u>Atribut: <b>density</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'density'
+cat("Vi negre")
+bxplot_hist(n1$density,'density')
+cat("Vi blanc")
+bxplot_hist(n2$density,'density')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'density'.
+cat("Vi negre\nLlindar inferior:",mean(n1$density)-3*sd(n1$density))
+# Llindar superior per el valors atípics de 'density'.
+cat("Vi negre\nLlindar superior:",mean(n1$density)+3*sd(n1$density))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'density'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$density)-3*sd(n2$density))
+# Llindar superior per el valors atípics de 'density'.
+cat("Vi negre\nLlindar superior:",mean(n2$density)+3*sd(n2$density))
+```
+
+<p>
+En el cas de la 'densitat', obtenim valors atípics, però no estem segurs de que siguin incorrectes. Les 
+distribucions queden ben descrites per els paràmetres estadístics com la mediana. No volem perdre informació 
+del dataset i per tant no eliminem ni modifiquem cap valor.
+</p>
+
+<u>Atribut: <b>pH</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'pH'
+cat("Vi negre")
+bxplot_hist(n1$pH,'pH')
+cat("Vi blanc")
+bxplot_hist(n2$pH,'pH')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'pH'.
+cat("Vi negre\nLlindar inferior:",mean(n1$pH)-3*sd(n1$pH))
+# Llindar superior per el valors atípics de 'pH'.
+cat("Vi negre\nLlindar superior:",mean(n1$pH)+3*sd(n1$pH))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'pH'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$pH)-3*sd(n2$pH))
+# Llindar superior per el valors atípics de 'pH'.
+cat("Vi negre\nLlindar superior:",mean(n2$pH)+3*sd(n2$pH))
+```
+
+<p>
+En el cas del 'pH', és igual que el cas anterior, podem mantenir els valors atípics, ja que poden ser valors correctes i no
+tenim seguretat d'error. En general abans de modificar les dades cal estar segur de que realment és necessari, perque podriem
+estar eliminant patrons en les dades que per no semblar-nos 'coherents' d'entrada són valors que indiquen una variació en una
+tendència incipient.Sabem que el pH marca la acidesa del vi, per tant és probable que el pH tingui alguna correlació amb els
+atributs 'fixed.acidity' o 'citric.acid'.
+</p>
+
+<u>Atribut: <b>sulphates</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'sulphates'
+cat("Vi negre")
+bxplot_hist(n1$sulphates,'sulphates')
+cat("Vi blanc")
+bxplot_hist(n2$sulphates,'sulphates')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'sulphates'.
+cat("Vi negre\nLlindar inferior:",mean(n1$sulphates)-3*sd(n1$sulphates))
+# Llindar superior per el valors atípics de 'sulphates'.
+cat("Vi negre\nLlindar superior:",mean(n1$sulphates)+3*sd(n1$sulphates))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'sulphates'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$sulphates)-3*sd(n2$sulphates))
+# Llindar superior per el valors atípics de 'sulphates'.
+cat("Vi negre\nLlindar superior:",mean(n2$sulphates)+3*sd(n2$sulphates))
+```
+
+<p>
+Els sulfats de sodi i calci apareixen en l'aigua i per tant el raïm i el vi poden contenir-los. Una alta concentració dels 
+mateixos podria fer que una aigua no fos de qualitat alimentària. Una aigua amb una quantitat de sulfats inferior a 250mg /l 
+es considera en aquest aspecte una aigua de qualitat i amb valors superiors a 400 mg / l insalubre.<br>
+Per tant suposem aquest camp important per determinar la qualitat del vi. Igual que en els dos darrers cassos no trobem valors
+atípics que no puguin ser correctes, i per tant conservem tots els valors.
+</p>
+
+
+<u>Atribut: <b>alcohol</b></u>
+
+```{r, out.width='60%'}
+
+# Valors extrems de 'alcohol'
+cat("Vi negre")
+bxplot_hist(n1$alcohol,'alcohol')
+cat("Vi blanc")
+bxplot_hist(n2$alcohol,'alcohol')
+
+# Cas Vi negre
+# Llindar inferior per els valors atípics de 'alcohol'.
+cat("Vi negre\nLlindar inferior:",mean(n1$alcohol)-3*sd(n1$alcohol))
+# Llindar superior per el valors atípics de 'alcohol'.
+cat("Vi negre\nLlindar superior:",mean(n1$alcohol)+3*sd(n1$alcohol))
+
+# Cas Vi blanc
+# Llindar inferior per els valors atípics de 'alcohol'.
+cat("Vi blanc\nLlindar inferior:",mean(n2$alcohol)-3*sd(n2$alcohol))
+# Llindar superior per el valors atípics de 'alcohol'.
+cat("Vi negre\nLlindar superior:",mean(n2$alcohol)+3*sd(n2$alcohol))
+```
+
+<p>
+En de l'alcohol, tampoc trobem valors atípics que no puguin ser correctes, i per tant conservem tots els valors.
+En aquest cas observem l'antiguitat del dataset perquè actualment la tendència en els darrers anys en la gradució 
+dels vins éstà per sobre de 13º, (sobretot en el vi negre).
+</p>
+
+<p>
+Un cop tractats els valors buits, zeros i identificats i tractats els valors atípics de tots els atributs, definim 
+una nova versió del dataset de vins. 
+</p>
+
+```{r}
+
+# Tenim capçaleres iguals, si la suma de noms iguals és la suma total de camps.
+a<-colnames(n1)
+b<-colnames(n2)
+cat(paste0("El nombre de camps (",ncol(n1),") és igual al nombre de camps iguals ",sum(a==b)))
+
+# Combinem les mostres dels dos fitxers i factoritzem el camp color per determinar 
+# els valors que pren: 'blanc i 'negre'
+d<-rbind(n1,n2)
+d$color<-factor(d$color)
+
+# Dimensions del dataset:
+cat("Files - Instàncies:",nrow(d),"\nColumnes-Atributs-Variables:",ncol(d),"\n")
+
+# Comprovem els valors del dataset:
+head(d)
+tail(d)
+```
+
+## 4. Anàlisi de dades.
+<p style="color:royalblue"><b>
+4.1. Selecció dels grups de dades que es volen analitzar/comparar (planificació dels anàlisis a aplicar).<br>
+4.2. Comprovació de la normalitat i homogeneïtat de la variància.<br>
+4.3. Aplicació de proves estadístiques per comparar els grups de dades. En funció de les dades i de l’objectiu 
+de l’estudi, aplicar proves de contrast d’hipòtesis, correlacions, regressions, etc. Aplicar almenys tres mètodes 
+d’anàlisi diferents.<br>
+</b>
+</p>
+
+<b>Valoració de la variable resposta</b><br>
+Tenim instàncies per un valor de qualitat 3, 4, 5, 6, 7, 8 en vi negre i 3,4,5,6,7,8,9 en vi blanc. Com més alt sigui
+el valor, millor és la qualitat del vi.
+
+El nostre conjunt de dades està molt desequilibrat, ja que tenim molts vins classificats amb qualitats de 5 o 6, 
+mentre que molt pocs vins són molt dolents (3) o extremadament bons (8), el que s'espera. Una possible solució és la 
+repetició de valors per les categories minoritàries i disposar d'una mostra més equilibrada.
+</p>
+
+<p style="color:royalblue">
+4.1. Selecció dels grups de dades que es volen analitzar/comparar (planificació dels anàlisis a aplicar).
+<p>
+
+En primer lloc, aplicarem un contrast per veure si la mitjana de les seves distribucions és igual. Segons això
+volem extreure patrons de correlació entre atributs, i per això calculem una matriu, 
+de manera que l'ordre en que les característiques són llistades es correspongui amb l'ordre de 
+component principal (paràmetre <b>order</b>). L'index de correlació és el de Pearson. Després decidirem
+si la qualitat del vi es comporta de manera diferent segons el color del vi (atribut color).
+</p>
+
+<p style="color:royalblue">
+4.2. Comprovació de la normalitat i homogeneïtat de la variància.
+<p>
+
+<p>Mirem la normalitat de la 'qualitat' del vi sense diferenciar segons si es vi blanc o negre:</p>
+
+```{r}
+# Visualitzem el boxplot de la qualitat segons color del vi.
+par(mfrow=c(1,2))
+boxplot(d[d$color=='negre',"quality"], ylim=c(3,9), col="lightblue", xlab="Vi Negre")
+boxplot(d[d$color=='blanc',"quality"], col="lightblue", xlab="Vi Blanc")
+par(mfrow=c(1,1))
+```
+
+
+<p>
+
+</p>
+
+<p>
+----------------------------------------------------------------------------
+</p>
+
+
+```{r}
+# Vi negre
+nc=ncol(n1)
+df <- n1[,1:11]
+df$quality <- as.integer(n1[,12])
+correlacio <- cor(df,method="pearson")
+corrplot(correlacio, number.cex = 2, method = "square", hclust.method = "ward", order = "FPC",
+         type = "full", tl.cex=0.8,tl.col = "navy")
+```
+
+De la matriu anterior podem establir les següents correlacions entre atributs per el vi negre:<br>
+
+<ol>
+
+<li>Alta correlació relativa:
+<br><b>total.sulfur.dioxide</b> amb <b>free.sulfur.dioxide</b>.<br>
+<b>fixed.acidity</b> amb <b>density</b> i <b>citric.acid</b>.
+<li>Relativament correlacionades:
+<br><b>alcohol</b> amb <b>qualitat</b></li>
+<li>Altament inverses correlatives
+<br>
+<b>fixed.acidity</b> amb <b>pH</b></li>
+<li>Relativament inversament correlatives:
+<br><b>citric.acid</b> amb <b>pH</b> i <b>volatile.acidity</b></li>
+</ol>
+</p>
+
+
+```{r}
+# Vi blanc
+nc=ncol(n2)
+df <- n2[,1:11]
+df$quality <- as.integer(n2[,12])
+correlacio <- cor(df,method="pearson")
+corrplot(correlacio, number.cex = 2, method = "square", hclust.method = "ward", order = "FPC",
+         type = "full", tl.cex=0.8,tl.col = "navy")
+```
+
+<p>
+De la matriu anterior podem establir les següents correlacions entre atributs per el vi blanc:<br>
+
+<ol>
+<li>Alta correlació relativa:
+<br><b>total.sulfur.dioxide</b> amb <b>free.sulfur.dioxide</b>.<br>
+<b>densitat</b> amb <b>residual.sugar</b>.
+<li>Relativament correlacionats:
+<br><b>alcohol</b> amb <b>qualitat</b></li>
+<li>Altament inversament correlacionats
+<br>
+<b>densitat</b> amb <b>alcohol</b></li>
+<li>Relativament inversament correlacionats:
+<br><b>alcohol</b> amb <b>residual.sugar</b> i <b>total.sulfur.dioxide</b> i<br>
+<b>fixed.acidity</b> amb <b>pH</b>
+</li>
+</ol>
+</p>
+
+<p>
+D'aquests resultats decidim seleccionar els atributs <b>alcohol</b>,<b>volatile.acidity</b> i <b>sulfats</b> com característiques representatives
+de la qualitat del vi, i procedim a les proves analítiques que utilitzaran aquests atributs per determinar si el color del vi és s
+</p>
+
+
